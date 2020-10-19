@@ -15,8 +15,20 @@
                     <view key="view" contentMode="scaleToFill" id="F5W-hk-rPg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jhO-uZ-9SA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="05f-pD-fXa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="05f-pD-fXa" firstAttribute="trailing" secondItem="jhO-uZ-9SA" secondAttribute="trailing" id="COC-lk-api"/>
+                            <constraint firstItem="jhO-uZ-9SA" firstAttribute="leading" secondItem="05f-pD-fXa" secondAttribute="leading" id="Hih-Dm-VZo"/>
+                            <constraint firstItem="jhO-uZ-9SA" firstAttribute="top" secondItem="05f-pD-fXa" secondAttribute="top" id="dn1-kQ-HmE"/>
+                            <constraint firstItem="05f-pD-fXa" firstAttribute="bottom" secondItem="jhO-uZ-9SA" secondAttribute="bottom" id="dpk-Wr-yaj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tl0-rp-X91"/>
                 </viewController>
