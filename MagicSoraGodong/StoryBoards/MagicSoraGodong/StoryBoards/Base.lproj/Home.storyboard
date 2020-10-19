@@ -8,17 +8,37 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--마법의 소라고동-->
         <scene sceneID="usM-Vc-OHc">
             <objects>
                 <viewController id="qGb-1B-Ctk" customClass="HomeViewController" customModule="MagicSoraGodong" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gRH-tR-EtW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Krs-PC-n5N">
+                                <rect key="frame" x="0.0" y="44" width="414" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3pn-Px-eJ2"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="IRG-wi-l2K"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="LpB-sG-EG9"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="GOm-fi-tjK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GOm-fi-tjK" firstAttribute="trailing" secondItem="Krs-PC-n5N" secondAttribute="trailing" id="D6O-Oe-oKw"/>
+                            <constraint firstItem="Krs-PC-n5N" firstAttribute="leading" secondItem="GOm-fi-tjK" secondAttribute="leading" id="afG-Nj-3Cl"/>
+                            <constraint firstItem="Krs-PC-n5N" firstAttribute="top" secondItem="GOm-fi-tjK" secondAttribute="top" id="dju-Dx-UdO"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="VqT-7h-939"/>
+                    <navigationItem key="navigationItem" title="마법의 소라고동" id="VqT-7h-939">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="3hT-Yq-EgG"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="scrollView" destination="Krs-PC-n5N" id="l0d-LG-vpR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yx9-Jb-PJw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
