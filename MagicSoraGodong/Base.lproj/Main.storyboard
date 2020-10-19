@@ -24,17 +24,37 @@
             </objects>
             <point key="canvasLocation" x="1831.8840579710147" y="108.48214285714285"/>
         </scene>
-        <!--Home View Controller-->
+        <!--마법의 소라고동-->
         <scene sceneID="usM-Vc-OHc">
             <objects>
                 <viewController id="qGb-1B-Ctk" customClass="HomeViewController" customModule="MagicSoraGodong" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gRH-tR-EtW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ffi-aC-dJD">
+                                <rect key="frame" x="0.0" y="88" width="414" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mOp-XX-7RK"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Jsr-8d-9uv"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="yJJ-SX-VwL"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="GOm-fi-tjK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ffi-aC-dJD" firstAttribute="trailing" secondItem="GOm-fi-tjK" secondAttribute="trailing" id="u4H-LC-hyr"/>
+                            <constraint firstItem="Ffi-aC-dJD" firstAttribute="leading" secondItem="GOm-fi-tjK" secondAttribute="leading" id="yTi-7N-oSC"/>
+                            <constraint firstItem="Ffi-aC-dJD" firstAttribute="top" secondItem="GOm-fi-tjK" secondAttribute="top" id="ygm-NQ-94Q"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="VqT-7h-939"/>
+                    <navigationItem key="navigationItem" title="마법의 소라고동" id="VqT-7h-939">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="xKt-Bb-q4W"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="scrollView" destination="Ffi-aC-dJD" id="vSq-0h-YBR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yx9-Jb-PJw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,6 +82,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Rvu-rs-k0d" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fR6-11-JQx">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

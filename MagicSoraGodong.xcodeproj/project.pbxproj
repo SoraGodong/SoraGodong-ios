@@ -37,6 +37,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6840F68A253DE259008B0E23 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8D97E617253C866000908404 /* HomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6840F68B253DE26C008B0E23 /* supportig file */ = {
+			isa = PBXGroup;
+			children = (
+				8D97E613253C866000908404 /* AppDelegate.swift */,
+				8D97E615253C866000908404 /* SceneDelegate.swift */,
+				8D97E61E253C866000908404 /* LaunchScreen.storyboard */,
+			);
+			path = "supportig file";
+			sourceTree = "<group>";
+		};
 		8D97E607253C866000908404 = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +74,10 @@
 		8D97E612253C866000908404 /* MagicSoraGodong */ = {
 			isa = PBXGroup;
 			children = (
-				8D97E613253C866000908404 /* AppDelegate.swift */,
-				8D97E615253C866000908404 /* SceneDelegate.swift */,
-				8D97E617253C866000908404 /* HomeViewController.swift */,
+				6840F68B253DE26C008B0E23 /* supportig file */,
+				6840F68A253DE259008B0E23 /* ViewController */,
 				8D97E619253C866000908404 /* Main.storyboard */,
 				8D97E61C253C866000908404 /* Assets.xcassets */,
-				8D97E61E253C866000908404 /* LaunchScreen.storyboard */,
 				8D97E621253C866000908404 /* Info.plist */,
 			);
 			path = MagicSoraGodong;
