@@ -4,5 +4,9 @@
 //
 //  Created by 이정인 on 2020/10/20.
 //
+ 
+import UIKit
 
-import Foundation
+extension UILabel{
+    
+}

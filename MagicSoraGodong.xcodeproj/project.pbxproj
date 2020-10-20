@@ -11,6 +11,7 @@
 		683E55B6253E00F7000D79CE /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683E55B4253E00F7000D79CE /* Home.storyboard */; };
 		683E55B9253E010D000D79CE /* Studio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683E55B8253E010D000D79CE /* Studio.storyboard */; };
 		683E55BD253E011D000D79CE /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683E55BB253E011D000D79CE /* MyPage.storyboard */; };
+		68A0AC6A253EAFE700885027 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A0AC69253EAFE700885027 /* HomeTableViewCell.swift */; };
 		8D97E614253C866000908404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D97E613253C866000908404 /* AppDelegate.swift */; };
 		8D97E616253C866000908404 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D97E615253C866000908404 /* SceneDelegate.swift */; };
 		8D97E618253C866000908404 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D97E617253C866000908404 /* HomeViewController.swift */; };
@@ -24,6 +25,7 @@
 		683E55B5253E00F7000D79CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MagicSoraGodong/StoryBoards/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		683E55B8253E010D000D79CE /* Studio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Studio.storyboard; sourceTree = "<group>"; };
 		683E55BC253E011D000D79CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MagicSoraGodong/StoryBoards/Base.lproj/MyPage.storyboard; sourceTree = "<group>"; };
+		68A0AC69253EAFE700885027 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		8D97E610253C866000908404 /* MagicSoraGodong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicSoraGodong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D97E613253C866000908404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D97E615253C866000908404 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 			path = StoryBoards;
 			sourceTree = "<group>";
 		};
+		68A0AC6C253EAFF800885027 /* HomeCustom */ = {
+			isa = PBXGroup;
+			children = (
+				68A0AC69253EAFE700885027 /* HomeTableViewCell.swift */,
+			);
+			path = HomeCustom;
+			sourceTree = "<group>";
+		};
 		8D97E607253C866000908404 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +111,7 @@
 		8D97E612253C866000908404 /* MagicSoraGodong */ = {
 			isa = PBXGroup;
 			children = (
+				68A0AC6C253EAFF800885027 /* HomeCustom */,
 				68093315253E0F640041DEF0 /* extensions */,
 				683E55AE253E00CA000D79CE /* supporting files */,
 				683E55B0253E00D5000D79CE /* ViewControllers */,
@@ -185,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D97E618253C866000908404 /* HomeViewController.swift in Sources */,
+				68A0AC6A253EAFE700885027 /* HomeTableViewCell.swift in Sources */,
 				8D97E614253C866000908404 /* AppDelegate.swift in Sources */,
 				8D97E616253C866000908404 /* SceneDelegate.swift in Sources */,
 				68093317253E0F7B0041DEF0 /* extension.swift in Sources */,
