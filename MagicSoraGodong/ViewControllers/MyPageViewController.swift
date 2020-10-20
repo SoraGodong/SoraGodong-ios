@@ -9,8 +9,12 @@ import UIKit
 
 class MyPageViewController: UIViewController {
 
+    @IBOutlet weak var mypageTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
     }
 
