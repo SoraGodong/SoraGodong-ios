@@ -12,6 +12,7 @@
 		683E55B6253E00F7000D79CE /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683E55B4253E00F7000D79CE /* Home.storyboard */; };
 		683E55B9253E010D000D79CE /* Studio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683E55B8253E010D000D79CE /* Studio.storyboard */; };
 		683E55BD253E011D000D79CE /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683E55BB253E011D000D79CE /* MyPage.storyboard */; };
+		684D07A6253EBB24006C8A3E /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684D07A5253EBB24006C8A3E /* HomeTableViewCell.swift */; };
 		8D4DC435253E924D00E06D8B /* StudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4DC434253E924D00E06D8B /* StudioViewController.swift */; };
 		8D97E614253C866000908404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D97E613253C866000908404 /* AppDelegate.swift */; };
 		8D97E616253C866000908404 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D97E615253C866000908404 /* SceneDelegate.swift */; };
@@ -27,6 +28,7 @@
 		683E55B5253E00F7000D79CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MagicSoraGodong/StoryBoards/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		683E55B8253E010D000D79CE /* Studio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Studio.storyboard; sourceTree = "<group>"; };
 		683E55BC253E011D000D79CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MagicSoraGodong/StoryBoards/Base.lproj/MyPage.storyboard; sourceTree = "<group>"; };
+		684D07A5253EBB24006C8A3E /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		8D4DC434253E924D00E06D8B /* StudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioViewController.swift; sourceTree = "<group>"; };
 		8D97E610253C866000908404 /* MagicSoraGodong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicSoraGodong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D97E613253C866000908404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				683E55B2253E00E0000D79CE /* StoryBoards */,
 				8D97E61C253C866000908404 /* Assets.xcassets */,
 				8D97E621253C866000908404 /* Info.plist */,
+				684D07A5253EBB24006C8A3E /* HomeTableViewCell.swift */,
 			);
 			path = MagicSoraGodong;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			files = (
 				8D4DC435253E924D00E06D8B /* StudioViewController.swift in Sources */,
 				280D7120253EB0A800EA5745 /* MyPageViewController.swift in Sources */,
+				684D07A6253EBB24006C8A3E /* HomeTableViewCell.swift in Sources */,
 				8D97E618253C866000908404 /* HomeViewController.swift in Sources */,
 				8D97E614253C866000908404 /* AppDelegate.swift in Sources */,
 				8D97E616253C866000908404 /* SceneDelegate.swift in Sources */,
