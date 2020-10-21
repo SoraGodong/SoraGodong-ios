@@ -16,26 +16,40 @@ class StudioViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setCollectionView()
+        configureCollectionView()
+        configureNavigationBar()
     }
     
 }
 // MARK:- Configure UI
 extension StudioViewController {
     
-    func setCollectionView() {
+    func configureCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(
             UINib(nibName: "StudioCollectionViewCell", bundle: nil),
             forCellWithReuseIdentifier: "studioCell")
+        
+        collectionView.register(UINib(nibName: String(describing: StudioCollectionHeaderReusableView.self), bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader , withReuseIdentifier: String(describing: StudioCollectionHeaderReusableView.self))
+    }
+    
+    func configureNavigationBar() {
+        let button = UIBarButtonItem(title: "선택완료", style: .plain, target: self, action: #selector(touchUpNextButton))
+        navigationItem.rightBarButtonItem = button
+        navigationItem.title = "마법의 소라고동"
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.barTintColor = .systemIndigo
+        navigationController?.navigationBar.tintColor = .white
     }
     
 }
 
 // MARK:- Methods
 extension StudioViewController {
-    
+    @objc func touchUpNextButton() {
+        
+    }
 }
 
 // MARK:- Collection View DataSource
@@ -60,12 +74,21 @@ extension StudioViewController: UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: String(describing: StudioCollectionHeaderReusableView.self), for: indexPath)
+            return header
+        default:
+            return UICollectionReusableView()
+        }
+    }
+    
 }
 
 // MARK:- Collection View Delegate
 extension StudioViewController: UICollectionViewDelegate {
-    
-    
+
 }
 
 // MARK:- Collection View Delegate FlowLayout
@@ -89,8 +112,8 @@ extension StudioViewController: UICollectionViewDelegateFlowLayout {
         return 10.0
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-//        return CGSize(width: 0, height: 0)
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: 400, height: 50)
+    }
     
 }

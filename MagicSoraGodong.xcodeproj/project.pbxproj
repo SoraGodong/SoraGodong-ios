@@ -22,6 +22,8 @@
 		8D97E61B253C866000908404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D97E619253C866000908404 /* Main.storyboard */; };
 		8D97E61D253C866000908404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D97E61C253C866000908404 /* Assets.xcassets */; };
 		8D97E620253C866000908404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D97E61E253C866000908404 /* LaunchScreen.storyboard */; };
+		8DF86F0C25400DA0008776AC /* StudioCollectionHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF86F0A25400DA0008776AC /* StudioCollectionHeaderReusableView.swift */; };
+		8DF86F0D25400DA0008776AC /* StudioCollectionHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF86F0B25400DA0008776AC /* StudioCollectionHeaderReusableView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		8D97E61C253C866000908404 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D97E61F253C866000908404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D97E621253C866000908404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DF86F0A25400DA0008776AC /* StudioCollectionHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioCollectionHeaderReusableView.swift; sourceTree = "<group>"; };
+		8DF86F0B25400DA0008776AC /* StudioCollectionHeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudioCollectionHeaderReusableView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 			children = (
 				8D653848253F30B50021D348 /* StudioCollectionViewCell.swift */,
 				8D653849253F30B50021D348 /* StudioCollectionViewCell.xib */,
+				8DF86F0A25400DA0008776AC /* StudioCollectionHeaderReusableView.swift */,
+				8DF86F0B25400DA0008776AC /* StudioCollectionHeaderReusableView.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -201,6 +207,7 @@
 			files = (
 				8D97E620253C866000908404 /* LaunchScreen.storyboard in Resources */,
 				8D65384B253F30B50021D348 /* StudioCollectionViewCell.xib in Resources */,
+				8DF86F0D25400DA0008776AC /* StudioCollectionHeaderReusableView.xib in Resources */,
 				683E55BD253E011D000D79CE /* MyPage.storyboard in Resources */,
 				8D97E61D253C866000908404 /* Assets.xcassets in Resources */,
 				8D97E61B253C866000908404 /* Main.storyboard in Resources */,
@@ -224,6 +231,7 @@
 				8D97E614253C866000908404 /* AppDelegate.swift in Sources */,
 				8D97E616253C866000908404 /* SceneDelegate.swift in Sources */,
 				68093317253E0F7B0041DEF0 /* extension.swift in Sources */,
+				8DF86F0C25400DA0008776AC /* StudioCollectionHeaderReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
