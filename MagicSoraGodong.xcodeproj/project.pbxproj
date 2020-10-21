@@ -16,6 +16,12 @@
 		8D2532AA25403722002F1B77 /* ProductInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2532A925403722002F1B77 /* ProductInformationViewController.swift */; };
 		8D2532AD2540376F002F1B77 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2532AC2540376F002F1B77 /* RegistrationViewController.swift */; };
 		8D4DC435253E924D00E06D8B /* StudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4DC434253E924D00E06D8B /* StudioViewController.swift */; };
+		8D5EB6D62540444800B2CDFE /* SelectedProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EB6D42540444800B2CDFE /* SelectedProductTableViewCell.swift */; };
+		8D5EB6D72540444800B2CDFE /* SelectedProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D5EB6D52540444800B2CDFE /* SelectedProductTableViewCell.xib */; };
+		8D5EB6DB2540481800B2CDFE /* UploadingViedoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EB6D92540481800B2CDFE /* UploadingViedoTableViewCell.swift */; };
+		8D5EB6DC2540481800B2CDFE /* UploadingViedoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D5EB6DA2540481800B2CDFE /* UploadingViedoTableViewCell.xib */; };
+		8D5EB6E02540522900B2CDFE /* VideoInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EB6DE2540522900B2CDFE /* VideoInformationTableViewCell.swift */; };
+		8D5EB6E12540522900B2CDFE /* VideoInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D5EB6DF2540522900B2CDFE /* VideoInformationTableViewCell.xib */; };
 		8D65384A253F30B50021D348 /* StudioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D653848253F30B50021D348 /* StudioCollectionViewCell.swift */; };
 		8D65384B253F30B50021D348 /* StudioCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D653849253F30B50021D348 /* StudioCollectionViewCell.xib */; };
 		8D97E614253C866000908404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D97E613253C866000908404 /* AppDelegate.swift */; };
@@ -38,6 +44,12 @@
 		8D2532A925403722002F1B77 /* ProductInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInformationViewController.swift; sourceTree = "<group>"; };
 		8D2532AC2540376F002F1B77 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		8D4DC434253E924D00E06D8B /* StudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioViewController.swift; sourceTree = "<group>"; };
+		8D5EB6D42540444800B2CDFE /* SelectedProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedProductTableViewCell.swift; sourceTree = "<group>"; };
+		8D5EB6D52540444800B2CDFE /* SelectedProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedProductTableViewCell.xib; sourceTree = "<group>"; };
+		8D5EB6D92540481800B2CDFE /* UploadingViedoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadingViedoTableViewCell.swift; sourceTree = "<group>"; };
+		8D5EB6DA2540481800B2CDFE /* UploadingViedoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadingViedoTableViewCell.xib; sourceTree = "<group>"; };
+		8D5EB6DE2540522900B2CDFE /* VideoInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoInformationTableViewCell.swift; sourceTree = "<group>"; };
+		8D5EB6DF2540522900B2CDFE /* VideoInformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoInformationTableViewCell.xib; sourceTree = "<group>"; };
 		8D653848253F30B50021D348 /* StudioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioCollectionViewCell.swift; sourceTree = "<group>"; };
 		8D653849253F30B50021D348 /* StudioCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudioCollectionViewCell.xib; sourceTree = "<group>"; };
 		8D97E610253C866000908404 /* MagicSoraGodong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicSoraGodong.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +132,12 @@
 				8D653849253F30B50021D348 /* StudioCollectionViewCell.xib */,
 				8DF86F0A25400DA0008776AC /* StudioCollectionHeaderReusableView.swift */,
 				8DF86F0B25400DA0008776AC /* StudioCollectionHeaderReusableView.xib */,
+				8D5EB6D42540444800B2CDFE /* SelectedProductTableViewCell.swift */,
+				8D5EB6D52540444800B2CDFE /* SelectedProductTableViewCell.xib */,
+				8D5EB6D92540481800B2CDFE /* UploadingViedoTableViewCell.swift */,
+				8D5EB6DA2540481800B2CDFE /* UploadingViedoTableViewCell.xib */,
+				8D5EB6DE2540522900B2CDFE /* VideoInformationTableViewCell.swift */,
+				8D5EB6DF2540522900B2CDFE /* VideoInformationTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -212,11 +230,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D97E620253C866000908404 /* LaunchScreen.storyboard in Resources */,
+				8D5EB6DC2540481800B2CDFE /* UploadingViedoTableViewCell.xib in Resources */,
 				8D65384B253F30B50021D348 /* StudioCollectionViewCell.xib in Resources */,
+				8D5EB6E12540522900B2CDFE /* VideoInformationTableViewCell.xib in Resources */,
 				8DF86F0D25400DA0008776AC /* StudioCollectionHeaderReusableView.xib in Resources */,
 				683E55BD253E011D000D79CE /* MyPage.storyboard in Resources */,
 				8D97E61D253C866000908404 /* Assets.xcassets in Resources */,
 				8D97E61B253C866000908404 /* Main.storyboard in Resources */,
+				8D5EB6D72540444800B2CDFE /* SelectedProductTableViewCell.xib in Resources */,
 				683E55B9253E010D000D79CE /* Studio.storyboard in Resources */,
 				683E55B6253E00F7000D79CE /* Home.storyboard in Resources */,
 			);
@@ -231,12 +252,15 @@
 			files = (
 				8D65384A253F30B50021D348 /* StudioCollectionViewCell.swift in Sources */,
 				8D2532AA25403722002F1B77 /* ProductInformationViewController.swift in Sources */,
+				8D5EB6E02540522900B2CDFE /* VideoInformationTableViewCell.swift in Sources */,
 				8D4DC435253E924D00E06D8B /* StudioViewController.swift in Sources */,
 				8D2532AD2540376F002F1B77 /* RegistrationViewController.swift in Sources */,
 				280D7120253EB0A800EA5745 /* MyPageViewController.swift in Sources */,
 				684D07A6253EBB24006C8A3E /* HomeTableViewCell.swift in Sources */,
+				8D5EB6D62540444800B2CDFE /* SelectedProductTableViewCell.swift in Sources */,
 				8D97E618253C866000908404 /* HomeViewController.swift in Sources */,
 				8D97E614253C866000908404 /* AppDelegate.swift in Sources */,
+				8D5EB6DB2540481800B2CDFE /* UploadingViedoTableViewCell.swift in Sources */,
 				8D97E616253C866000908404 /* SceneDelegate.swift in Sources */,
 				68093317253E0F7B0041DEF0 /* extension.swift in Sources */,
 				8DF86F0C25400DA0008776AC /* StudioCollectionHeaderReusableView.swift in Sources */,

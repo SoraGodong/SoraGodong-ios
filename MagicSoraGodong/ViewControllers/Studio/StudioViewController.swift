@@ -47,9 +47,15 @@ extension StudioViewController {
 
 // MARK:- Methods
 extension StudioViewController {
+    
     @objc func touchUpNextButton() {
-        
+        // 상품 체크해야 넘어가도록 조건 추가하기
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "registrationViewController") as? RegistrationViewController else {
+            return
+        }
+        navigationController?.pushViewController(vc, animated: true)
     }
+    
 }
 
 // MARK:- Collection View DataSource

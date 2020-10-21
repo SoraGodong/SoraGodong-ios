@@ -143,13 +143,28 @@
         <!--Registration View Controller-->
         <scene sceneID="HvN-7D-LKx">
             <objects>
-                <viewController id="geY-KP-8OP" customClass="RegistrationViewController" customModule="MagicSoraGodong" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registrationViewController" id="geY-KP-8OP" customClass="RegistrationViewController" customModule="MagicSoraGodong" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZfY-vV-DzF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kcg-a2-iDa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Q7W-qk-aDA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kcg-a2-iDa" firstAttribute="top" secondItem="Q7W-qk-aDA" secondAttribute="top" id="GqY-VJ-mqV"/>
+                            <constraint firstItem="Q7W-qk-aDA" firstAttribute="bottom" secondItem="Kcg-a2-iDa" secondAttribute="bottom" id="K3s-Jg-v9m"/>
+                            <constraint firstItem="Q7W-qk-aDA" firstAttribute="trailing" secondItem="Kcg-a2-iDa" secondAttribute="trailing" id="ePb-Yl-c78"/>
+                            <constraint firstItem="Kcg-a2-iDa" firstAttribute="leading" secondItem="Q7W-qk-aDA" secondAttribute="leading" id="udm-Cu-yyV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Kcg-a2-iDa" id="Bv0-N0-5Dt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sFh-Vt-1TK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
