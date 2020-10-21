@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		280D7120253EB0A800EA5745 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280D711F253EB0A800EA5745 /* MyPageViewController.swift */; };
+		2866FD6B25408FD6009583AC /* ShowHostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866FD6A25408FD6009583AC /* ShowHostTableViewCell.swift */; };
+		2866FD6E25408FE6009583AC /* ShoppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866FD6D25408FE6009583AC /* ShoppingTableViewCell.swift */; };
+		2866FD7125408FEC009583AC /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866FD7025408FEC009583AC /* ShoppingListViewController.swift */; };
+		2866FD7425408FF7009583AC /* MyInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866FD7325408FF7009583AC /* MyInformationTableViewCell.swift */; };
 		68093317253E0F7B0041DEF0 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68093316253E0F7B0041DEF0 /* extension.swift */; };
 		68276125253F212C00235D84 /* newYorkFlip-clip.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 68276116253F212C00235D84 /* newYorkFlip-clip.mp4 */; };
 		68276126253F212C00235D84 /* bulletTrain-clip.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 68276117253F212C00235D84 /* bulletTrain-clip.mp4 */; };
@@ -45,6 +49,10 @@
 
 /* Begin PBXFileReference section */
 		280D711F253EB0A800EA5745 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		2866FD6A25408FD6009583AC /* ShowHostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowHostTableViewCell.swift; sourceTree = "<group>"; };
+		2866FD6D25408FE6009583AC /* ShoppingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewCell.swift; sourceTree = "<group>"; };
+		2866FD7025408FEC009583AC /* ShoppingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
+		2866FD7325408FF7009583AC /* MyInformationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyInformationTableViewCell.swift; sourceTree = "<group>"; };
 		68093316253E0F7B0041DEF0 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		68276116253F212C00235D84 /* newYorkFlip-clip.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "newYorkFlip-clip.mp4"; sourceTree = "<group>"; };
 		68276117253F212C00235D84 /* bulletTrain-clip.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bulletTrain-clip.mp4"; sourceTree = "<group>"; };
@@ -160,6 +168,10 @@
 			children = (
 				68A44585254002DB00136039 /* Home */,
 				8D4DC434253E924D00E06D8B /* StudioViewController.swift */,
+				2866FD6A25408FD6009583AC /* ShowHostTableViewCell.swift */,
+				2866FD6D25408FE6009583AC /* ShoppingTableViewCell.swift */,
+				2866FD7325408FF7009583AC /* MyInformationTableViewCell.swift */,
+				2866FD7025408FEC009583AC /* ShoppingListViewController.swift */,
 				280D711F253EB0A800EA5745 /* MyPageViewController.swift */,
 			);
 			path = ViewControllers;
@@ -325,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2866FD6E25408FE6009583AC /* ShoppingTableViewCell.swift in Sources */,
 				68F93F1E253F3233002F6C9F /* CommentTableViewCell.swift in Sources */,
 				8D4DC435253E924D00E06D8B /* StudioViewController.swift in Sources */,
 				280D7120253EB0A800EA5745 /* MyPageViewController.swift in Sources */,
@@ -333,10 +346,13 @@
 				68A44583254002D400136039 /* ItemListViewController.swift in Sources */,
 				8D97E618253C866000908404 /* HomeViewController.swift in Sources */,
 				686817C325401AD600F621D3 /* Item.swift in Sources */,
+				2866FD6B25408FD6009583AC /* ShowHostTableViewCell.swift in Sources */,
 				68F93F14253F2412002F6C9F /* Video.swift in Sources */,
 				685DF757253F07C8007E28C2 /* HomeDetailViewController.swift in Sources */,
 				686817C925402D7800F621D3 /* Comment.swift in Sources */,
 				8D97E614253C866000908404 /* AppDelegate.swift in Sources */,
+				2866FD7125408FEC009583AC /* ShoppingListViewController.swift in Sources */,
+				2866FD7425408FF7009583AC /* MyInformationTableViewCell.swift in Sources */,
 				8D97E616253C866000908404 /* SceneDelegate.swift in Sources */,
 				68093317253E0F7B0041DEF0 /* extension.swift in Sources */,
 				686817C6254022CE00F621D3 /* Toast.swift in Sources */,
