@@ -66,7 +66,6 @@ extension StudioViewController: UICollectionViewDataSource {
 extension StudioViewController: UICollectionViewDelegate {
     
     
-    
 }
 
 // MARK:- Collection View Delegate FlowLayout
@@ -89,5 +88,9 @@ extension StudioViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 10.0
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+//        return CGSize(width: 0, height: 0)
+//    }
     
 }
