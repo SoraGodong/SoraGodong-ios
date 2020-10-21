@@ -88,7 +88,14 @@ extension StudioViewController: UICollectionViewDataSource {
 
 // MARK:- Collection View Delegate
 extension StudioViewController: UICollectionViewDelegate {
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "productInformationViewController") as? ProductInformationViewController else {
+            return
+        }
+        
+        present(vc, animated: true, completion: nil)
+    }
 }
 
 // MARK:- Collection View Delegate FlowLayout

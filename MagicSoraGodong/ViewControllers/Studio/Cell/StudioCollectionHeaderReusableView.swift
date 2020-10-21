@@ -8,6 +8,9 @@
 import UIKit
 
 class StudioCollectionHeaderReusableView: UICollectionReusableView {
+    
+    @IBOutlet weak var wholeButton: UIButton!
+    @IBOutlet weak var foodButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
