@@ -43,14 +43,17 @@ extension MyPageViewController: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "MyInformationTableViewCell", for: indexPath) as? MyInformationTableViewCell else { return UITableViewCell() }
             cell.idLabel.text = "lotteWorld"
             cell.emailLabel.text = "lotte@lotteWorld.co.kr"
+            cell.selectionStyle = .none
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingTableViewCell", for: indexPath) as? ShoppingTableViewCell else { return UITableViewCell() }
             cell.shoppingCartLabel.text = "total 4"
             cell.shoppingTotalListLabel.text = "total 3"
+            cell.selectionStyle = .none
             return cell
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ShowHostTableViewCell", for: indexPath) as? ShowHostTableViewCell else { return UITableViewCell() }
+            cell.selectionStyle = .none
             return cell
         default:
             return UITableViewCell()
@@ -68,9 +71,9 @@ extension MyPageViewController: UITableViewDelegate {
         
         switch indexPath.row {
         case 0:
-            return 301
+            return 290
         case 1:
-            return 254
+            return 220
         case 2:
             return 152
         default:
