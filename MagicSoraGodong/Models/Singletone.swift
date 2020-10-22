@@ -6,3 +6,8 @@
 //
 
 import Foundation
+class Singletone{
+    static let shared = Singletone()
+    var selVideoId:String?
+    
+}
