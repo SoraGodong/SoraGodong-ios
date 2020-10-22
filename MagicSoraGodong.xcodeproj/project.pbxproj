@@ -214,10 +214,6 @@
 		683E55B0253E00D5000D79CE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				680F508E2541E4A500ED016A /* MyPageAllOfVideosTableViewCell.swift */,
-				680F508D2541E4A500ED016A /* MyPageMyVideoTableViewCell.swift */,
-				680F508C2541E4A500ED016A /* MyPageShowHostViewController.swift */,
-				680F508B2541E4A500ED016A /* RevenueTableViewCell.swift */,
 				8D241D892541AD2400485D0D /* StudioTap */,
 				68A44585254002DB00136039 /* Home */,
 				8D97E617253C866000908404 /* HomeViewController.swift */,
@@ -233,6 +229,10 @@
 				2866FD7C2540A092009583AC /* ShoppingListTableViewCell.swift */,
 				2866FD7625409E5F009583AC /* ShoppingListfooterView.swift */,
 				280D711F253EB0A800EA5745 /* MyPageViewController.swift */,
+				680F508C2541E4A500ED016A /* MyPageShowHostViewController.swift */,
+				680F508B2541E4A500ED016A /* RevenueTableViewCell.swift */,
+				680F508D2541E4A500ED016A /* MyPageMyVideoTableViewCell.swift */,
+				680F508E2541E4A500ED016A /* MyPageAllOfVideosTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
