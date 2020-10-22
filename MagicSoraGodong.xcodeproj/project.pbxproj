@@ -96,9 +96,21 @@
 		683E55B0253E00D5000D79CE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8D653846253F30820021D348 /* Studio */,
 				8D97E617253C866000908404 /* HomeViewController.swift */,
 				280D711F253EB0A800EA5745 /* MyPageViewController.swift */,
+				8D4DC434253E924D00E06D8B /* StudioViewController.swift */,
+				8D2532A925403722002F1B77 /* ProductInformationViewController.swift */,
+				8D2532AC2540376F002F1B77 /* RegistrationViewController.swift */,
+				8D653848253F30B50021D348 /* StudioCollectionViewCell.swift */,
+				8D653849253F30B50021D348 /* StudioCollectionViewCell.xib */,
+				8DF86F0A25400DA0008776AC /* StudioCollectionHeaderReusableView.swift */,
+				8DF86F0B25400DA0008776AC /* StudioCollectionHeaderReusableView.xib */,
+				8D5EB6D42540444800B2CDFE /* SelectedProductTableViewCell.swift */,
+				8D5EB6D52540444800B2CDFE /* SelectedProductTableViewCell.xib */,
+				8D5EB6D92540481800B2CDFE /* UploadingViedoTableViewCell.swift */,
+				8D5EB6DA2540481800B2CDFE /* UploadingViedoTableViewCell.xib */,
+				8D5EB6DE2540522900B2CDFE /* VideoInformationTableViewCell.swift */,
+				8D5EB6DF2540522900B2CDFE /* VideoInformationTableViewCell.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -112,34 +124,6 @@
 				683E55BB253E011D000D79CE /* MyPage.storyboard */,
 			);
 			path = StoryBoards;
-			sourceTree = "<group>";
-		};
-		8D653846253F30820021D348 /* Studio */ = {
-			isa = PBXGroup;
-			children = (
-				8D4DC434253E924D00E06D8B /* StudioViewController.swift */,
-				8D2532A925403722002F1B77 /* ProductInformationViewController.swift */,
-				8D2532AC2540376F002F1B77 /* RegistrationViewController.swift */,
-				8D653847253F309A0021D348 /* Cell */,
-			);
-			path = Studio;
-			sourceTree = "<group>";
-		};
-		8D653847253F309A0021D348 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				8D653848253F30B50021D348 /* StudioCollectionViewCell.swift */,
-				8D653849253F30B50021D348 /* StudioCollectionViewCell.xib */,
-				8DF86F0A25400DA0008776AC /* StudioCollectionHeaderReusableView.swift */,
-				8DF86F0B25400DA0008776AC /* StudioCollectionHeaderReusableView.xib */,
-				8D5EB6D42540444800B2CDFE /* SelectedProductTableViewCell.swift */,
-				8D5EB6D52540444800B2CDFE /* SelectedProductTableViewCell.xib */,
-				8D5EB6D92540481800B2CDFE /* UploadingViedoTableViewCell.swift */,
-				8D5EB6DA2540481800B2CDFE /* UploadingViedoTableViewCell.xib */,
-				8D5EB6DE2540522900B2CDFE /* VideoInformationTableViewCell.swift */,
-				8D5EB6DF2540522900B2CDFE /* VideoInformationTableViewCell.xib */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		8D97E607253C866000908404 = {
