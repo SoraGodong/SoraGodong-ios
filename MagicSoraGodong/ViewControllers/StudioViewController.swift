@@ -7,10 +7,33 @@
 
 import UIKit
 
+// MARK:- Struct
+struct Product {
+    let productImageName: String?
+    let productTitle: String?
+    let productPrice: Int?
+    var isCheck: Bool?
+    
+    init(productImageName: String, productTitle: String, productPrice: Int, isCheck: Bool) {
+        self.productImageName = productImageName
+        self.productTitle = productTitle
+        self.productPrice = productPrice
+        self.isCheck = isCheck
+    }
+}
+
+// MARK:- View Controller
 class StudioViewController: UIViewController {
     
     // MARK:- Properties
     @IBOutlet weak var collectionView: UICollectionView!
+    private var products: [Product] = [
+        Product(productImageName: "table", productTitle: "woody table", productPrice: 10000, isCheck: true),
+        Product(productImageName: "chair", productTitle: "engle chair", productPrice: 20000, isCheck: true),
+        Product(productImageName: "cup", productTitle: "white cup", productPrice: 7000, isCheck: true),
+        Product(productImageName: "sofa", productTitle: "녹색 자연의 소파", productPrice: 5430000, isCheck: true)
+    ]
+    var productNames = ["데리버거", "새우버거", "게살버거", "한우버거", "와퍼", "주니어와퍼", "빅맥", "상하이스파이스"]
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -48,8 +71,24 @@ extension StudioViewController {
 // MARK:- Methods
 extension StudioViewController {
     
+//    @objc func clickOnSelectButton(_ sender: UIButton) {
+//        if cart[sender.tag].isCheck ?? false {
+//            cart[sender.tag].isCheck = false
+//            sender.tintColor = #colorLiteral(red: 0.7900478244, green: 0.7798151374, blue: 0.7973746657, alpha: 1)
+//            totalPrice -= (cart[sender.tag].itemAmount ?? 0) * (cart[sender.tag].itemPrice ?? 0)
+//            cartTableView.reloadData()
+//        }
+//        else {
+//            cart[sender.tag].isCheck = true
+//            sender.tintColor = #colorLiteral(red: 0.5169164538, green: 0.689781487, blue: 0.9588938355, alpha: 1)
+//            totalPrice += (cart[sender.tag].itemAmount ?? 0) * (cart[sender.tag].itemPrice ?? 0)
+//            cartTableView.reloadData()
+//        }
+//    }
+    
     @objc func touchUpNextButton() {
         // 상품 체크해야 넘어가도록 조건 추가하기
+        
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "registrationViewController") as? RegistrationViewController else {
             return
         }
@@ -64,7 +103,7 @@ extension StudioViewController: UICollectionViewDataSource {
     func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int) -> Int {
-        return 8
+        return products.count
     }
     
     func collectionView(
@@ -74,9 +113,12 @@ extension StudioViewController: UICollectionViewDataSource {
                 withReuseIdentifier: "studioCell",
                 for: indexPath) as? StudioCollectionViewCell else { return UICollectionViewCell() }
         
-        cell.productNameLabel.text = "데리버거"
-        cell.productPriceLabel.text = "\(2000)원"
-        cell.checkBoxButton.isSelected.toggle()
+
+        cell.productImage.image = UIImage(named: self.products[indexPath.item].productImageName ?? "")
+        cell.checkBoxButton.tag = indexPath.item
+        cell.productNameLabel.text = products[indexPath.item].productTitle
+        cell.productPriceLabel.text = String(products[indexPath.item].productPrice ?? 0)
+//        cell.checkBoxButton.isSelected.toggle()
         
         return cell
     }
@@ -114,7 +156,7 @@ extension StudioViewController: UICollectionViewDelegateFlowLayout {
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top:10,left: 10,bottom: 10,right: 10)
+        return UIEdgeInsets(top:10, left: 10, bottom: 10, right: 10)
     }
 
 
