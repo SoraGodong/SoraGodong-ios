@@ -50,9 +50,6 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <state key="selected" image="checkmark.rectangle.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="clickCheckBox:" destination="gTV-IL-0wX" eventType="touchUpInside" id="qGN-vv-svb"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -79,8 +76,8 @@
                 <constraint firstItem="9UC-gY-DHn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LWl-Yx-XQr"/>
             </constraints>
             <connections>
-                <outlet property="backgroundView" destination="RBV-xd-Xky" id="JZM-U9-mRz"/>
                 <outlet property="checkBoxButton" destination="vOm-c3-5Ho" id="uDF-UE-F7L"/>
+                <outlet property="productImage" destination="RBV-xd-Xky" id="EDY-mX-gcC"/>
                 <outlet property="productNameLabel" destination="Jdp-Dy-jjd" id="mR4-Pn-7n8"/>
                 <outlet property="productPriceLabel" destination="KUc-Ch-sFx" id="5et-du-VVu"/>
             </connections>

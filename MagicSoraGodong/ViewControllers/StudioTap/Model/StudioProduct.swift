@@ -29,11 +29,11 @@ class StudioProduct {
 class SelectedProduct {
     static let shared = SelectedProduct()
     
-    let products: [product] = []
+    let products: [Product] = []
     
-    struct product {
-//        var productImage: UIImage?
-        var productName: String?
-        var productPrice: String?
+    struct Product {
+        let productImageName: String?
+        let productTitle: String?
+        let productPrice: Int?
     }
 }

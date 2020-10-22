@@ -12,13 +12,13 @@ struct Product {
     let productImageName: String?
     let productTitle: String?
     let productPrice: Int?
-    var isCheck: Bool?
+    var check: Bool?
     
-    init(productImageName: String, productTitle: String, productPrice: Int, isCheck: Bool) {
+    init(productImageName: String, productTitle: String, productPrice: Int, check: Bool) {
         self.productImageName = productImageName
         self.productTitle = productTitle
         self.productPrice = productPrice
-        self.isCheck = isCheck
+        self.check = check
     }
 }
 
@@ -28,12 +28,18 @@ class StudioViewController: UIViewController {
     // MARK:- Properties
     @IBOutlet weak var collectionView: UICollectionView!
     private var products: [Product] = [
-        Product(productImageName: "table", productTitle: "woody table", productPrice: 10000, isCheck: true),
-        Product(productImageName: "chair", productTitle: "engle chair", productPrice: 20000, isCheck: true),
-        Product(productImageName: "cup", productTitle: "white cup", productPrice: 7000, isCheck: true),
-        Product(productImageName: "sofa", productTitle: "녹색 자연의 소파", productPrice: 5430000, isCheck: true)
+        Product(productImageName: "table", productTitle: "woody table", productPrice: 10000, check: false),
+        Product(productImageName: "chair", productTitle: "engle chair", productPrice: 20000, check: false),
+        Product(productImageName: "cup", productTitle: "white cup", productPrice: 7000, check: false),
+        Product(productImageName: "sofa", productTitle: "녹색 자연의 소파", productPrice: 5430000, check: false),
+        Product(productImageName: "food1", productTitle: "berry", productPrice: 5000, check: false),
+        Product(productImageName: "food2", productTitle: "toast", productPrice: 4000, check: false),
+        Product(productImageName: "food3", productTitle: "strawberry", productPrice: 5430000, check: false),
+        Product(productImageName: "food4", productTitle: "noodle", productPrice: 2000, check: false),
+        Product(productImageName: "food5", productTitle: "burger", productPrice: 3000, check: false),
+        Product(productImageName: "food6", productTitle: "stake", productPrice: 12000, check: false)
     ]
-    var productNames = ["데리버거", "새우버거", "게살버거", "한우버거", "와퍼", "주니어와퍼", "빅맥", "상하이스파이스"]
+//    var productNames = ["데리버거", "새우버거", "게살버거", "한우버거", "와퍼", "주니어와퍼", "빅맥", "상하이스파이스"]
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -71,23 +77,25 @@ extension StudioViewController {
 // MARK:- Methods
 extension StudioViewController {
     
-//    @objc func clickOnSelectButton(_ sender: UIButton) {
-//        if cart[sender.tag].isCheck ?? false {
-//            cart[sender.tag].isCheck = false
-//            sender.tintColor = #colorLiteral(red: 0.7900478244, green: 0.7798151374, blue: 0.7973746657, alpha: 1)
-//            totalPrice -= (cart[sender.tag].itemAmount ?? 0) * (cart[sender.tag].itemPrice ?? 0)
-//            cartTableView.reloadData()
-//        }
-//        else {
-//            cart[sender.tag].isCheck = true
-//            sender.tintColor = #colorLiteral(red: 0.5169164538, green: 0.689781487, blue: 0.9588938355, alpha: 1)
-//            totalPrice += (cart[sender.tag].itemAmount ?? 0) * (cart[sender.tag].itemPrice ?? 0)
-//            cartTableView.reloadData()
-//        }
-//    }
+    @objc func touchUpCheckBox(_ sender: UIButton) {
+        guard let productCheck = products[sender.tag].check  else { return }
+        if productCheck {
+            products[sender.tag].check = false
+            sender.tintColor = #colorLiteral(red: 0.7900478244, green: 0.7798151374, blue: 0.7973746657, alpha: 1)
+        }
+        else {
+            products[sender.tag].check = true
+            sender.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//            SelectedProduct.shared.products.append(
+//                []
+//            )
+            
+        }
+    }
     
     @objc func touchUpNextButton() {
         // 상품 체크해야 넘어가도록 조건 추가하기
+//        guard let cell = collectionView.cellForItem(at: [0, 10]) as? StudioCollectionViewCell else { return }
         
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "registrationViewController") as? RegistrationViewController else {
             return
@@ -114,11 +122,12 @@ extension StudioViewController: UICollectionViewDataSource {
                 for: indexPath) as? StudioCollectionViewCell else { return UICollectionViewCell() }
         
 
-        cell.productImage.image = UIImage(named: self.products[indexPath.item].productImageName ?? "")
+        cell.productImage.image = UIImage(
+            named: self.products[indexPath.item].productImageName ?? "")
         cell.checkBoxButton.tag = indexPath.item
+        cell.checkBoxButton.addTarget(self, action: #selector(touchUpCheckBox(_:)), for: .touchUpInside)
         cell.productNameLabel.text = products[indexPath.item].productTitle
         cell.productPriceLabel.text = String(products[indexPath.item].productPrice ?? 0)
-//        cell.checkBoxButton.isSelected.toggle()
         
         return cell
     }
