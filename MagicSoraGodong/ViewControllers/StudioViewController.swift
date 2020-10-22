@@ -8,19 +8,7 @@
 import UIKit
 
 // MARK:- Struct
-struct Product {
-    let productImageName: String?
-    let productTitle: String?
-    let productPrice: Int?
-    var check: Bool?
-    
-    init(productImageName: String, productTitle: String, productPrice: Int, check: Bool) {
-        self.productImageName = productImageName
-        self.productTitle = productTitle
-        self.productPrice = productPrice
-        self.check = check
-    }
-}
+
 
 // MARK:- View Controller
 class StudioViewController: UIViewController {
@@ -39,7 +27,6 @@ class StudioViewController: UIViewController {
         Product(productImageName: "food5", productTitle: "burger", productPrice: 3000, check: false),
         Product(productImageName: "food6", productTitle: "stake", productPrice: 12000, check: false)
     ]
-//    var productNames = ["데리버거", "새우버거", "게살버거", "한우버거", "와퍼", "주니어와퍼", "빅맥", "상하이스파이스"]
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -87,9 +74,8 @@ extension StudioViewController {
             products[sender.tag].check = true
             sender.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
 //            SelectedProduct.shared.products.append(
-//                []
+//                SelectedProduct.Product(productImageName: products[sender.tag].productImageName, productTitle: products[sender.tag].productTitle, productPrice: products[sender.tag].productPrice)
 //            )
-            
         }
     }
     
@@ -102,6 +88,7 @@ extension StudioViewController {
         }
         navigationController?.pushViewController(vc, animated: true)
     }
+    
     
 }
 
