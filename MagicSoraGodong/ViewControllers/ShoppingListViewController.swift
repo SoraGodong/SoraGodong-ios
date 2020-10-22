@@ -51,19 +51,19 @@ class ShoppingListViewController: UIViewController {
 
 //MARK: TableView
 
-extension ShoppingListViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cart.count + 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
-    
-    
-}
-
-extension ShoppingListViewController: UITableViewDelegate {
-    
-}
+//extension ShoppingListViewController: UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return cart.count + 1
+//    }
+//    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        <#code#>
+//    }
+//    
+//    
+//}
+//
+//extension ShoppingListViewController: UITableViewDelegate {
+//    
+//}
 

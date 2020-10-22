@@ -31,9 +31,10 @@ class HomeDetailViewController: UIViewController,
     @IBAction func showItemList(_ sender:UIButton){
         guard let itemVC = self.storyboard?.instantiateViewController(withIdentifier: "itemListView") as? ItemListViewController else {return}
         self.definesPresentationContext = true
-        
+        Singletone.shared.selVideoId = video?.videoId ?? "0"
         itemVC.modalPresentationStyle = .formSheet
         self.present(itemVC, animated: true, completion: nil)
+        
     }
     @IBAction func TouchUpSubscript(_ sender:UIButton){
         let status = self.subscriptButton.currentTitle
@@ -66,7 +67,7 @@ class HomeDetailViewController: UIViewController,
             Toast.show(message: "댓글을 입력해주세요", controller: self)
             return false
         }else{
-            comments.append(Comment(id: "아이디 뭐로 해야돼", content: commentWrite.text ?? "", date: "방금"))
+            comments.append(Comment(id: "lotteWorld", content: commentWrite.text ?? "", date: "방금"))
             self.commentWrite.text = ""
             comments.reverse()
             commentTable.reloadData()
@@ -85,6 +86,7 @@ extension HomeDetailViewController{
     func initUI(){
         guard let v = self.video else {return}
         self.Videotitle.text = v.title
+        self.hostName.text = v.subtitle 
         
         guard let videoUrl = video?.url else {return}
         let player = AVPlayer(url: videoUrl)
