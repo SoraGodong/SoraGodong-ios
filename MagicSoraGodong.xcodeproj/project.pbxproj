@@ -166,6 +166,7 @@
 		683E55B0253E00D5000D79CE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8D97E617253C866000908404 /* HomeViewController.swift */,
 				68A44585254002DB00136039 /* Home */,
 				8D4DC434253E924D00E06D8B /* StudioViewController.swift */,
 				2866FD6A25408FD6009583AC /* ShowHostTableViewCell.swift */,
@@ -191,7 +192,6 @@
 		68A44585254002DB00136039 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				8D97E617253C866000908404 /* HomeViewController.swift */,
 				685DF756253F07C8007E28C2 /* HomeDetailViewController.swift */,
 				68A44582254002D400136039 /* ItemListViewController.swift */,
 			);
