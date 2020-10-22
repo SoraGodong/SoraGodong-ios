@@ -202,12 +202,10 @@ extension ShoppingListViewController: UITableViewDelegate {
             return 200
         }
         return 177
-        
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 110
-        
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
