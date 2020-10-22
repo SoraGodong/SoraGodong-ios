@@ -12,6 +12,7 @@ class StudioCollectionViewCell: UICollectionViewCell {
     // MARK:- Properties
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productPriceLabel: UILabel!
+    @IBOutlet weak var checkBoxButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()

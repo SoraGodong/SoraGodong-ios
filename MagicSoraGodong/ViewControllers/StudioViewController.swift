@@ -76,6 +76,7 @@ extension StudioViewController: UICollectionViewDataSource {
         
         cell.productNameLabel.text = "데리버거"
         cell.productPriceLabel.text = "\(2000)원"
+        cell.checkBoxButton.isSelected.toggle()
         
         return cell
     }

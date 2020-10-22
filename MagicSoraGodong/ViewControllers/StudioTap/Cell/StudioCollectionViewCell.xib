@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -45,7 +45,11 @@
                                     <constraint firstAttribute="height" constant="30" id="Fpm-2w-bIq"/>
                                     <constraint firstAttribute="width" constant="30" id="NJy-nN-38r"/>
                                 </constraints>
-                                <state key="normal" image="checkmark.rectangle" catalog="system"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="checkmark.rectangle" catalog="system">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="selected" image="checkmark.rectangle.fill" catalog="system"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -72,6 +76,7 @@
                 <constraint firstItem="9UC-gY-DHn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LWl-Yx-XQr"/>
             </constraints>
             <connections>
+                <outlet property="checkBoxButton" destination="vOm-c3-5Ho" id="uDF-UE-F7L"/>
                 <outlet property="productNameLabel" destination="Jdp-Dy-jjd" id="mR4-Pn-7n8"/>
                 <outlet property="productPriceLabel" destination="KUc-Ch-sFx" id="5et-du-VVu"/>
             </connections>
@@ -80,6 +85,7 @@
     </objects>
     <resources>
         <image name="checkmark.rectangle" catalog="system" width="128" height="93"/>
+        <image name="checkmark.rectangle.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
