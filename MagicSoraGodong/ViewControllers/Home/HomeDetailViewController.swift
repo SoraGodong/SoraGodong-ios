@@ -47,7 +47,7 @@ class HomeDetailViewController: UIViewController{
 // MARK: - Configure
 extension HomeDetailViewController{
     func initUI(){
-        cartButton.layer.cornerRadius = 15
+        cartButton.layer.cornerRadius = 0.5 * cartButton.bounds.size.width
         cartButton.layer.shadowColor = UIColor.gray.cgColor
         cartButton.layer.shadowOpacity = 1.0
         cartButton.layer.shadowOffset = .zero
@@ -112,12 +112,13 @@ extension HomeDetailViewController:UITextFieldDelegate{
 extension HomeDetailViewController{
     
     @IBAction func showItemList(_ sender:UIButton){
-        guard let itemVC = self.storyboard?.instantiateViewController(withIdentifier: "itemListView") as? ShoppingListViewController else {return}
         self.definesPresentationContext = true
         Singletone.shared.selVideoId = video?.videoId ?? "0"
-        itemVC.modalPresentationStyle = .formSheet
-        self.present(itemVC, animated: true, completion: nil)
-        
+        let sb: UIStoryboard = UIStoryboard(name: "MyPage", bundle: nil)
+        guard let ShoppingVC = sb.instantiateViewController(withIdentifier: "ShoppingListViewController") as? ShoppingListViewController else {return}
+        ShoppingVC.modalPresentationStyle = .formSheet
+        self.present(ShoppingVC, animated: true, completion: nil)
+      
     }
     @IBAction func TouchUpSubscript(_ sender:UIButton){
         let status = self.subscriptButton.currentTitle
