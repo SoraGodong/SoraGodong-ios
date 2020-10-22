@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -172,13 +171,27 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="li5-ed-VFl">
-                                                <rect key="frame" x="347" y="315" width="52" height="50"/>
-                                                <state key="normal" title="구독하기"/>
-                                                <connections>
-                                                    <action selector="TouchUpSubscript:" destination="xBx-m5-Xs0" eventType="touchUpInside" id="6pr-l9-dnj"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cGB-KD-IVf">
+                                                <rect key="frame" x="336" y="315" width="63" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="li5-ed-VFl">
+                                                        <rect key="frame" x="0.0" y="0.0" width="63" height="22.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" title="구독하기"/>
+                                                        <connections>
+                                                            <action selector="TouchUpSubscript:" destination="xBx-m5-Xs0" eventType="touchUpInside" id="6pr-l9-dnj"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHs-dV-LlH">
+                                                        <rect key="frame" x="0.0" y="27.5" width="63" height="22.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" title="구매하기"/>
+                                                        <connections>
+                                                            <action selector="showItemList:" destination="xBx-m5-Xs0" eventType="touchUpInside" id="DDU-5X-GaU"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HFP-WC-h27">
                                                 <rect key="frame" x="0.0" y="445" width="414" height="500"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -245,20 +258,6 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNf-8N-0Vv">
-                                                <rect key="frame" x="347" y="15" width="53" height="43"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <imageReference key="image" image="cart.badge.plus" catalog="system" symbolScale="large"/>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large" weight="bold"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showItemList:" destination="xBx-m5-Xs0" eventType="touchUpInside" id="bAJ-ZF-CHm"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -266,18 +265,16 @@
                                             <constraint firstItem="FNo-ea-03n" firstAttribute="leading" secondItem="DQh-CG-mhA" secondAttribute="leading" constant="15" id="1Z5-N1-7tS"/>
                                             <constraint firstAttribute="trailing" secondItem="G89-fH-Xmg" secondAttribute="trailing" constant="15" id="22c-Ka-R4H"/>
                                             <constraint firstItem="HFP-WC-h27" firstAttribute="top" secondItem="G89-fH-Xmg" secondAttribute="bottom" constant="15" id="4TR-6T-Zfo"/>
-                                            <constraint firstItem="G89-fH-Xmg" firstAttribute="top" secondItem="li5-ed-VFl" secondAttribute="bottom" constant="15" id="DO2-8f-2GF"/>
-                                            <constraint firstAttribute="trailing" secondItem="JNf-8N-0Vv" secondAttribute="trailing" constant="5" id="H7N-xf-Ylm"/>
+                                            <constraint firstAttribute="trailing" secondItem="cGB-KD-IVf" secondAttribute="trailing" constant="15" id="7As-me-bn7"/>
                                             <constraint firstAttribute="height" constant="800" id="HKu-Jz-EbG"/>
-                                            <constraint firstItem="JNf-8N-0Vv" firstAttribute="top" secondItem="DQh-CG-mhA" secondAttribute="top" constant="15" id="W0P-MI-a92"/>
+                                            <constraint firstItem="G89-fH-Xmg" firstAttribute="top" secondItem="cGB-KD-IVf" secondAttribute="bottom" constant="15" id="MOV-PZ-7P8"/>
                                             <constraint firstItem="G89-fH-Xmg" firstAttribute="leading" secondItem="DQh-CG-mhA" secondAttribute="leading" constant="15" id="Wf6-6G-9hI"/>
                                             <constraint firstAttribute="trailing" secondItem="yg9-5O-vyO" secondAttribute="trailing" id="XCS-UU-EF4"/>
                                             <constraint firstItem="yg9-5O-vyO" firstAttribute="leading" secondItem="DQh-CG-mhA" secondAttribute="leading" id="clT-mV-hSP"/>
-                                            <constraint firstAttribute="trailing" secondItem="li5-ed-VFl" secondAttribute="trailing" constant="15" id="lfO-ah-6re"/>
+                                            <constraint firstItem="cGB-KD-IVf" firstAttribute="top" secondItem="yg9-5O-vyO" secondAttribute="bottom" constant="15" id="gdg-J5-z0e"/>
                                             <constraint firstItem="G89-fH-Xmg" firstAttribute="top" secondItem="FNo-ea-03n" secondAttribute="bottom" constant="15" id="m5A-zK-BeX"/>
                                             <constraint firstItem="yg9-5O-vyO" firstAttribute="top" secondItem="DQh-CG-mhA" secondAttribute="top" id="pDu-bH-KpZ"/>
                                             <constraint firstItem="FNo-ea-03n" firstAttribute="top" secondItem="yg9-5O-vyO" secondAttribute="bottom" constant="15" id="wko-W2-pqD"/>
-                                            <constraint firstItem="li5-ed-VFl" firstAttribute="top" secondItem="yg9-5O-vyO" secondAttribute="bottom" constant="15" id="wm8-lg-bpS"/>
                                             <constraint firstAttribute="trailing" secondItem="HFP-WC-h27" secondAttribute="trailing" id="zss-lz-fgQ"/>
                                         </constraints>
                                     </view>
@@ -305,7 +302,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="Videotitle" destination="mba-A9-261" id="bBC-jm-Ike"/>
-                        <outlet property="cartButton" destination="JNf-8N-0Vv" id="vCM-JO-xUD"/>
+                        <outlet property="cartButton" destination="dHs-dV-LlH" id="DpM-f2-5Wx"/>
                         <outlet property="commentTable" destination="HFP-WC-h27" id="bZP-MM-x6y"/>
                         <outlet property="commentWrite" destination="G89-fH-Xmg" id="5Jf-BU-zcA"/>
                         <outlet property="hostName" destination="lfW-dX-uTS" id="bG7-nY-hRw"/>
@@ -434,7 +431,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cart.badge.plus" catalog="system" width="128" height="106"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
