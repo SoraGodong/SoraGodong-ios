@@ -12,3 +12,4 @@ class RevenueTableViewCell: UITableViewCell {
     @IBOutlet weak var totalRevenueLabel: UILabel!
     
 }
+

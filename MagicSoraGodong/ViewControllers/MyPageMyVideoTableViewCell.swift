@@ -12,3 +12,4 @@ class MyPageMyVideoTableViewCell: UITableViewCell {
     @IBOutlet weak var subscriberLabel: UILabel!
     
 }
+
