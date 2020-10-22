@@ -13,7 +13,6 @@ class ItemListViewController: UIViewController,
     
     @IBOutlet weak var tableView:UITableView!
     var items:[UILabel] = []
-    var itemList:[Item] = []
     
     @IBAction func cartButton(_ sender:UIButton){
         
@@ -52,15 +51,12 @@ class ItemListViewController: UIViewController,
     
     //MARK: Table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemList.count
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard  let cell:ItemTableViewCell = tableView.dequeueReusableCell(withIdentifier: ItemTableViewCell.cellIdentifier) as? ItemTableViewCell else {fatalError("Unable to dequeue CommentTableViewCell")}
         items.append(cell.itemCnt)
-        let item = itemList[indexPath.row]
-        cell.itemTitle.text = item.itemTitle
-        cell.itemPrice.text = item.itemPrice
         return cell
     }
     
@@ -79,14 +75,8 @@ class ItemListViewController: UIViewController,
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        itemList = Item.initData(id: Singletone.shared.selVideoId ?? "1")
+        super.viewDidLoad() 
         // Do any additional setup after loading the view.
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        tableView.reloadData()
     }
     
 

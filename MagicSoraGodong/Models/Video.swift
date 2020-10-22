@@ -14,25 +14,22 @@ class Video: NSObject {
   let subtitle: String
   let itemtitle:String = "item"
   let profile:String = ""
-  let videoId:String
 
-    init(url: URL, thumbURL: URL, title: String, subtitle: String,id:String) {
+  init(url: URL, thumbURL: URL, title: String, subtitle: String) {
     self.url = url
     self.thumbURL = thumbURL
     self.title = title
     self.subtitle = subtitle
-    self.videoId = id
   }
   
   class func localVideos() -> [Video] {
     var videos: [Video] = []
     let names = ["newYorkFlip", "bulletTrain", "monkey", "shark"]
-    let videoId = ["1","2","3","4","5"]
     let titles = ["New York Flip", "Bullet Train Adventure", "Monkey Village", "Robot Battles"]
-    let subtitles = ["뉴요커 운동화",
-                     "기차 여행 착장",
-                     "원숭이 인형",
-                     "로봇"]
+    let subtitles = ["Can this guys really flip all of his bros? You'll never believe what happens!",
+                     "Enjoying the soothing view of passing towns in Japan",
+                     "Watch as a roving gang of monkeys terrorizes the top of this mountain!",
+                     "Have you ever seen a robot shark try to eat another robot?"]
     
     for (index, name) in names.enumerated() {
       let urlPath = Bundle.main.path(forResource: name, ofType: "mp4")!
@@ -40,7 +37,7 @@ class Video: NSObject {
       let thumbURLPath = Bundle.main.path(forResource: name, ofType: "png")!
       let thumbURL = URL(fileURLWithPath: thumbURLPath)
       
-        let video = Video(url: url, thumbURL: thumbURL, title: titles[index], subtitle: subtitles[index],id : videoId[index])
+      let video = Video(url: url, thumbURL: thumbURL, title: titles[index], subtitle: subtitles[index])
       videos.append(video)
     }
     return videos
@@ -54,7 +51,7 @@ class Video: NSObject {
     if let url = URL(string: videoURLString) {
       let thumbURLPath = Bundle.main.path(forResource: "foxVillage", ofType: "png")!
       let thumbURL = URL(fileURLWithPath: thumbURLPath)
-        let remoteVideo = Video(url: url, thumbURL: thumbURL, title: "キツネ村", subtitle: "아동 책가방",id:"5")
+      let remoteVideo = Video(url: url, thumbURL: thumbURL, title: "キツネ村", subtitle: "Will we be mauled by vicious foxes? Tune in to find out!")
       videos.append(remoteVideo)
     }
     

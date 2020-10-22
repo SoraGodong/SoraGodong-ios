@@ -15,7 +15,7 @@ class HomeViewController: UIViewController,
     @IBOutlet weak var scrollView:UIScrollView! 
     @IBOutlet weak var tableView:UITableView!
     
-    let category = ["핫딜","패션","식품","가전","전자","여행","애견"]
+    let category = ["의류","패션","인테리어","가전"]
     var categoryMenus:[UILabel] = []
     var videos:[Video] = Video.allVideos()
 
