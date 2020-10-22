@@ -21,6 +21,7 @@ class HomeViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         makeCategoryMenu()
+        initNavigation()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
@@ -36,7 +37,10 @@ class HomeViewController: UIViewController{
 
 // MARK:- Configure
 extension HomeViewController{
-     
+    
+    func initNavigation(){
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) 
+    }
     func makeCategoryMenu(){
         //상단 메뉴 생성
         for i in 0..<category.count{
