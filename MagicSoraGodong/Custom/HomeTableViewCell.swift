@@ -21,9 +21,8 @@ class HomeTableViewCell: UITableViewCell {
         self.thumbnail.loadImage(url: video.thumbURL)
         //self.profile.loadImage(url: video.profile)
         self.videoTitle.text = video.title
-        self.videoItem.text = video.itemtitle
+        self.videoItem.text = video.subtitle
     }
-
     static let cellIdentifier = "homeCell"
     override func awakeFromNib() {
         super.awakeFromNib()
