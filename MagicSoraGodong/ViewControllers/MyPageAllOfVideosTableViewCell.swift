@@ -8,7 +8,7 @@
 import UIKit
 
 class MyPageAllOfVideosTableViewCell: UITableViewCell {
-
+    
     //MARK: Properties
     
     @IBOutlet weak var thumbnail: UIImageView!
@@ -24,5 +24,5 @@ class MyPageAllOfVideosTableViewCell: UITableViewCell {
         self.videoTitle.text = video.title
         self.videoItem.text = video.itemtitle
     }
-
+    
 }

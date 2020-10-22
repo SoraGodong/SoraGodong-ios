@@ -8,7 +8,7 @@
 import UIKit
 
 class MyPageShowHostViewController: UIViewController {
-
+    
     //MARK: Properties
 
     @IBOutlet weak var showhostTableView: UITableView!
