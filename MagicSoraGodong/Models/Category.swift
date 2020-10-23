@@ -9,6 +9,6 @@ import Foundation
 
 class categoty {
     
-    static var categories = ["전체", "식품", "디지털", "의류", "가구", "뷰티", "가전", "주방", "애견", "도서", "스포츠"]
-    
+    static var categories = ["의류", "패션", "인테리어", "가전", "식품", "반려동물", "1인가구"]
+  
 }
