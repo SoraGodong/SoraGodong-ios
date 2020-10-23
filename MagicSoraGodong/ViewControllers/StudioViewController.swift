@@ -7,10 +7,6 @@
 
 import UIKit
 
-// MARK:- Struct
-
-
-// MARK:- View Controller
 class StudioViewController: UIViewController {
     
     // MARK:- Properties
@@ -108,13 +104,24 @@ extension StudioViewController {
     }
     
     @objc func touchUpNextButton() {
-        // 상품 체크해야 넘어가도록 조건 추가하기
-//        guard let cell = collectionView.cellForItem(at: [0, 10]) as? StudioCollectionViewCell else { return }
-        
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "registrationViewController") as? RegistrationViewController else {
             return
         }
-        navigationController?.pushViewController(vc, animated: true)
+        
+        if SelectedProduct.shared.products.count == 0 {
+            let alert = UIAlertController(
+                title: "",
+                message: "제품을 최소 1개 이상 선택해주세요.",
+                preferredStyle: .alert)
+            let okAction = UIAlertAction(
+                title: "확인",
+                style: .default) { (action : UIAlertAction) in
+            }
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+        } else {
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     

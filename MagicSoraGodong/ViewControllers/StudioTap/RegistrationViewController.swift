@@ -101,6 +101,10 @@ extension RegistrationViewController {
         view.endEditing(true)
     }
     
+    func checkField() {
+        
+    }
+    
 }
 
 // MARK:- Table View DataSource
@@ -210,20 +214,20 @@ extension RegistrationViewController: UITableViewDelegate {
     }
 }
 
-extension RegistrationViewController: UITextViewDelegate {
-    
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.textColor == UIColor.lightGray {
-            textView.text = nil
-            textView.textColor = UIColor.black
-        }
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text.isEmpty {
-            textView.text = "영상 내용을 작성해주세요."
-            textView.textColor = UIColor.lightGray
-        }
-    }
-    
-}
+//extension RegistrationViewController: UITextViewDelegate {
+//
+//    func textViewDidBeginEditing(_ textView: UITextView) {
+//        if textView.textColor == UIColor.lightGray {
+//            textView.text = nil
+//            textView.textColor = UIColor.black
+//        }
+//    }
+//
+//    func textViewDidEndEditing(_ textView: UITextView) {
+//        if textView.text.isEmpty {
+//            textView.text = "영상 내용을 작성해주세요."
+//            textView.textColor = UIColor.lightGray
+//        }
+//    }
+//
+//}
