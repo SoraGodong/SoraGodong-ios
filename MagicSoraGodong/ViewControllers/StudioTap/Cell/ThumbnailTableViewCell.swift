@@ -1,17 +1,13 @@
 //
-//  SelectedProductTableViewCell.swift
+//  ThumbnailTableViewCell.swift
 //  MagicSoraGodong
 //
-//  Created by uno on 2020/10/21.
+//  Created by uno on 2020/10/23.
 //
 
 import UIKit
 
-class SelectedProductTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var productImageView: UIImageView!
-    @IBOutlet weak var productName: UILabel!
-    @IBOutlet weak var productPrice: UILabel!
+class ThumbnailTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -17,10 +17,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="CgQ-0f-3DM">
-                        <rect key="frame" x="30" y="33" width="334" height="34"/>
+                        <rect key="frame" x="30" y="30" width="340" height="40"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x8S-Vp-3gz">
-                                <rect key="frame" x="0.0" y="0.0" width="250" height="34"/>
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="zJX-8Y-5N0"/>
                                 </constraints>
@@ -28,15 +28,17 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Peq-H9-pjv">
-                                <rect key="frame" x="282" y="0.0" width="52" height="34"/>
+                                <rect key="frame" x="282" y="0.0" width="58" height="40"/>
                                 <state key="normal" title="파일찾기"/>
                             </button>
                         </subviews>
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="CgQ-0f-3DM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="OAY-uH-lMQ"/>
-                    <constraint firstItem="CgQ-0f-3DM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="SNA-w4-Mjj"/>
+                    <constraint firstItem="CgQ-0f-3DM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="P8o-vf-ZSA"/>
+                    <constraint firstAttribute="trailing" secondItem="CgQ-0f-3DM" secondAttribute="trailing" constant="30" id="Xru-Wy-c9K"/>
+                    <constraint firstItem="CgQ-0f-3DM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="eZT-hf-mCa"/>
+                    <constraint firstAttribute="bottom" secondItem="CgQ-0f-3DM" secondAttribute="bottom" constant="30" id="flC-N6-C9I"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

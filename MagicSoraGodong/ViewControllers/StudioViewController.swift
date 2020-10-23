@@ -68,16 +68,41 @@ extension StudioViewController {
     
     @objc func touchUpCheckBox(_ sender: UIButton) {
         guard let productCheck = products[sender.tag].check  else { return }
-        if productCheck {
+        if productCheck == true {
             products[sender.tag].check = false
             sender.tintColor = #colorLiteral(red: 0.7900478244, green: 0.7798151374, blue: 0.7973746657, alpha: 1)
+            print("--------------------------------")
+            print("취소 실행전 담긴 갯수: \(SelectedProduct.shared.products.count)")
+            print("취소 실행전 태그 번호 : \(sender.tag)")
+            print("--------------------------------")
+            for index in 0 ..< SelectedProduct.shared.products.count {
+                if SelectedProduct.shared.products[index].tagNumber == sender.tag {
+                    SelectedProduct.shared.products.remove(at: index)
+                }
+            }
+            print("--------------------------------")
+            print("취소 실행후 담긴 갯수: \(SelectedProduct.shared.products.count)")
+            print("취소 실행후 태그 번호 : \(sender.tag)")
+            print("--------------------------------")
         }
-        else {
+        else if productCheck == false  {
             products[sender.tag].check = true
             sender.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-//            SelectedProduct.shared.products.append(
-//                SelectedProduct.Product(productImageName: products[sender.tag].productImageName, productTitle: products[sender.tag].productTitle, productPrice: products[sender.tag].productPrice)
-//            )
+            print("--------------------------------")
+            print("추가 실행전 담긴 갯수: \(SelectedProduct.shared.products.count)")
+            print("추가 실행전 태그 번호 : \(sender.tag)")
+            print("--------------------------------")
+            SelectedProduct.shared.products.append(
+                SelectedProduct.Product(
+                    tagNumber: sender.tag,
+                    productImageName: products[sender.tag].productImageName,
+                    productTitle: products[sender.tag].productTitle,
+                    productPrice: products[sender.tag].productPrice)
+            )
+            print("--------------------------------")
+            print("추가 실행후 단긴 갯수: \(SelectedProduct.shared.products.count)")
+            print("추가 실행후 태그 번호 : \(sender.tag)")
+            print("--------------------------------")
         }
     }
     

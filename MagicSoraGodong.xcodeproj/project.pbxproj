@@ -68,6 +68,8 @@
 		8D97E61B253C866000908404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D97E619253C866000908404 /* Main.storyboard */; };
 		8D97E61D253C866000908404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D97E61C253C866000908404 /* Assets.xcassets */; };
 		8D97E620253C866000908404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D97E61E253C866000908404 /* LaunchScreen.storyboard */; };
+		8DB0E1032542BC9700F4E8FC /* ThumbnailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB0E1012542BC9700F4E8FC /* ThumbnailTableViewCell.swift */; };
+		8DB0E1042542BC9700F4E8FC /* ThumbnailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB0E1022542BC9700F4E8FC /* ThumbnailTableViewCell.xib */; };
 		8DF86F0C25400DA0008776AC /* StudioCollectionHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF86F0A25400DA0008776AC /* StudioCollectionHeaderReusableView.swift */; };
 		8DF86F0D25400DA0008776AC /* StudioCollectionHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF86F0B25400DA0008776AC /* StudioCollectionHeaderReusableView.xib */; };
 /* End PBXBuildFile section */
@@ -136,6 +138,8 @@
 		8D97E61C253C866000908404 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D97E61F253C866000908404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D97E621253C866000908404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DB0E1012542BC9700F4E8FC /* ThumbnailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailTableViewCell.swift; sourceTree = "<group>"; };
+		8DB0E1022542BC9700F4E8FC /* ThumbnailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThumbnailTableViewCell.xib; sourceTree = "<group>"; };
 		8DF86F0A25400DA0008776AC /* StudioCollectionHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioCollectionHeaderReusableView.swift; sourceTree = "<group>"; };
 		8DF86F0B25400DA0008776AC /* StudioCollectionHeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudioCollectionHeaderReusableView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -304,6 +308,8 @@
 				8D5EB6D52540444800B2CDFE /* SelectedProductTableViewCell.xib */,
 				8D5EB6D92540481800B2CDFE /* UploadingViedoTableViewCell.swift */,
 				8D5EB6DA2540481800B2CDFE /* UploadingViedoTableViewCell.xib */,
+				8DB0E1012542BC9700F4E8FC /* ThumbnailTableViewCell.swift */,
+				8DB0E1022542BC9700F4E8FC /* ThumbnailTableViewCell.xib */,
 				8D5EB6DE2540522900B2CDFE /* VideoInformationTableViewCell.swift */,
 				8D5EB6DF2540522900B2CDFE /* VideoInformationTableViewCell.xib */,
 			);
@@ -410,6 +416,7 @@
 				68276127253F212C00235D84 /* monkey-clip.mp4 in Resources */,
 				8D97E620253C866000908404 /* LaunchScreen.storyboard in Resources */,
 				8D5EB6DC2540481800B2CDFE /* UploadingViedoTableViewCell.xib in Resources */,
+				8DB0E1042542BC9700F4E8FC /* ThumbnailTableViewCell.xib in Resources */,
 				8D65384B253F30B50021D348 /* StudioCollectionViewCell.xib in Resources */,
 				8D5EB6E12540522900B2CDFE /* VideoInformationTableViewCell.xib in Resources */,
 				8DF86F0D25400DA0008776AC /* StudioCollectionHeaderReusableView.xib in Resources */,
@@ -463,6 +470,7 @@
 				686817C325401AD600F621D3 /* Item.swift in Sources */,
 				2866FDB52541F2D9009583AC /* MyPageMyVideoTableViewCell.swift in Sources */,
 				2866FD6B25408FD6009583AC /* ShowHostTableViewCell.swift in Sources */,
+				8DB0E1032542BC9700F4E8FC /* ThumbnailTableViewCell.swift in Sources */,
 				68F93F14253F2412002F6C9F /* Video.swift in Sources */,
 				685DF757253F07C8007E28C2 /* HomeDetailViewController.swift in Sources */,
 				686817C925402D7800F621D3 /* Comment.swift in Sources */,

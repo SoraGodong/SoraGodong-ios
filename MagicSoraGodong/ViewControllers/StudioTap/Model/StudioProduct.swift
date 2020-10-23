@@ -34,6 +34,7 @@ struct Product {
     
 }
 
+
 // MARK:- Studio Registration's Selected Product Singleton Model
 class SelectedProduct {
     
@@ -42,6 +43,7 @@ class SelectedProduct {
     var products: [Product] = []
     
     struct Product {
+        let tagNumber: Int?
         let productImageName: String?
         let productTitle: String?
         let productPrice: Int?
