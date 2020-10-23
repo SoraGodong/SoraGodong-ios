@@ -19,7 +19,7 @@ class StudioCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        checkBoxButton.tintColor = #colorLiteral(red: 0.7900478244, green: 0.7798151374, blue: 0.7973746657, alpha: 1)
+//        checkBoxButton.tintColor = #colorLiteral(red: 0.7900478244, green: 0.7798151374, blue: 0.7973746657, alpha: 1)
     }
     
 //    @IBAction func clickCheckBox(_ sender: UIButton) {

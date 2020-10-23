@@ -40,9 +40,19 @@ class StudioViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureAlert()
+//        configureAlert()
         configureCollectionView()
         configureNavigationBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        reconfigureCollectionView()
+    }
+        
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
 }
@@ -79,6 +89,17 @@ extension StudioViewController {
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.5169164538, green: 0.689781487, blue: 0.9588938355, alpha: 1)
         navigationController?.navigationBar.tintColor = .white
+    }
+    
+    func reconfigureCollectionView() {
+        for index in 0 ..< products.count {
+            if products[index].check == true {
+                products[index].check = false
+            }
+        }
+        SelectedProduct.shared.products = []
+        collectionView.reloadData()
+//        collectionView.reloadSections(IndexSet(0…0))
     }
     
 }
@@ -171,6 +192,7 @@ extension StudioViewController: UICollectionViewDataSource {
         cell.productImage.image = UIImage(
             named: self.products[indexPath.item].productImageName ?? "")
         cell.checkBoxButton.tag = indexPath.item
+        cell.checkBoxButton.tintColor = #colorLiteral(red: 0.7900478244, green: 0.7798151374, blue: 0.7973746657, alpha: 1)
         cell.checkBoxButton.addTarget(self, action: #selector(touchUpCheckBox(_:)), for: .touchUpInside)
         cell.productNameLabel.text = products[indexPath.item].productTitle
         cell.productPriceLabel.text = numberFormatter.string(from: NSNumber(value: products[indexPath.item].productPrice ?? 0))! + " 원"
