@@ -78,6 +78,7 @@ extension StudioViewController {
             for index in 0 ..< SelectedProduct.shared.products.count {
                 if SelectedProduct.shared.products[index].tagNumber == sender.tag {
                     SelectedProduct.shared.products.remove(at: index)
+                    return
                 }
             }
             print("--------------------------------")
