@@ -11,30 +11,14 @@ class StudioViewController: UIViewController {
     
     // MARK:- Properties
     @IBOutlet weak var collectionView: UICollectionView!
-    var collectionViewHeader = StudioCollectionHeaderReusableView()
+    private var collectionViewHeader = StudioCollectionHeaderReusableView()
+    private var products = StudioProduct.categoryProducts[0]
+//    private var categoryProducts = StudioProduct.categoryProducts
     let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         return formatter
     }()
-    private var products: [Product] = [
-        Product(productImageName: "food1", productTitle: "berry", productPrice: 5000, check: false),
-        Product(productImageName: "food2", productTitle: "toast", productPrice: 4000, check: false),
-        Product(productImageName: "food3", productTitle: "strawberry", productPrice: 5430000, check: false),
-        Product(productImageName: "food4", productTitle: "noodle", productPrice: 2000, check: false),
-        Product(productImageName: "food5", productTitle: "burger", productPrice: 3000, check: false),
-        Product(productImageName: "food6", productTitle: "stake", productPrice: 12000, check: false),
-        Product(productImageName: "beauty1", productTitle: "aloe", productPrice: 13000, check: false),
-        Product(productImageName: "beauty2", productTitle: "lipstick", productPrice: 8000, check: false),
-        Product(productImageName: "beauty3", productTitle: "emple", productPrice: 15000, check: false),
-        Product(productImageName: "beauty4", productTitle: "tomato", productPrice: 10000, check: false),
-        Product(productImageName: "beauty5", productTitle: "pouch", productPrice: 20000, check: false),
-        Product(productImageName: "beauty6", productTitle: "pink set", productPrice: 30000, check: false),
-        Product(productImageName: "digital1", productTitle: "cuty", productPrice: 5000, check: false),
-        Product(productImageName: "digital2", productTitle: "phone", productPrice: 800000, check: false),
-        Product(productImageName: "digital3", productTitle: "camera", productPrice: 500000, check: false),
-        Product(productImageName: "digital4", productTitle: "watch", productPrice: 200000, check: false)
-    ]
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
