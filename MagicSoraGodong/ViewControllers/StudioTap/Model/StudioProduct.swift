@@ -7,6 +7,13 @@
 
 import UIKit
 
+// MARK:- Category of Studio Product 
+class StudioCategoty {
+    
+    static var categories = ["전체", "식품", "디지털", "의류", "가구", "뷰티", "가전", "주방", "애견", "도서", "스포츠"]
+    
+}
+
 // MARK:- Product Category
 enum ProductCategoryNumber: Int, CaseIterable {
     
@@ -50,4 +57,6 @@ class SelectedProduct {
     }
     
 }
+
+
 

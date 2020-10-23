@@ -11,7 +11,7 @@ class StudioCollectionHeaderReusableView: UICollectionReusableView {
     
     // MARK:- Properties
     @IBOutlet weak var categoryView: UIView!
-    let categories = categoty.categories
+    let categories = StudioCategoty.categories
     var categoryButtons: [UIButton] = []
     var collectionView: UICollectionView?
     
