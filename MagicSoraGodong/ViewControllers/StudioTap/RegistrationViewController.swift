@@ -67,13 +67,6 @@ extension RegistrationViewController {
         viewTapGestureRecognizer.addTarget(self, action: #selector(tapView))
     }
     
-    func configureTextView() {
-//        let videoInformationCell = VideoInformationTableViewCell()
-//        let textView = videoInformationCell.textView!
-//        textView.text = "한줄평을 작성해주세요."
-//        textView.textColor = UIColor.lightGray
-    }
-    
 }
 
 // MARK:- Methods
@@ -84,26 +77,58 @@ extension RegistrationViewController {
     }
     
     @objc func touchUpRegistrationButton() {
-        let alert = UIAlertController(
-            title: "",
-            message: "브이로그 등록이 완료되었습니다.",
-            preferredStyle: .alert)
-        let okAction = UIAlertAction(
-            title: "확인",
-            style: .default) { (action : UIAlertAction) in
-            // 등록 완료 조건 추가하기
-            self.navigationController?.popViewController(animated: true)
-        }
-        alert.addAction(okAction) 
-        present(alert, animated: true, completion: nil)
+//        if checkField() {
+            let alert = UIAlertController(
+                title: "",
+                message: "브이로그 등록이 완료되었습니다.",
+                preferredStyle: .alert)
+            let okAction = UIAlertAction(
+                title: "확인",
+                style: .default) { (action : UIAlertAction) in
+                // 등록 완료 조건 추가하기
+                self.navigationController?.popViewController(animated: true)
+            }
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+//        } else {
+//            let alert = UIAlertController(
+//                title: "",
+//                message: "모든 항목을 작성해주세요.",
+//                preferredStyle: .alert)
+//            let okAction = UIAlertAction(
+//                title: "확인",
+//                style: .default)
+//            alert.addAction(okAction)
+//            present(alert, animated: true, completion: nil)
+//        }
+        
     }
     
     @objc func tapView() {
         view.endEditing(true)
     }
     
-    func checkField() {
-//        let videoCell = tableView.cellForRow(at: IndexPath(1))
+    func checkField() -> Bool {
+        
+//        guard let videoCell = tableView.cellForRow(at: [0, 1]) as? UploadingViedoTableViewCell else { return false }
+//        guard let pictureCell = tableView.cellForRow(at: [0, 2]) as? ThumbnailTableViewCell else { return false }
+        guard let infoCell = tableView.cellForRow(at: [0, 3]) as? VideoInformationTableViewCell else { return false }
+        
+//        let videoField = videoCell.videoInformationTextField
+//        let pictureField = pictureCell.videoThumbnailImage
+        let titleField = infoCell.videoTitleField
+        let infonField = infoCell.videoInfoField
+        
+//        guard let videoField = videoCell.videoInformationTextField else { return }
+//        guard let pictureField = pictureCell.videoThumbnailImage else { return }
+//        guard let titleField = infoCell.videoTitleField else { return }
+//        guard let infonField = infoCell.videoInfoField else { return }
+        
+        if !titleField!.text!.isEmpty && infonField?.text != "영상 내용을 작성해주세요." {
+            return true
+        } else {
+            return false
+        }
     }
     
 }
@@ -214,21 +239,3 @@ extension RegistrationViewController: UITableViewDelegate {
         }
     }
 }
-
-//extension RegistrationViewController: UITextViewDelegate {
-//
-//    func textViewDidBeginEditing(_ textView: UITextView) {
-//        if textView.textColor == UIColor.lightGray {
-//            textView.text = nil
-//            textView.textColor = UIColor.black
-//        }
-//    }
-//
-//    func textViewDidEndEditing(_ textView: UITextView) {
-//        if textView.text.isEmpty {
-//            textView.text = "영상 내용을 작성해주세요."
-//            textView.textColor = UIColor.lightGray
-//        }
-//    }
-//
-//}

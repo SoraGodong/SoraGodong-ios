@@ -45,7 +45,7 @@ extension StudioCollectionHeaderReusableView {
                 equalTo: index == 0 ? categoryView.leadingAnchor : categoryButtons[index - 1].trailingAnchor,
                 constant: 18).isActive = true
         }
-        categoryButtons[0].setTitleColor(#colorLiteral(red: 0.3134731054, green: 0.6144956946, blue: 1, alpha: 1), for: .normal)
+        categoryButtons[0].setTitleColor(#colorLiteral(red: 0.5169164538, green: 0.689781487, blue: 0.9588938355, alpha: 1), for: .normal)
     }
     
 }

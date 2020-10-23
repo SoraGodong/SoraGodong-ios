@@ -10,7 +10,8 @@ import UIKit
 class VideoInformationTableViewCell: UITableViewCell {
     
     // MARK:- Properties
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var videoTitleField: UITextField!
+    @IBOutlet weak var videoInfoField: UITextView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,12 +31,12 @@ class VideoInformationTableViewCell: UITableViewCell {
 extension VideoInformationTableViewCell {
     
     func configureTextView() {
-        textView.delegate = self
-        textView.text = "영상 내용을 작성해주세요."
-        textView.textColor = UIColor.lightGray
-        textView.layer.borderWidth = 1.0
-        textView.layer.borderColor = UIColor.lightGray.cgColor
-        textView.layer.cornerRadius = 5
+        videoInfoField.delegate = self
+        videoInfoField.text = "영상 내용을 작성해주세요."
+        videoInfoField.textColor = UIColor.lightGray
+        videoInfoField.layer.borderWidth = 1.0
+        videoInfoField.layer.borderColor = UIColor.lightGray.cgColor
+        videoInfoField.layer.cornerRadius = 5
     }
     
 }

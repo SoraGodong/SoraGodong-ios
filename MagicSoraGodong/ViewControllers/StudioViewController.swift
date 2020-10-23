@@ -13,22 +13,29 @@ class StudioViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var collectionViewHeader = StudioCollectionHeaderReusableView()
     private var products: [Product] = [
-        Product(productImageName: "table", productTitle: "woody table", productPrice: 10000, check: false),
-        Product(productImageName: "chair", productTitle: "engle chair", productPrice: 20000, check: false),
-        Product(productImageName: "cup", productTitle: "white cup", productPrice: 7000, check: false),
-        Product(productImageName: "sofa", productTitle: "녹색 자연의 소파", productPrice: 5430000, check: false),
         Product(productImageName: "food1", productTitle: "berry", productPrice: 5000, check: false),
         Product(productImageName: "food2", productTitle: "toast", productPrice: 4000, check: false),
         Product(productImageName: "food3", productTitle: "strawberry", productPrice: 5430000, check: false),
         Product(productImageName: "food4", productTitle: "noodle", productPrice: 2000, check: false),
         Product(productImageName: "food5", productTitle: "burger", productPrice: 3000, check: false),
-        Product(productImageName: "food6", productTitle: "stake", productPrice: 12000, check: false)
+        Product(productImageName: "food6", productTitle: "stake", productPrice: 12000, check: false),
+        Product(productImageName: "beauty1", productTitle: "aloe", productPrice: 13000, check: false),
+        Product(productImageName: "beauty2", productTitle: "lipstick", productPrice: 8000, check: false),
+        Product(productImageName: "beauty3", productTitle: "emple", productPrice: 15000, check: false),
+        Product(productImageName: "beauty4", productTitle: "tomato", productPrice: 10000, check: false),
+        Product(productImageName: "beauty5", productTitle: "pouch", productPrice: 20000, check: false),
+        Product(productImageName: "beauty6", productTitle: "pink set", productPrice: 30000, check: false),
+        Product(productImageName: "digital1", productTitle: "cuty", productPrice: 5000, check: false),
+        Product(productImageName: "digital2", productTitle: "phone", productPrice: 800000, check: false),
+        Product(productImageName: "digital3", productTitle: "camera", productPrice: 500000, check: false),
+        Product(productImageName: "digital4", productTitle: "watch", productPrice: 200000, check: false)
     ]
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureAlert()
         configureCollectionView()
         configureNavigationBar()
     }
@@ -36,6 +43,18 @@ class StudioViewController: UIViewController {
 }
 // MARK:- Configure UI
 extension StudioViewController {
+    
+    func configureAlert() {
+        let alert = UIAlertController(
+            title: "쇼호스트",
+            message: "홍보할 상품을 선택하고 영상을 업로드해주세요.",
+            preferredStyle: .alert)
+        let okAction = UIAlertAction(
+            title: "확인",
+            style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
     
     func configureCollectionView() {
         collectionViewHeader.collectionView = self.collectionView

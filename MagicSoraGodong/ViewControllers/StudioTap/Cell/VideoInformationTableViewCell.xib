@@ -76,7 +76,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="textView" destination="T0m-yr-jys" id="11S-r3-mLp"/>
+                <outlet property="videoInfoField" destination="T0m-yr-jys" id="eKK-8q-y2h"/>
+                <outlet property="videoTitleField" destination="l8i-XP-6lG" id="i1J-wH-sMf"/>
             </connections>
             <point key="canvasLocation" x="-30.434782608695656" y="82.366071428571431"/>
         </tableViewCell>
