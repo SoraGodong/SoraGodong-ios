@@ -8,6 +8,9 @@
 import UIKit
 
 class ThumbnailTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var videoThumbnailImage: UIImageView!
+    @IBOutlet weak var uploadingPictureButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()

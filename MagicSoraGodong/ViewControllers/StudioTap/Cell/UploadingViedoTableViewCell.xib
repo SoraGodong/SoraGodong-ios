@@ -42,6 +42,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="findingViedoButton" destination="Peq-H9-pjv" id="1zN-VG-KTS"/>
+                <outlet property="videoInformationTextField" destination="x8S-Vp-3gz" id="6vZ-68-K8Q"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="82.366071428571431"/>
         </tableViewCell>
     </objects>

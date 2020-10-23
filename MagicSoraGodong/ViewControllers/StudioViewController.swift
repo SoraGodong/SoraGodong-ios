@@ -11,6 +11,7 @@ class StudioViewController: UIViewController {
     
     // MARK:- Properties
     @IBOutlet weak var collectionView: UICollectionView!
+    var collectionViewHeader = StudioCollectionHeaderReusableView()
     private var products: [Product] = [
         Product(productImageName: "table", productTitle: "woody table", productPrice: 10000, check: false),
         Product(productImageName: "chair", productTitle: "engle chair", productPrice: 20000, check: false),
@@ -23,7 +24,6 @@ class StudioViewController: UIViewController {
         Product(productImageName: "food5", productTitle: "burger", productPrice: 3000, check: false),
         Product(productImageName: "food6", productTitle: "stake", productPrice: 12000, check: false)
     ]
-    var collectionViewHeader = StudioCollectionHeaderReusableView()
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -170,11 +170,15 @@ extension StudioViewController: UICollectionViewDataSource {
 extension StudioViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "productInformationViewController") as? ProductInformationViewController else {
+        guard let productInformationController = storyboard?.instantiateViewController(withIdentifier: "productInformationViewController") as? ProductInformationViewController else {
             return
         }
         
-        present(vc, animated: true, completion: nil)
+        productInformationController.temporaryProductImageName = products[indexPath.item].productImageName
+        productInformationController.temporaryProductName = products[indexPath.item].productTitle
+        productInformationController.temporaryProductPrice = products[indexPath.item].productPrice
+        
+        present(productInformationController, animated: true, completion: nil)
     }
 }
 

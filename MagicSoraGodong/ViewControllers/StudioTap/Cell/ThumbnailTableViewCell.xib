@@ -38,6 +38,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="uploadingPictureButton" destination="9wC-Q7-IsC" id="T1P-gA-Zan"/>
+                <outlet property="videoThumbnailImage" destination="AlH-K3-LY5" id="VZo-Ha-0mT"/>
+            </connections>
             <point key="canvasLocation" x="138" y="69"/>
         </tableViewCell>
     </objects>

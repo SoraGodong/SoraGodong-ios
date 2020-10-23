@@ -14,6 +14,7 @@ class RegistrationViewController: UIViewController {
     var numberOfProducts = 3
     private var selectedProducts = SelectedProduct.shared.products
     
+    
     // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,7 +103,7 @@ extension RegistrationViewController {
     }
     
     func checkField() {
-        
+//        let videoCell = tableView.cellForRow(at: IndexPath(1))
     }
     
 }
@@ -135,7 +136,7 @@ extension RegistrationViewController: UITableViewDataSource {
             }
             cell.productImageView.image = UIImage(named: selectedProducts[indexPath.row].productImageName ?? "")
             cell.productName.text = selectedProducts[indexPath.row].productTitle
-            cell.productPrice.text = String(selectedProducts[indexPath.row].productPrice ?? 0)
+            cell.productPrice.text = String(selectedProducts[indexPath.row].productPrice ?? 0) + " 원"
             cell.selectionStyle = .none
             return cell
         case 1:

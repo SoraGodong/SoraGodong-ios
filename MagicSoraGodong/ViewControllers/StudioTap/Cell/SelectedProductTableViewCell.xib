@@ -25,15 +25,15 @@
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HpO-UP-dO6">
-                        <rect key="frame" x="170" y="49.5" width="200" height="51"/>
+                        <rect key="frame" x="150" y="49.5" width="200" height="51"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lud-ab-g3U">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상품명" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lud-ab-g3U">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihC-9t-AN0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihC-9t-AN0">
                                 <rect key="frame" x="0.0" y="30.5" width="200" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -41,15 +41,15 @@
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="width" constant="200" id="mam-GP-Whp"/>
+                            <constraint firstAttribute="width" constant="200" id="Nwh-Fp-uDr"/>
                         </constraints>
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="HpO-UP-dO6" firstAttribute="leading" secondItem="MQh-MJ-yh8" secondAttribute="trailing" constant="20" id="B5T-cZ-HQM"/>
                     <constraint firstItem="MQh-MJ-yh8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="B9L-iS-KNp"/>
                     <constraint firstItem="MQh-MJ-yh8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="LXD-5a-7AV"/>
-                    <constraint firstItem="HpO-UP-dO6" firstAttribute="centerY" secondItem="MQh-MJ-yh8" secondAttribute="centerY" id="gbh-zn-ols"/>
+                    <constraint firstItem="HpO-UP-dO6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eaA-hf-fni"/>
+                    <constraint firstAttribute="trailing" secondItem="HpO-UP-dO6" secondAttribute="trailing" constant="50" id="n2y-6v-1ww"/>
                     <constraint firstAttribute="bottom" secondItem="MQh-MJ-yh8" secondAttribute="bottom" id="p6b-JF-OGo"/>
                 </constraints>
             </tableViewCellContentView>
