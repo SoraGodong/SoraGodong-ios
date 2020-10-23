@@ -26,6 +26,7 @@ class HomeViewController: UIViewController{
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         tableView.reloadData()
+        getCategory()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

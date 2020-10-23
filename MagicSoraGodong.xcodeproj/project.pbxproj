@@ -44,8 +44,11 @@
 		686817C325401AD600F621D3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686817C225401AD600F621D3 /* Item.swift */; };
 		686817C6254022CE00F621D3 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686817C5254022CE00F621D3 /* Toast.swift */; };
 		686817C925402D7800F621D3 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686817C825402D7800F621D3 /* Comment.swift */; };
-		687227FF2541B8C30000211A /* Singletone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687227FE2541B8C30000211A /* Singletone.swift */; };
+		687227FF2541B8C30000211A /* CachedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687227FE2541B8C30000211A /* CachedData.swift */; };
 		68A44583254002D400136039 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A44582254002D400136039 /* ItemListViewController.swift */; };
+		68D6F6C02542801F00930A85 /* CategoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D6F6BF2542801F00930A85 /* CategoryRequest.swift */; };
+		68D6F6C425428D2C00930A85 /* LoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D6F6C325428D2C00930A85 /* LoginInfo.swift */; };
+		68D6F6C725428E8F00930A85 /* LoginToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D6F6C625428E8F00930A85 /* LoginToken.swift */; };
 		68F93F14253F2412002F6C9F /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F93F13253F2412002F6C9F /* Video.swift */; };
 		68F93F1B253F3224002F6C9F /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F93F1A253F3224002F6C9F /* ItemTableViewCell.swift */; };
 		68F93F1E253F3233002F6C9F /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F93F1D253F3233002F6C9F /* CommentTableViewCell.swift */; };
@@ -109,8 +112,11 @@
 		686817C225401AD600F621D3 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		686817C5254022CE00F621D3 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		686817C825402D7800F621D3 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
-		687227FE2541B8C30000211A /* Singletone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singletone.swift; sourceTree = "<group>"; };
+		687227FE2541B8C30000211A /* CachedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedData.swift; sourceTree = "<group>"; };
 		68A44582254002D400136039 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
+		68D6F6BF2542801F00930A85 /* CategoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRequest.swift; sourceTree = "<group>"; };
+		68D6F6C325428D2C00930A85 /* LoginInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInfo.swift; sourceTree = "<group>"; };
+		68D6F6C625428E8F00930A85 /* LoginToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginToken.swift; sourceTree = "<group>"; };
 		68F93F13253F2412002F6C9F /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		68F93F1A253F3224002F6C9F /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		68F93F1D253F3233002F6C9F /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
@@ -257,6 +263,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		68D6F6BE25427DD500930A85 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				68D6F6BF2542801F00930A85 /* CategoryRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		68F93F12253F2401002F6C9F /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,7 +278,9 @@
 				686817C225401AD600F621D3 /* Item.swift */,
 				686817C825402D7800F621D3 /* Comment.swift */,
 				8D28F0EB2541B0DD00080D7B /* Category.swift */,
-				687227FE2541B8C30000211A /* Singletone.swift */,
+				687227FE2541B8C30000211A /* CachedData.swift */,
+				68D6F6C325428D2C00930A85 /* LoginInfo.swift */,
+				68D6F6C625428E8F00930A85 /* LoginToken.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -326,6 +342,7 @@
 		8D97E612253C866000908404 /* MagicSoraGodong */ = {
 			isa = PBXGroup;
 			children = (
+				68D6F6BE25427DD500930A85 /* Request */,
 				68F93F12253F2401002F6C9F /* Models */,
 				68F93F17253F25D8002F6C9F /* Custom */,
 				68093315253E0F640041DEF0 /* extensions */,
@@ -436,8 +453,9 @@
 				2866FD6E25408FE6009583AC /* ShoppingTableViewCell.swift in Sources */,
 				2866FD7D2540A092009583AC /* ShoppingListTableViewCell.swift in Sources */,
 				68F93F1E253F3233002F6C9F /* CommentTableViewCell.swift in Sources */,
-				687227FF2541B8C30000211A /* Singletone.swift in Sources */,
+				687227FF2541B8C30000211A /* CachedData.swift in Sources */,
 				2866FD8825418ED1009583AC /* PurchaseListViewController.swift in Sources */,
+				68D6F6C02542801F00930A85 /* CategoryRequest.swift in Sources */,
 				2866FD8B25419120009583AC /* PurchaseListTableViewCell.swift in Sources */,
 				8D4DC435253E924D00E06D8B /* StudioViewController.swift in Sources */,
 				2866FDB82541F2F5009583AC /* RevenueTableViewCell.swift in Sources */,
@@ -450,6 +468,7 @@
 				8D97E618253C866000908404 /* HomeViewController.swift in Sources */,
 				2866FD852540B365009583AC /* ShoppingListHeaderView.swift in Sources */,
 				686817C325401AD600F621D3 /* Item.swift in Sources */,
+				68D6F6C425428D2C00930A85 /* LoginInfo.swift in Sources */,
 				2866FDB52541F2D9009583AC /* MyPageMyVideoTableViewCell.swift in Sources */,
 				2866FD6B25408FD6009583AC /* ShowHostTableViewCell.swift in Sources */,
 				68F93F14253F2412002F6C9F /* Video.swift in Sources */,
@@ -466,6 +485,7 @@
 				2866FD7425408FF7009583AC /* MyInformationTableViewCell.swift in Sources */,
 				8D28F0EC2541B0DD00080D7B /* Category.swift in Sources */,
 				8D97E616253C866000908404 /* SceneDelegate.swift in Sources */,
+				68D6F6C725428E8F00930A85 /* LoginToken.swift in Sources */,
 				2866FD8E25419A92009583AC /* PurchaseListHeaderTableViewCell.swift in Sources */,
 				2866FDB22541F2B5009583AC /* MyPageAllOfVideosTableViewCell.swift in Sources */,
 				68093317253E0F7B0041DEF0 /* extension.swift in Sources */,

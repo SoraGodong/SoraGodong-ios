@@ -113,7 +113,7 @@ extension HomeDetailViewController{
     
     @IBAction func showItemList(_ sender:UIButton){
         self.definesPresentationContext = true
-        Singletone.shared.selVideoId = video?.videoId ?? "0"
+        //Singletone.shared.selVideoId = video?.videoId ?? "0"
         let sb: UIStoryboard = UIStoryboard(name: "MyPage", bundle: nil)
         guard let ShoppingVC = sb.instantiateViewController(withIdentifier: "ShoppingListViewController") as? ShoppingListViewController else {return}
         ShoppingVC.modalPresentationStyle = .formSheet
