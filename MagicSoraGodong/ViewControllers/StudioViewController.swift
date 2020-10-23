@@ -11,33 +11,32 @@ class StudioViewController: UIViewController {
     
     // MARK:- Properties
     @IBOutlet weak var collectionView: UICollectionView!
-    var collectionViewHeader = StudioCollectionHeaderReusableView()
-    private var products: [Product] = [
-        Product(productImageName: "food1", productTitle: "berry", productPrice: 5000, check: false),
-        Product(productImageName: "food2", productTitle: "toast", productPrice: 4000, check: false),
-        Product(productImageName: "food3", productTitle: "strawberry", productPrice: 5430000, check: false),
-        Product(productImageName: "food4", productTitle: "noodle", productPrice: 2000, check: false),
-        Product(productImageName: "food5", productTitle: "burger", productPrice: 3000, check: false),
-        Product(productImageName: "food6", productTitle: "stake", productPrice: 12000, check: false),
-        Product(productImageName: "beauty1", productTitle: "aloe", productPrice: 13000, check: false),
-        Product(productImageName: "beauty2", productTitle: "lipstick", productPrice: 8000, check: false),
-        Product(productImageName: "beauty3", productTitle: "emple", productPrice: 15000, check: false),
-        Product(productImageName: "beauty4", productTitle: "tomato", productPrice: 10000, check: false),
-        Product(productImageName: "beauty5", productTitle: "pouch", productPrice: 20000, check: false),
-        Product(productImageName: "beauty6", productTitle: "pink set", productPrice: 30000, check: false),
-        Product(productImageName: "digital1", productTitle: "cuty", productPrice: 5000, check: false),
-        Product(productImageName: "digital2", productTitle: "phone", productPrice: 800000, check: false),
-        Product(productImageName: "digital3", productTitle: "camera", productPrice: 500000, check: false),
-        Product(productImageName: "digital4", productTitle: "watch", productPrice: 200000, check: false)
-    ]
+//    private var collectionViewHeader = StudioCollectionHeaderReusableView()
+    private var products = StudioProduct.categoryProducts[0]
+//    private var categoryProducts = StudioProduct.categoryProducts
+    let numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        return formatter
+    }()
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureAlert()
+//        configureAlert()
         configureCollectionView()
         configureNavigationBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        reconfigureCollectionView()
+    }
+        
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
 }
@@ -57,7 +56,7 @@ extension StudioViewController {
     }
     
     func configureCollectionView() {
-        collectionViewHeader.collectionView = self.collectionView
+//        collectionViewHeader.collectionView = self.collectionView
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(
@@ -65,6 +64,9 @@ extension StudioViewController {
             forCellWithReuseIdentifier: "studioCell")
         
         collectionView.register(UINib(nibName: String(describing: StudioCollectionHeaderReusableView.self), bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader , withReuseIdentifier: String(describing: StudioCollectionHeaderReusableView.self))
+        
+//        guard let headerCell = collectionView.cellForItem(at: [0, 0]) as? StudioCollectionHeaderReusableView else { return }
+//        headerCell.completionHandler = setProducts(_:)
     }
     
     func configureNavigationBar() {
@@ -74,6 +76,17 @@ extension StudioViewController {
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.5169164538, green: 0.689781487, blue: 0.9588938355, alpha: 1)
         navigationController?.navigationBar.tintColor = .white
+    }
+    
+    func reconfigureCollectionView() {
+        for index in 0 ..< products.count {
+            if products[index].check == true {
+                products[index].check = false
+            }
+        }
+        SelectedProduct.shared.products = []
+        collectionView.reloadData()
+//        collectionView.reloadSections(IndexSet(0…0))
     }
     
 }
@@ -143,6 +156,11 @@ extension StudioViewController {
         }
     }
     
+    func setProducts(_ index: Int) {
+        products = StudioProduct.categoryProducts[0]
+        collectionView.reloadData()
+    }
+    
     
 }
 
@@ -166,9 +184,10 @@ extension StudioViewController: UICollectionViewDataSource {
         cell.productImage.image = UIImage(
             named: self.products[indexPath.item].productImageName ?? "")
         cell.checkBoxButton.tag = indexPath.item
+        cell.checkBoxButton.tintColor = #colorLiteral(red: 0.7900478244, green: 0.7798151374, blue: 0.7973746657, alpha: 1)
         cell.checkBoxButton.addTarget(self, action: #selector(touchUpCheckBox(_:)), for: .touchUpInside)
         cell.productNameLabel.text = products[indexPath.item].productTitle
-        cell.productPriceLabel.text = String(products[indexPath.item].productPrice ?? 0)
+        cell.productPriceLabel.text = numberFormatter.string(from: NSNumber(value: products[indexPath.item].productPrice ?? 0))! + " 원"
         
         return cell
     }

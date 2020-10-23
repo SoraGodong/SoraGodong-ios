@@ -13,7 +13,11 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var numberOfProducts = 3
     private var selectedProducts = SelectedProduct.shared.products
-    
+    let numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        return formatter
+    }()
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -159,9 +163,11 @@ extension RegistrationViewController: UITableViewDataSource {
                     for: indexPath) as? SelectedProductTableViewCell else {
                 return UITableViewCell()
             }
+            
+            
             cell.productImageView.image = UIImage(named: selectedProducts[indexPath.row].productImageName ?? "")
             cell.productName.text = selectedProducts[indexPath.row].productTitle
-            cell.productPrice.text = String(selectedProducts[indexPath.row].productPrice ?? 0) + " 원"
+            cell.productPrice.text = numberFormatter.string(from: NSNumber(value: selectedProducts[indexPath.row].productPrice ?? 0))! + " 원"
             cell.selectionStyle = .none
             return cell
         case 1:
