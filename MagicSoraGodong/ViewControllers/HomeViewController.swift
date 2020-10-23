@@ -51,7 +51,7 @@ extension HomeViewController{
             categoryMenu.tag = i 
             categoryMenu.isUserInteractionEnabled = true
             
-            categoryMenu.textColor = i == 0 ? #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) :  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            categoryMenu.textColor = i == 0 ? #colorLiteral(red: 0.3134731054, green: 0.6144956946, blue: 1, alpha: 1) :  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
             
             
             let categoryTab:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.touchUpCategory(_:)))
@@ -69,9 +69,9 @@ extension HomeViewController{
            guard let selected = tabGesture.view as? UILabel else {return}
 
            for i in 0..<categoryMenus.count{
-               categoryMenus[i].textColor = categoryMenus[i].tag == selected.tag ? #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) :  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+               categoryMenus[i].textColor = categoryMenus[i].tag == selected.tag ? #colorLiteral(red: 0.3134731054, green: 0.6144956946, blue: 1, alpha: 1) :  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
            }
-        tableView.reloadSections(IndexSet(0...0), with: .right)
+        tableView.reloadSections(IndexSet(0...0), with: .left)
 
        }
 

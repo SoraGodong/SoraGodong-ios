@@ -229,7 +229,7 @@
         <!--Shopping List View Controller-->
         <scene sceneID="002-Pw-Nj9">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="FFG-Ch-9e8" customClass="ShoppingListViewController" customModule="MagicSoraGodong" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShoppingListViewController" modalPresentationStyle="fullScreen" id="FFG-Ch-9e8" customClass="ShoppingListViewController" customModule="MagicSoraGodong" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i2k-9t-BSF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -396,63 +396,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fw3-wZ-Xie" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3269.5652173913045" y="877.90178571428567"/>
-        </scene>
-        <!--My Page Show Host View Controller-->
-        <scene sceneID="1vk-Z9-3qh">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="81Y-NU-xsh" customClass="MyPageShowHostViewController" customModule="MagicSoraGodong" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ikW-6u-O69">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mIn-96-4ZO">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RevenueTableViewCell" rowHeight="272" id="Hr2-Xh-KDk" customClass="RevenueTableViewCell" customModule="MagicSoraGodong" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="272"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hr2-Xh-KDk" id="ZEw-dl-2gs">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="272"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyPageMyVideoTableViewCell" rowHeight="120" id="yHH-Nk-PZu" customClass="MyPageMyVideoTableViewCell" customModule="MagicSoraGodong" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="300" width="414" height="120"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yHH-Nk-PZu" id="KcA-HK-nXt">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyPageAllOfVideosTableViewCell" rowHeight="222" id="tQf-Vx-YWZ" customClass="MyPageAllOfVideosTableViewCell" customModule="MagicSoraGodong" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="420" width="414" height="222"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tQf-Vx-YWZ" id="dex-RQ-we5">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="222"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="RGx-c2-AB6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="RGx-c2-AB6" firstAttribute="bottom" secondItem="mIn-96-4ZO" secondAttribute="bottom" id="Eub-lq-EuW"/>
-                            <constraint firstItem="mIn-96-4ZO" firstAttribute="leading" secondItem="RGx-c2-AB6" secondAttribute="leading" id="VeT-O2-6t8"/>
-                            <constraint firstItem="mIn-96-4ZO" firstAttribute="top" secondItem="RGx-c2-AB6" secondAttribute="top" id="iBe-5J-Nqy"/>
-                            <constraint firstItem="RGx-c2-AB6" firstAttribute="trailing" secondItem="mIn-96-4ZO" secondAttribute="trailing" id="w6a-V5-cwE"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="kAm-Lm-UW1"/>
-                    <connections>
-                        <outlet property="showhostTableView" destination="mIn-96-4ZO" id="b8S-1i-Pkd"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GVe-ks-fgB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2435" y="2192"/>
         </scene>
         <!--Purchase List View Controller-->
         <scene sceneID="nmo-jF-vwF">
