@@ -11,7 +11,7 @@ class StudioViewController: UIViewController {
     
     // MARK:- Properties
     @IBOutlet weak var collectionView: UICollectionView!
-    private var collectionViewHeader = StudioCollectionHeaderReusableView()
+//    private var collectionViewHeader = StudioCollectionHeaderReusableView()
     private var products = StudioProduct.categoryProducts[0]
 //    private var categoryProducts = StudioProduct.categoryProducts
     let numberFormatter: NumberFormatter = {
@@ -56,7 +56,7 @@ extension StudioViewController {
     }
     
     func configureCollectionView() {
-        collectionViewHeader.collectionView = self.collectionView
+//        collectionViewHeader.collectionView = self.collectionView
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(
@@ -64,6 +64,9 @@ extension StudioViewController {
             forCellWithReuseIdentifier: "studioCell")
         
         collectionView.register(UINib(nibName: String(describing: StudioCollectionHeaderReusableView.self), bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader , withReuseIdentifier: String(describing: StudioCollectionHeaderReusableView.self))
+        
+//        guard let headerCell = collectionView.cellForItem(at: [0, 0]) as? StudioCollectionHeaderReusableView else { return }
+//        headerCell.completionHandler = setProducts(_:)
     }
     
     func configureNavigationBar() {
@@ -154,9 +157,10 @@ extension StudioViewController {
     }
     
     func setProducts(_ index: Int) {
-        products = StudioProduct.categoryProducts[index]
+        products = StudioProduct.categoryProducts[0]
         collectionView.reloadData()
     }
+    
     
 }
 
