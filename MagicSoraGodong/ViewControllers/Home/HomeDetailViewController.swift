@@ -10,12 +10,13 @@ import AVKit
 import AVFoundation
 
 class HomeDetailViewController: UIViewController{
-   
     
     // MARK:- Properties
-    var video:Video?
-    var comments:[Comment] = Comment.initData()
+    var vlogIdx:Int?
+    var comments:[comment_] = []
+    var vlog:vlog_?
     var isBack:Bool = false
+    var video:Video?
     
     @IBOutlet weak var videoContainer:UIView!
     @IBOutlet weak var profile:UIImageView!
@@ -31,7 +32,7 @@ class HomeDetailViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
-        videoAdd()
+        getVlog(vlogIdx: self.vlogIdx ?? 0)
         // Do any additional setup after loading the view.
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -55,14 +56,15 @@ extension HomeDetailViewController{
         
         self.view.bringSubviewToFront(cartButton)
         self.commentWrite.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didReceiveVlog), name: DidReceiveVlogNotification, object: nil)
         
     }
     
     func videoAdd(){
-        guard let v = self.video else {return}
-        self.Videotitle.text = v.title
-        self.hostName.text = v.subtitle
-        guard let videoUrl = video?.url else {return}
+        guard let v = self.vlog else {return}
+        self.Videotitle.text = v.vlogTitle
+        self.hostName.text = v.userNickName
+        guard let videoUrl = URL(string:v.vlogUrl) else {return}
         let player = AVPlayer(url: videoUrl)
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.videoGravity = .resize
@@ -82,9 +84,9 @@ extension HomeDetailViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard  let cell:CommentTableViewCell = tableView.dequeueReusableCell(withIdentifier: CommentTableViewCell.cellIdentifier) as? CommentTableViewCell else {fatalError("Unable to dequeue CommentTableViewCell")}
         let comment = comments[indexPath.row]
-        cell.userId.text = comment.userId
-        cell.date.text = comment.date
-        cell.comment.text = comment.content
+        cell.userId.text = comment.userNickName
+//        cell.date.text = comment.
+        cell.comment.text = comment.commentContent
         return cell
     }
     
@@ -98,7 +100,7 @@ extension HomeDetailViewController:UITextFieldDelegate{
             Toast.show(message: "댓글을 입력해주세요", controller: self)
             return false
         }else{
-            comments.append(Comment(id: "lotteWorld", content: commentWrite.text ?? "", date: "방금"))
+            comments.append(comment_(commentIdx:comments.count+1, userIdx: 1, userNickName: "lotteWorld", commentContent:commentWrite.text ?? ""))
             self.commentWrite.text = ""
             comments.reverse()
             commentTable.reloadData()
@@ -113,7 +115,7 @@ extension HomeDetailViewController{
     
     @IBAction func showItemList(_ sender:UIButton){
         self.definesPresentationContext = true
-        Singletone.shared.selVideoId = video?.videoId ?? "0"
+        //Singletone.shared.selVideoId = video?.videoId ?? "0"
         let sb: UIStoryboard = UIStoryboard(name: "MyPage", bundle: nil)
         guard let ShoppingVC = sb.instantiateViewController(withIdentifier: "ShoppingListViewController") as? ShoppingListViewController else {return}
         ShoppingVC.modalPresentationStyle = .formSheet
@@ -131,5 +133,17 @@ extension HomeDetailViewController{
             
         }
     }
+    @objc func didReceiveVlog(_ noti:Notification){
+        guard let result = noti.object as? vlogDetailKey else { fatalError("브이로그 데이터 변환 실패") }
+        if result.isSuccess{
+            self.comments = result.Result.comments
+            self.vlog = result.Result.vlog.first
+            videoAdd()
+        }else{
+            Toast.printError(code: result.code, controller: self)
+        }
+        self.commentTable.reloadData()
+    }
 }
+ 
  

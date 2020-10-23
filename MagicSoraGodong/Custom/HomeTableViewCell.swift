@@ -17,11 +17,11 @@ class HomeTableViewCell: UITableViewCell {
     
     
     
-    func update(video:Video){
-        self.thumbnail.loadImage(url: video.thumbURL)
+    func update(video:vlogItem){
+        //self.thumbnail.loadImage(url: video.vlogThumbnailUrl)
         //self.profile.loadImage(url: video.profile)
-        self.videoTitle.text = video.title
-        self.videoItem.text = video.subtitle
+        self.videoTitle.text = video.vlogTitle
+        self.videoItem.text = video.userNickName
     }
     static let cellIdentifier = "homeCell"
     override func awakeFromNib() {
