@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ThumbnailTableViewCell" customModule="MagicSoraGodong" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wC-Q7-IsC">
+                        <rect key="frame" x="298" y="60" width="52" height="30"/>
+                        <state key="normal" title="사진선택"/>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AlH-K3-LY5">
+                        <rect key="frame" x="33" y="25" width="150" height="100"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="EXh-Z3-BCi"/>
+                            <constraint firstAttribute="width" constant="150" id="n2c-Mp-2RS"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="AlH-K3-LY5" secondAttribute="bottom" constant="25" id="Ffd-Pi-MOU"/>
+                    <constraint firstItem="AlH-K3-LY5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="33" id="Iy8-fQ-hrL"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="9wC-Q7-IsC" secondAttribute="trailing" constant="30" id="ZEh-0G-ZVr"/>
+                    <constraint firstItem="AlH-K3-LY5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="lwz-dj-bwL"/>
+                    <constraint firstItem="9wC-Q7-IsC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wzU-nL-vw5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="uploadingPictureButton" destination="9wC-Q7-IsC" id="T1P-gA-Zan"/>
+                <outlet property="videoThumbnailImage" destination="AlH-K3-LY5" id="VZo-Ha-0mT"/>
+            </connections>
+            <point key="canvasLocation" x="138" y="69"/>
+        </tableViewCell>
+    </objects>
+</document>

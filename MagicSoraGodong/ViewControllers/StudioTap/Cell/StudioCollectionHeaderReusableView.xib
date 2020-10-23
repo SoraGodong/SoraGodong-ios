@@ -22,138 +22,9 @@
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IN5-gy-Afi">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="cvF-lE-ca9">
-                                            <rect key="frame" x="20" y="10" width="552" height="30"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdS-An-VOn">
-                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                                                    <state key="normal" title="전체">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <state key="selected">
-                                                        <color key="titleColor" red="0.3317549568" green="0.53511634669999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                    <state key="highlighted">
-                                                        <color key="titleColor" red="0.3317549568" green="0.53511634669999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lll-cs-6Y9">
-                                                    <rect key="frame" x="42" y="0.0" width="30" height="30"/>
-                                                    <state key="normal" title="식품">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <state key="selected">
-                                                        <color key="titleColor" red="0.3317549568" green="0.53511634669999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyC-5P-hiS">
-                                                    <rect key="frame" x="84" y="0.0" width="30" height="30"/>
-                                                    <state key="normal" title="가전">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <state key="selected">
-                                                        <color key="titleColor" red="0.3317549568" green="0.53511634669999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5h-jX-feA">
-                                                    <rect key="frame" x="126" y="0.0" width="39" height="30"/>
-                                                    <state key="normal" title="디지털">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <state key="selected">
-                                                        <color key="titleColor" red="0.3317549568" green="0.53511634669999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbR-ji-vWB">
-                                                    <rect key="frame" x="177" y="0.0" width="30" height="30"/>
-                                                    <state key="normal" title="뷰티">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <state key="selected">
-                                                        <color key="titleColor" red="0.3317549568" green="0.53511634669999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZ5-Cm-6iM">
-                                                    <rect key="frame" x="219" y="0.0" width="30" height="30"/>
-                                                    <state key="normal" title="의류">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <state key="selected">
-                                                        <color key="titleColor" red="0.3317549568" green="0.53511634669999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5G-qd-4hw">
-                                                    <rect key="frame" x="261" y="0.0" width="30" height="30"/>
-                                                    <state key="normal" title="가구">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <state key="selected">
-                                                        <color key="titleColor" red="0.3317549568" green="0.53511634669999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tkb-Tm-N3J">
-                                                    <rect key="frame" x="303" y="0.0" width="30" height="30"/>
-                                                    <state key="normal" title="주방">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <state key="selected">
-                                                        <color key="titleColor" red="0.3317549568" green="0.53511634669999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMy-fL-2YK">
-                                                    <rect key="frame" x="345" y="0.0" width="30" height="30"/>
-                                                    <state key="normal" title="애견">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <state key="selected">
-                                                        <color key="titleColor" red="0.3317549568" green="0.53511634669999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTI-F8-sjz">
-                                                    <rect key="frame" x="387" y="0.0" width="30" height="30"/>
-                                                    <state key="normal" title="도서">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <state key="selected">
-                                                        <color key="titleColor" red="0.3317549568" green="0.53511634669999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJa-bm-fXN">
-                                                    <rect key="frame" x="429" y="0.0" width="30" height="30"/>
-                                                    <state key="normal" title="헬스">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <state key="selected">
-                                                        <color key="titleColor" red="0.3317549568" green="0.53511634669999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNY-F0-uGi">
-                                                    <rect key="frame" x="471" y="0.0" width="30" height="30"/>
-                                                    <state key="normal" title="문구">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <state key="selected">
-                                                        <color key="titleColor" red="0.3317549568" green="0.53511634669999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0G-qF-VVU">
-                                                    <rect key="frame" x="513" y="0.0" width="39" height="30"/>
-                                                    <state key="normal" title="스포츠">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </state>
-                                                    <state key="selected">
-                                                        <color key="titleColor" red="0.3317549568" green="0.53511634669999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
-                                                </button>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstItem="cvF-lE-ca9" firstAttribute="leading" secondItem="IN5-gy-Afi" secondAttribute="leading" constant="20" id="2DC-eF-er7"/>
                                         <constraint firstAttribute="width" constant="600" id="EUs-0w-YN9"/>
-                                        <constraint firstItem="cvF-lE-ca9" firstAttribute="centerY" secondItem="IN5-gy-Afi" secondAttribute="centerY" id="taz-bZ-W8s"/>
                                     </constraints>
                                 </view>
                             </subviews>
@@ -184,8 +55,7 @@
                 <constraint firstItem="cDS-G7-No4" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="gN8-PO-1kZ"/>
             </constraints>
             <connections>
-                <outlet property="foodButton" destination="lll-cs-6Y9" id="kzE-ok-TwS"/>
-                <outlet property="wholeButton" destination="pdS-An-VOn" id="Vna-HV-U7Z"/>
+                <outlet property="categoryView" destination="IN5-gy-Afi" id="7Gh-1r-2YZ"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="82.366071428571431"/>
         </collectionReusableView>

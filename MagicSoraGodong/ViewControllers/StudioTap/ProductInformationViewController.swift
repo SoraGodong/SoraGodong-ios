@@ -8,22 +8,30 @@
 import UIKit
 
 class ProductInformationViewController: UIViewController {
-
+    
+    // MARK:- Properties
+    @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var productPrice: UILabel!
+    var temporaryProductImageName: String?
+    var temporaryProductName: String?
+    var temporaryProductPrice: Int?
+    
+    // MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureUI()
+    }
 
-        // Do any additional setup after loading the view.
+}
+
+extension ProductInformationViewController {
+    
+    func configureUI() {
+        productImage.image = UIImage(named: temporaryProductImageName ?? "")
+        productName.text = temporaryProductName
+        productPrice.text = String(temporaryProductPrice ?? 0) + " 원"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

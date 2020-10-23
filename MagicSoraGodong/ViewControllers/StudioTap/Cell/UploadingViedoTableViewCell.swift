@@ -8,6 +8,9 @@
 import UIKit
 
 class UploadingViedoTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var videoInformationTextField: UITextField!
+    @IBOutlet weak var findingViedoButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()

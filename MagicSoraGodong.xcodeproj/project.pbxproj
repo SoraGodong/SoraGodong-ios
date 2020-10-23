@@ -57,6 +57,7 @@
 		8D2532AA25403722002F1B77 /* ProductInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2532A925403722002F1B77 /* ProductInformationViewController.swift */; };
 		8D2532AD2540376F002F1B77 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2532AC2540376F002F1B77 /* RegistrationViewController.swift */; };
 		8D28F0EC2541B0DD00080D7B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28F0EB2541B0DD00080D7B /* Category.swift */; };
+		8D33FF592541D8C9006C5E4D /* StudioProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D33FF582541D8C9006C5E4D /* StudioProduct.swift */; };
 		8D4DC435253E924D00E06D8B /* StudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4DC434253E924D00E06D8B /* StudioViewController.swift */; };
 		8D5EB6D62540444800B2CDFE /* SelectedProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5EB6D42540444800B2CDFE /* SelectedProductTableViewCell.swift */; };
 		8D5EB6D72540444800B2CDFE /* SelectedProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D5EB6D52540444800B2CDFE /* SelectedProductTableViewCell.xib */; };
@@ -72,6 +73,8 @@
 		8D97E61B253C866000908404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D97E619253C866000908404 /* Main.storyboard */; };
 		8D97E61D253C866000908404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D97E61C253C866000908404 /* Assets.xcassets */; };
 		8D97E620253C866000908404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D97E61E253C866000908404 /* LaunchScreen.storyboard */; };
+		8DB0E1032542BC9700F4E8FC /* ThumbnailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB0E1012542BC9700F4E8FC /* ThumbnailTableViewCell.swift */; };
+		8DB0E1042542BC9700F4E8FC /* ThumbnailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB0E1022542BC9700F4E8FC /* ThumbnailTableViewCell.xib */; };
 		8DF86F0C25400DA0008776AC /* StudioCollectionHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF86F0A25400DA0008776AC /* StudioCollectionHeaderReusableView.swift */; };
 		8DF86F0D25400DA0008776AC /* StudioCollectionHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF86F0B25400DA0008776AC /* StudioCollectionHeaderReusableView.xib */; };
 /* End PBXBuildFile section */
@@ -127,6 +130,7 @@
 		8D2532A925403722002F1B77 /* ProductInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInformationViewController.swift; sourceTree = "<group>"; };
 		8D2532AC2540376F002F1B77 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		8D28F0EB2541B0DD00080D7B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		8D33FF582541D8C9006C5E4D /* StudioProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioProduct.swift; sourceTree = "<group>"; };
 		8D4DC434253E924D00E06D8B /* StudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioViewController.swift; sourceTree = "<group>"; };
 		8D5EB6D42540444800B2CDFE /* SelectedProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedProductTableViewCell.swift; sourceTree = "<group>"; };
 		8D5EB6D52540444800B2CDFE /* SelectedProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedProductTableViewCell.xib; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 		8D97E61C253C866000908404 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D97E61F253C866000908404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D97E621253C866000908404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DB0E1012542BC9700F4E8FC /* ThumbnailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailTableViewCell.swift; sourceTree = "<group>"; };
+		8DB0E1022542BC9700F4E8FC /* ThumbnailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThumbnailTableViewCell.xib; sourceTree = "<group>"; };
 		8DF86F0A25400DA0008776AC /* StudioCollectionHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioCollectionHeaderReusableView.swift; sourceTree = "<group>"; };
 		8DF86F0B25400DA0008776AC /* StudioCollectionHeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudioCollectionHeaderReusableView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -224,10 +230,10 @@
 		683E55B0253E00D5000D79CE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8D4DC434253E924D00E06D8B /* StudioViewController.swift */,
 				8D241D892541AD2400485D0D /* StudioTap */,
 				68A44585254002DB00136039 /* Home */,
 				8D97E617253C866000908404 /* HomeViewController.swift */,
-				8D4DC434253E924D00E06D8B /* StudioViewController.swift */,
 				2866FD6A25408FD6009583AC /* ShowHostTableViewCell.swift */,
 				2866FD6D25408FE6009583AC /* ShoppingTableViewCell.swift */,
 				2866FD7325408FF7009583AC /* MyInformationTableViewCell.swift */,
@@ -308,6 +314,7 @@
 				8D2532A925403722002F1B77 /* ProductInformationViewController.swift */,
 				8D2532AC2540376F002F1B77 /* RegistrationViewController.swift */,
 				8D28F0EA2541B0A500080D7B /* Cell */,
+				8D33FF572541D864006C5E4D /* Model */,
 			);
 			path = StudioTap;
 			sourceTree = "<group>";
@@ -323,10 +330,20 @@
 				8D5EB6D52540444800B2CDFE /* SelectedProductTableViewCell.xib */,
 				8D5EB6D92540481800B2CDFE /* UploadingViedoTableViewCell.swift */,
 				8D5EB6DA2540481800B2CDFE /* UploadingViedoTableViewCell.xib */,
+				8DB0E1012542BC9700F4E8FC /* ThumbnailTableViewCell.swift */,
+				8DB0E1022542BC9700F4E8FC /* ThumbnailTableViewCell.xib */,
 				8D5EB6DE2540522900B2CDFE /* VideoInformationTableViewCell.swift */,
 				8D5EB6DF2540522900B2CDFE /* VideoInformationTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		8D33FF572541D864006C5E4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8D33FF582541D8C9006C5E4D /* StudioProduct.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8D97E607253C866000908404 = {
@@ -422,6 +439,7 @@
 				68276127253F212C00235D84 /* monkey-clip.mp4 in Resources */,
 				8D97E620253C866000908404 /* LaunchScreen.storyboard in Resources */,
 				8D5EB6DC2540481800B2CDFE /* UploadingViedoTableViewCell.xib in Resources */,
+				8DB0E1042542BC9700F4E8FC /* ThumbnailTableViewCell.xib in Resources */,
 				8D65384B253F30B50021D348 /* StudioCollectionViewCell.xib in Resources */,
 				8D5EB6E12540522900B2CDFE /* VideoInformationTableViewCell.xib in Resources */,
 				8DF86F0D25400DA0008776AC /* StudioCollectionHeaderReusableView.xib in Resources */,
@@ -478,6 +496,7 @@
 				68D6F6C425428D2C00930A85 /* LoginInfo.swift in Sources */,
 				2866FDB52541F2D9009583AC /* MyPageMyVideoTableViewCell.swift in Sources */,
 				2866FD6B25408FD6009583AC /* ShowHostTableViewCell.swift in Sources */,
+				8DB0E1032542BC9700F4E8FC /* ThumbnailTableViewCell.swift in Sources */,
 				68F93F14253F2412002F6C9F /* Video.swift in Sources */,
 				685DF757253F07C8007E28C2 /* HomeDetailViewController.swift in Sources */,
 				686817C925402D7800F621D3 /* Comment.swift in Sources */,
@@ -494,6 +513,7 @@
 				8D97E616253C866000908404 /* SceneDelegate.swift in Sources */,
 				68D6F6C725428E8F00930A85 /* LoginToken.swift in Sources */,
 				2866FD8E25419A92009583AC /* PurchaseListHeaderTableViewCell.swift in Sources */,
+				8D33FF592541D8C9006C5E4D /* StudioProduct.swift in Sources */,
 				2866FDB22541F2B5009583AC /* MyPageAllOfVideosTableViewCell.swift in Sources */,
 				685493712542D1A000C0E843 /* Vlog.swift in Sources */,
 				68093317253E0F7B0041DEF0 /* extension.swift in Sources */,
