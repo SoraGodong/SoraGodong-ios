@@ -22,6 +22,7 @@
 		2866FDB22541F2B5009583AC /* MyPageAllOfVideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866FDB12541F2B5009583AC /* MyPageAllOfVideosTableViewCell.swift */; };
 		2866FDB52541F2D9009583AC /* MyPageMyVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866FDB42541F2D9009583AC /* MyPageMyVideoTableViewCell.swift */; };
 		2866FDB82541F2F5009583AC /* RevenueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866FDB72541F2F5009583AC /* RevenueTableViewCell.swift */; };
+		2866FDBB2542B01A009583AC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866FDBA2542B01A009583AC /* LoginViewController.swift */; };
 		68093317253E0F7B0041DEF0 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68093316253E0F7B0041DEF0 /* extension.swift */; };
 		68276125253F212C00235D84 /* newYorkFlip-clip.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 68276116253F212C00235D84 /* newYorkFlip-clip.mp4 */; };
 		68276126253F212C00235D84 /* bulletTrain-clip.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 68276117253F212C00235D84 /* bulletTrain-clip.mp4 */; };
@@ -87,6 +88,7 @@
 		2866FDB12541F2B5009583AC /* MyPageAllOfVideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageAllOfVideosTableViewCell.swift; sourceTree = "<group>"; };
 		2866FDB42541F2D9009583AC /* MyPageMyVideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMyVideoTableViewCell.swift; sourceTree = "<group>"; };
 		2866FDB72541F2F5009583AC /* RevenueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueTableViewCell.swift; sourceTree = "<group>"; };
+		2866FDBA2542B01A009583AC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		68093316253E0F7B0041DEF0 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		68276116253F212C00235D84 /* newYorkFlip-clip.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "newYorkFlip-clip.mp4"; sourceTree = "<group>"; };
 		68276117253F212C00235D84 /* bulletTrain-clip.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bulletTrain-clip.mp4"; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				2866FDB12541F2B5009583AC /* MyPageAllOfVideosTableViewCell.swift */,
 				2866FDB42541F2D9009583AC /* MyPageMyVideoTableViewCell.swift */,
 				2866FDB72541F2F5009583AC /* RevenueTableViewCell.swift */,
+				2866FDBA2542B01A009583AC /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 			files = (
 				8D65384A253F30B50021D348 /* StudioCollectionViewCell.swift in Sources */,
 				8D2532AA25403722002F1B77 /* ProductInformationViewController.swift in Sources */,
+				2866FDBB2542B01A009583AC /* LoginViewController.swift in Sources */,
 				8D5EB6E02540522900B2CDFE /* VideoInformationTableViewCell.swift in Sources */,
 				2866FD6E25408FE6009583AC /* ShoppingTableViewCell.swift in Sources */,
 				2866FD7D2540A092009583AC /* ShoppingListTableViewCell.swift in Sources */,
