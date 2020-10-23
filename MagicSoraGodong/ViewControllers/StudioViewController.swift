@@ -153,6 +153,10 @@ extension StudioViewController {
         }
     }
     
+    func setProducts(_ index: Int) {
+        products = StudioProduct.categoryProducts[index]
+        collectionView.reloadData()
+    }
     
 }
 
