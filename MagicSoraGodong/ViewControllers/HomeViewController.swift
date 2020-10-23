@@ -11,47 +11,49 @@ class HomeViewController: UIViewController{
 
     // MARK:- Properties
     @IBOutlet weak var scrollView:UIScrollView!
-    @IBOutlet weak var tableView:UITableView!
+    @IBOutlet weak var tableView:UITableView! 
     
     let category = categoty.categories
     var categoryMenus:[UILabel] = []
-    var videos:[Video] = Video.allVideos() 
+    var videos:[vlogItem] = []
     
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         makeCategoryMenu()
-        initNavigation()
+        initUI()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didReceiveVlogs), name: DidReceiveVlogsNotification, object: nil)
+        
+        getVlogs()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        tableView.reloadData()
-        getCategory()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let homeDetailViewController:HomeDetailViewController = segue.destination as? HomeDetailViewController else {return}
         guard let selectedIndexPath = self.tableView.indexPathForSelectedRow else {return}
-        homeDetailViewController.video = videos[selectedIndexPath.row]
+        homeDetailViewController.vlogIdx = videos[selectedIndexPath.row].vlogIdx
     }
 }
 
 // MARK:- Configure
 extension HomeViewController{
     
-    func initNavigation(){
-        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) 
+    func initUI(){
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
     func makeCategoryMenu(){
         //상단 메뉴 생성
+        
         for i in 0..<category.count{
             let categoryMenu = UILabel()
             let xposion = (self.view.frame.width/5)*CGFloat(i)
             categoryMenu.text = category[i]
-            categoryMenu.frame = CGRect(x: xposion+30, y: 15, width:self.view.frame.width/5 , height: 30)
-            categoryMenu.tag = i 
+            categoryMenu.frame = CGRect(x: xposion, y: 15, width:self.view.frame.width/5 , height: 30)
+            categoryMenu.tag = i+1
+            categoryMenu.textAlignment = .center
             categoryMenu.isUserInteractionEnabled = true
-            
             categoryMenu.textColor = i == 0 ? #colorLiteral(red: 0.3134731054, green: 0.6144956946, blue: 1, alpha: 1) :  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
             
             
@@ -72,6 +74,7 @@ extension HomeViewController{
            for i in 0..<categoryMenus.count{
                categoryMenus[i].textColor = categoryMenus[i].tag == selected.tag ? #colorLiteral(red: 0.3134731054, green: 0.6144956946, blue: 1, alpha: 1) :  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
            }
+        getVlogs(categoryIdx: selected.tag)
         tableView.reloadSections(IndexSet(0...0), with: .left)
 
        }
@@ -79,6 +82,15 @@ extension HomeViewController{
 
 }
 
+
+//MARK:- methods
+extension HomeViewController{
+    @objc func didReceiveVlogs(_ noti:Notification){
+        guard let v:vlogKey = noti.object as? vlogKey else {return}
+        self.videos = v.Result
+        self.tableView.reloadData()
+    }
+}
 
 //MARK: TableView
 extension HomeViewController:UITableViewDataSource{
@@ -88,8 +100,8 @@ extension HomeViewController:UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell:HomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.cellIdentifier) as? HomeTableViewCell else {fatalError("Unable to dequeue HomeTableViewCell")}
-        let video = videos[indexPath.row]
+        guard let cell:HomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.cellIdentifier) as? HomeTableViewCell else {fatalError("Unable to dequeue HomeTableViewCell")} 
+        let video = videos[indexPath.row] 
         cell.update(video: video)
         return cell
     }

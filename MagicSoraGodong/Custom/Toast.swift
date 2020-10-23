@@ -51,4 +51,23 @@ class Toast {
             })
         })
     }
+    
+    static func printError(code:Int,controller: UIViewController){
+//        200 |   브이로그 불러오기 성공
+//        400 |   유효하지 않은 토큰입니다
+//        401 |   허용되지 않는 요청입니다
+//        402 |   존재하지 않는 브이로그입니다
+        switch code{
+//        case 200:
+//            show(message: "브이로그 불러오기 성공", controller: controller)
+        case 400:
+            show(message: "유효하지 않은 토큰입니다", controller: controller)
+        case 401:
+            show(message: "허용되지 않는 요청입니다", controller: controller)
+        case 402:
+            show(message: "존재하지 않는 브이로그입니다", controller: controller)
+        default:
+            break
+        }
+    }
 }
