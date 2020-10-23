@@ -13,6 +13,7 @@ class StudioCollectionHeaderReusableView: UICollectionReusableView {
     @IBOutlet weak var categoryView: UIView!
     let categories = categoty.categories
     var categoryButtons: [UIButton] = []
+    var collectionView: UICollectionView?
     
     // MARK:- Nib Life Cycle
     override func awakeFromNib() {
@@ -59,6 +60,7 @@ extension StudioCollectionHeaderReusableView {
                 categoryButtons[index].setTitleColor(.lightGray, for: .normal)
             }
         }
+        collectionView?.reloadSections(IndexSet(0...0))
     }
     
 }

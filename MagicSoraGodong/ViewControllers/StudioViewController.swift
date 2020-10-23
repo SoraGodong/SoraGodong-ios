@@ -27,6 +27,7 @@ class StudioViewController: UIViewController {
         Product(productImageName: "food5", productTitle: "burger", productPrice: 3000, check: false),
         Product(productImageName: "food6", productTitle: "stake", productPrice: 12000, check: false)
     ]
+    var collectionViewHeader = StudioCollectionHeaderReusableView()
     
     // MARK:- View Life Cycle
     override func viewDidLoad() {
@@ -41,6 +42,7 @@ class StudioViewController: UIViewController {
 extension StudioViewController {
     
     func configureCollectionView() {
+        collectionViewHeader.collectionView = self.collectionView
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(
