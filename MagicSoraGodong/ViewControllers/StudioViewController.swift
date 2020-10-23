@@ -12,6 +12,11 @@ class StudioViewController: UIViewController {
     // MARK:- Properties
     @IBOutlet weak var collectionView: UICollectionView!
     var collectionViewHeader = StudioCollectionHeaderReusableView()
+    let numberFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        return formatter
+    }()
     private var products: [Product] = [
         Product(productImageName: "food1", productTitle: "berry", productPrice: 5000, check: false),
         Product(productImageName: "food2", productTitle: "toast", productPrice: 4000, check: false),
@@ -168,7 +173,7 @@ extension StudioViewController: UICollectionViewDataSource {
         cell.checkBoxButton.tag = indexPath.item
         cell.checkBoxButton.addTarget(self, action: #selector(touchUpCheckBox(_:)), for: .touchUpInside)
         cell.productNameLabel.text = products[indexPath.item].productTitle
-        cell.productPriceLabel.text = String(products[indexPath.item].productPrice ?? 0)
+        cell.productPriceLabel.text = numberFormatter.string(from: NSNumber(value: products[indexPath.item].productPrice ?? 0))! + " 원"
         
         return cell
     }

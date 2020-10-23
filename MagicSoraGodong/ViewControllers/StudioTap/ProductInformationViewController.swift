@@ -26,6 +26,7 @@ class ProductInformationViewController: UIViewController {
 
 }
 
+// MARK:- Configure UI
 extension ProductInformationViewController {
     
     func configureUI() {
