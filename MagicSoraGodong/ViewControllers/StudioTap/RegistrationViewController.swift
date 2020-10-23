@@ -56,7 +56,7 @@ extension RegistrationViewController {
         navigationItem.rightBarButtonItem = registrationButton
         navigationItem.title = "마법의 소라고동"
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.barTintColor = .systemIndigo
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.5169164538, green: 0.689781487, blue: 0.9588938355, alpha: 1)
         navigationController?.navigationBar.tintColor = .white
     }
     

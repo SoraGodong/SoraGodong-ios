@@ -33,7 +33,7 @@ extension StudioCollectionHeaderReusableView {
             let categoryButton = UIButton()
             categoryButton.tag = index
             categoryButton.setTitle(categories[index], for: .normal)
-            categoryButton.setTitleColor(.lightGray, for: .normal)
+            categoryButton.setTitleColor(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1), for: .normal)
             categoryButton.translatesAutoresizingMaskIntoConstraints = false
             categoryButton.addTarget(self, action: #selector(touchUpCategoryButton(_:)), for: .touchUpInside)
             categoryView.addSubview(categoryButton)
@@ -45,6 +45,7 @@ extension StudioCollectionHeaderReusableView {
                 equalTo: index == 0 ? categoryView.leadingAnchor : categoryButtons[index - 1].trailingAnchor,
                 constant: 18).isActive = true
         }
+        categoryButtons[0].setTitleColor(#colorLiteral(red: 0.3134731054, green: 0.6144956946, blue: 1, alpha: 1), for: .normal)
     }
     
 }
@@ -55,9 +56,9 @@ extension StudioCollectionHeaderReusableView {
     @objc func touchUpCategoryButton(_ sender: UIButton) {
         for index in 0 ..< categoryButtons.count {
             if sender.tag == index {
-                categoryButtons[index].setTitleColor(.black, for: .normal)
+                categoryButtons[index].setTitleColor(#colorLiteral(red: 0.5169164538, green: 0.689781487, blue: 0.9588938355, alpha: 1), for: .normal)
             } else {
-                categoryButtons[index].setTitleColor(.lightGray, for: .normal)
+                categoryButtons[index].setTitleColor(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1), for: .normal)
             }
         }
         collectionView?.reloadSections(IndexSet(0...0))

@@ -57,7 +57,7 @@ extension StudioViewController {
         navigationItem.rightBarButtonItem = button
         navigationItem.title = "마법의 소라고동"
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.barTintColor = .systemIndigo
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.5169164538, green: 0.689781487, blue: 0.9588938355, alpha: 1)
         navigationController?.navigationBar.tintColor = .white
     }
     
@@ -88,7 +88,7 @@ extension StudioViewController {
         }
         else if productCheck == false  {
             products[sender.tag].check = true
-            sender.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            sender.tintColor = #colorLiteral(red: 0.5169164538, green: 0.689781487, blue: 0.9588938355, alpha: 1)
             print("--------------------------------")
             print("추가 실행전 담긴 갯수: \(SelectedProduct.shared.products.count)")
             print("추가 실행전 태그 번호 : \(sender.tag)")
