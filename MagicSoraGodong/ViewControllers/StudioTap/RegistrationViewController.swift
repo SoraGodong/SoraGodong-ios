@@ -84,6 +84,9 @@ extension RegistrationViewController {
     }
     
     @objc func touchUpRegistrationButton() {
+        guard let videoInfoCell = tableView.cellForRow(at: [2, 0]) as? VideoInformationTableViewCell else { return }
+        VlogData.shared.videoTitle = videoInfoCell.videoTitleField.text
+        VlogData.shared.vidoeContent = videoInfoCell.videoInfoField.text
 //        if checkField() {
             let alert = UIAlertController(
                 title: "",
@@ -108,7 +111,6 @@ extension RegistrationViewController {
 //            alert.addAction(okAction)
 //            present(alert, animated: true, completion: nil)
 //        }
-        
     }
     
     @objc func tapView() {
@@ -167,6 +169,8 @@ extension RegistrationViewController: MediaPickerDelegate {
         // images will be created at each capture times.
         mediaPickerManager.generateThumbnailSync(url: videoURL, startOffsets: captureTime) { images in
             mediaCell.videoThumbnailImage.image = images.first!
+            VlogData.shared.videoAseet = AVAsset(url: videoURL)
+            VlogData.shared.videoImage = images.first!
         }
     }
 }
