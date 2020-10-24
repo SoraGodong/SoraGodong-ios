@@ -84,7 +84,11 @@ extension RegistrationViewController {
     }
     
     @objc func touchUpRegistrationButton() {
-//        if checkField() {
+        if self.checkField() {
+            guard let videoInfoCell = tableView.cellForRow(at: [2, 0]) as? VideoInformationTableViewCell else { return }
+            VlogData.shared.videoTitle = videoInfoCell.videoTitleField.text
+            VlogData.shared.vidoeContent = videoInfoCell.videoInfoField.text
+
             let alert = UIAlertController(
                 title: "",
                 message: "브이로그 등록이 완료되었습니다.",
@@ -97,17 +101,17 @@ extension RegistrationViewController {
             }
             alert.addAction(okAction)
             present(alert, animated: true, completion: nil)
-//        } else {
-//            let alert = UIAlertController(
-//                title: "",
-//                message: "모든 항목을 작성해주세요.",
-//                preferredStyle: .alert)
-//            let okAction = UIAlertAction(
-//                title: "확인",
-//                style: .default)
-//            alert.addAction(okAction)
-//            present(alert, animated: true, completion: nil)
-//        }
+        } else {
+            let alert = UIAlertController(
+                title: "",
+                message: "모든 항목을 작성해주세요.",
+                preferredStyle: .alert)
+            let okAction = UIAlertAction(
+                title: "확인",
+                style: .default)
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+        }
         
     }
     
@@ -116,22 +120,14 @@ extension RegistrationViewController {
     }
     
     func checkField() -> Bool {
+        guard let pictureCell = tableView.cellForRow(at: [1, 0]) as? ThumbnailTableViewCell else { return false }
+        guard let infoCell = tableView.cellForRow(at: [2, 0]) as? VideoInformationTableViewCell else { return false }
         
-//        guard let videoCell = tableView.cellForRow(at: [0, 1]) as? UploadingViedoTableViewCell else { return false }
-//        guard let pictureCell = tableView.cellForRow(at: [0, 2]) as? ThumbnailTableViewCell else { return false }
-        guard let infoCell = tableView.cellForRow(at: [0, 3]) as? VideoInformationTableViewCell else { return false }
+        guard let videoField = pictureCell.videoThumbnailImage else { return false }
+        guard let titleField = infoCell.videoTitleField else { return false }
+        guard let infonField = infoCell.videoInfoField else { return false }
         
-//        let videoField = videoCell.videoInformationTextField
-//        let pictureField = pictureCell.videoThumbnailImage
-        let titleField = infoCell.videoTitleField
-        let infonField = infoCell.videoInfoField
-        
-//        guard let videoField = videoCell.videoInformationTextField else { return }
-//        guard let pictureField = pictureCell.videoThumbnailImage else { return }
-//        guard let titleField = infoCell.videoTitleField else { return }
-//        guard let infonField = infoCell.videoInfoField else { return }
-        
-        if !titleField!.text!.isEmpty && infonField?.text != "영상 내용을 작성해주세요." {
+        if !titleField.text!.isEmpty && infonField.text != "영상 내용을 작성해주세요." && infonField.text != "" && videoField.image !== nil {
             return true
         } else {
             return false
@@ -167,6 +163,8 @@ extension RegistrationViewController: MediaPickerDelegate {
         // images will be created at each capture times.
         mediaPickerManager.generateThumbnailSync(url: videoURL, startOffsets: captureTime) { images in
             mediaCell.videoThumbnailImage.image = images.first!
+            VlogData.shared.videoAseet = AVAsset(url: videoURL)
+            VlogData.shared.videoImage = images.first!
         }
     }
 }
