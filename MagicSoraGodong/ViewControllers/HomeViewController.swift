@@ -20,10 +20,9 @@ class HomeViewController: UIViewController{
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        makeCategoryMenu()
-        initUI()
-        NotificationCenter.default.addObserver(self, selector: #selector(self.didReceiveVlogs), name: DidReceiveVlogsNotification, object: nil)
-        
+        configureNavigation()
+        configureCategoryMenu()
+        configureNotificationCenter()
         getVlogs()
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -40,10 +39,23 @@ class HomeViewController: UIViewController{
 // MARK:- Configure
 extension HomeViewController{
     
-    func initUI(){
-        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+    func configureNavigation(){
+        var searchKeywordField:UITextField{
+            let textfield = UITextField()
+            textfield.frame = CGRect(x: 0, y: 0, width: self.view.frame.width/3, height: 50)
+            textfield.placeholder = "검색어를 입력해주세요"
+            return textfield
+        }
+         
+        self.navigationItem.titleView = searchKeywordField
+        self.navigationItem.titleView?.isHidden = true
     }
-    func makeCategoryMenu(){
+    func configureNotificationCenter(){
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(self.didReceiveVlogs),
+                                               name: DidReceiveVlogsNotification, object: nil)
+    }
+    func configureCategoryMenu(){
         //상단 메뉴 생성
         
         for i in 0..<category.count{
@@ -57,7 +69,8 @@ extension HomeViewController{
             categoryMenu.textColor = i == 0 ? #colorLiteral(red: 0.3134731054, green: 0.6144956946, blue: 1, alpha: 1) :  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
             
             
-            let categoryTab:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.touchUpCategory(_:)))
+            let categoryTab:UITapGestureRecognizer = UITapGestureRecognizer(target: self,
+                                                                            action: #selector(self.touchUpCategory(_:)))
             categoryMenu.addGestureRecognizer(categoryTab)
             categoryMenus.append(categoryMenu)
             scrollView.contentSize.width = self.view.frame.width*1.5
@@ -89,6 +102,12 @@ extension HomeViewController{
         guard let v:vlogKey = noti.object as? vlogKey else {return}
         self.videos = v.Result
         self.tableView.reloadData()
+    }
+    @IBAction func searchToggle(_ sender:UIBarButtonItem){
+        guard let leftLogo = navigationItem.leftBarButtonItem else {return}
+        guard let search = navigationItem.titleView else {return} 
+        leftLogo.title = leftLogo.title=="" ? "마법의 소라고동" : ""
+        search.isHidden = !search.isHidden
     }
 }
 
