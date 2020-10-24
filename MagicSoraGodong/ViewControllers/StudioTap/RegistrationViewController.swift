@@ -162,10 +162,8 @@ extension RegistrationViewController {
 // MARK:- Media Picker Delegate
 extension RegistrationViewController: MediaPickerDelegate {
     func didFinishPickingMedia(videoURL: URL) {
-        print("영상 선택완료")
         let captureTime: [Double] = [12, 2, 3, 4]
-        guard let mediaCell = tableView.cellForRow(at: [0, 1]) as? ThumbnailTableViewCell else { return }
-        print(mediaCell.test)
+        guard let mediaCell = tableView.cellForRow(at: [1, 0]) as? ThumbnailTableViewCell else { return }
         // images will be created at each capture times.
         mediaPickerManager.generateThumbnailSync(url: videoURL, startOffsets: captureTime) { images in
             mediaCell.videoThumbnailImage.image = images.first!

@@ -14,7 +14,6 @@ class ThumbnailTableViewCell: UITableViewCell {
     @IBOutlet weak var mediaButton: UIButton!
 //    let mediaPickerManager = MediaPickerManager()
     var completionHandler: (() -> (Void))?
-    let test = "영상업로드셀"
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,17 +38,5 @@ extension ThumbnailTableViewCell {
     }
     
 }
-
-// MARK:- Media Picker Delegate
-//extension ThumbnailTableViewCell: MediaPickerDelegate {
-//    func didFinishPickingMedia(videoURL: URL) {
-//        let captureTime: [Double] = [12, 2, 3, 4]
-//
-//        // images will be created at each capture times.
-//        mediaPickerManager.generateThumbnailSync(url: videoURL, startOffsets: captureTime) { images in
-//            self.videoThumbnailImage.image = images.first!
-//        }
-//    }
-//}
 
 
