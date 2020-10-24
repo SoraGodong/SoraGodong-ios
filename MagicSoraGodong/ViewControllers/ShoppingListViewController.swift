@@ -61,6 +61,9 @@ class ShoppingListViewController: UIViewController {
         //cartTableView.separatorStyle = .none
         cartTableView.register(ShoppingListHeaderView.self, forHeaderFooterViewReuseIdentifier: "header")
         checkTotalPrice()
+        
+        navigationController?.navigationBar.topItem?.title = ""
+        navigationController?.navigationItem.title = ""
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,10 +71,8 @@ class ShoppingListViewController: UIViewController {
         cartTableView.dataSource = self
         cartTableView.delegate = self
         cartTableView.reloadData()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        navigationController?.navigationBar.topItem?.title = ""
+        navigationController?.navigationItem.title = ""
     }
 
 }

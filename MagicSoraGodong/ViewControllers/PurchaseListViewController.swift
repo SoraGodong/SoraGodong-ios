@@ -65,6 +65,7 @@ class PurchaseListViewController: UIViewController {
         purchaseListTableView.delegate = self
         purchaseListTableView.tableFooterView = UIView()
         //purchaseListTableView.separatorStyle = .none
+        navigationController?.navigationBar.topItem?.title = ""
 
     }
     
