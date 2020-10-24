@@ -12,11 +12,14 @@ class ThumbnailTableViewCell: UITableViewCell {
     
     @IBOutlet weak var videoThumbnailImage: UIImageView!
     @IBOutlet weak var mediaButton: UIButton!
-    let mediaPickerManager = MediaPickerManager()
+//    let mediaPickerManager = MediaPickerManager()
+    var completionHandler: (() -> (Void))?
+    let test = "영상업로드셀"
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+//        mediaPickerManager.mediaPickerDelegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,16 +33,23 @@ class ThumbnailTableViewCell: UITableViewCell {
 // MARK:- Methods
 extension ThumbnailTableViewCell {
     
-//    @IBAction func imageBtnTapped(_ sender: UIButton) {
-//        PHPhotoLibrary.checkPermission { isSuccess in
-//            DispatchQueue.main.async {
-//                if isSuccess {
-//                    self.present(self.mediaPickerManager.imagePicker, animated: true, completion: nil)
-//                }
-//            }
-//        }
-//    }
+    @IBAction func touchUpButton(_ sender: UIButton) {
+        guard let completionHandler = completionHandler else { return }
+        completionHandler()
+    }
     
 }
+
+// MARK:- Media Picker Delegate
+//extension ThumbnailTableViewCell: MediaPickerDelegate {
+//    func didFinishPickingMedia(videoURL: URL) {
+//        let captureTime: [Double] = [12, 2, 3, 4]
+//
+//        // images will be created at each capture times.
+//        mediaPickerManager.generateThumbnailSync(url: videoURL, startOffsets: captureTime) { images in
+//            self.videoThumbnailImage.image = images.first!
+//        }
+//    }
+//}
 
 

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Photos
 
 class RegistrationViewController: UIViewController {
     
@@ -13,6 +14,7 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var numberOfProducts = 3
     private var selectedProducts = SelectedProduct.shared.products
+    let mediaPickerManager = MediaPickerManager()
     let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
@@ -26,6 +28,7 @@ class RegistrationViewController: UIViewController {
         configureTableView()
         configureNavigationBar()
         configureTapGesture()
+        mediaPickerManager.mediaPickerDelegate = self
     }
     
 }
@@ -137,6 +140,39 @@ extension RegistrationViewController {
     
 }
 
+// MARK:- Video Methods
+extension RegistrationViewController {
+    
+    func checkPermissionAndPresentImagePicker() {
+        print("영상업로드")
+        PHPhotoLibrary.checkPermission { isSuccess in
+            DispatchQueue.main.async {
+                if isSuccess {
+                    self.present(self.mediaPickerManager.imagePicker, animated: true, completion: nil)
+                }
+            }
+        }
+    }
+    
+    func imageUpload() {
+        
+    }
+}
+
+// MARK:- Media Picker Delegate
+extension RegistrationViewController: MediaPickerDelegate {
+    func didFinishPickingMedia(videoURL: URL) {
+        print("영상 선택완료")
+        let captureTime: [Double] = [12, 2, 3, 4]
+        guard let mediaCell = tableView.cellForRow(at: [0, 1]) as? ThumbnailTableViewCell else { return }
+        print(mediaCell.test)
+        // images will be created at each capture times.
+        mediaPickerManager.generateThumbnailSync(url: videoURL, startOffsets: captureTime) { images in
+            mediaCell.videoThumbnailImage.image = images.first!
+        }
+    }
+}
+
 // MARK:- Table View DataSource
 extension RegistrationViewController: UITableViewDataSource {
     
@@ -176,6 +212,7 @@ extension RegistrationViewController: UITableViewDataSource {
                     for: indexPath) as? ThumbnailTableViewCell else {
                 return UITableViewCell()
             }
+            cell.completionHandler = checkPermissionAndPresentImagePicker
             cell.selectionStyle = .none
             return cell
         case 2:
