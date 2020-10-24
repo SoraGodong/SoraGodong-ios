@@ -24,6 +24,8 @@ class MyPageShowHostViewController: UIViewController {
         showhostTableView.delegate = self
         showhostTableView.separatorStyle = .none
         showhostTableView.tableFooterView = UIView()
+        
+        navigationController?.navigationBar.topItem?.title = ""
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
