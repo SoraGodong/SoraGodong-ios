@@ -141,14 +141,14 @@ extension RegistrationViewController {
 extension RegistrationViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
             return selectedProducts.count
-        case 1, 2, 3:
+        case 1, 2:
             return 1
         default:
             return 0
@@ -172,21 +172,13 @@ extension RegistrationViewController: UITableViewDataSource {
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(
-                    withIdentifier: String(describing: UploadingViedoTableViewCell.self),
-                    for: indexPath) as? UploadingViedoTableViewCell else {
-                return UITableViewCell()
-            }
-            cell.selectionStyle = .none
-            return cell
-        case 2:
-            guard let cell = tableView.dequeueReusableCell(
                     withIdentifier: String(describing: ThumbnailTableViewCell.self),
                     for: indexPath) as? ThumbnailTableViewCell else {
                 return UITableViewCell()
             }
             cell.selectionStyle = .none
             return cell
-        case 3:
+        case 2:
             guard let cell = tableView.dequeueReusableCell(
                     withIdentifier: String(describing: VideoInformationTableViewCell.self),
                     for: indexPath) as? VideoInformationTableViewCell else {
@@ -206,8 +198,6 @@ extension RegistrationViewController: UITableViewDataSource {
         case 1:
             return "브이로그 업로드"
         case 2:
-            return "브이로그 썸네일"
-        case 3:
             return "브이로그 정보"
         default:
             return ""

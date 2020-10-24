@@ -17,32 +17,32 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wC-Q7-IsC">
-                        <rect key="frame" x="298" y="60" width="52" height="30"/>
-                        <state key="normal" title="사진선택"/>
+                        <rect key="frame" x="291" y="60" width="69" height="30"/>
+                        <state key="normal" title="영상 업로드"/>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AlH-K3-LY5">
-                        <rect key="frame" x="33" y="25" width="150" height="100"/>
+                        <rect key="frame" x="20" y="0.0" width="200" height="150"/>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="100" id="EXh-Z3-BCi"/>
-                            <constraint firstAttribute="width" constant="150" id="n2c-Mp-2RS"/>
+                            <constraint firstAttribute="height" constant="150" id="fK3-rO-0NM"/>
+                            <constraint firstAttribute="width" constant="200" id="uNn-GG-dgn"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="AlH-K3-LY5" secondAttribute="bottom" constant="25" id="Ffd-Pi-MOU"/>
-                    <constraint firstItem="AlH-K3-LY5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="33" id="Iy8-fQ-hrL"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="9wC-Q7-IsC" secondAttribute="trailing" constant="30" id="ZEh-0G-ZVr"/>
-                    <constraint firstItem="AlH-K3-LY5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="lwz-dj-bwL"/>
+                    <constraint firstAttribute="bottom" secondItem="AlH-K3-LY5" secondAttribute="bottom" id="7lV-2p-PV3"/>
+                    <constraint firstItem="AlH-K3-LY5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Rkp-l1-OO3"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="9wC-Q7-IsC" secondAttribute="trailing" constant="20" id="ZEh-0G-ZVr"/>
+                    <constraint firstItem="AlH-K3-LY5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="exZ-TC-MG4"/>
                     <constraint firstItem="9wC-Q7-IsC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wzU-nL-vw5"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="uploadingPictureButton" destination="9wC-Q7-IsC" id="T1P-gA-Zan"/>
+                <outlet property="mediaButton" destination="9wC-Q7-IsC" id="T1P-gA-Zan"/>
                 <outlet property="videoThumbnailImage" destination="AlH-K3-LY5" id="VZo-Ha-0mT"/>
             </connections>
-            <point key="canvasLocation" x="138" y="69"/>
+            <point key="canvasLocation" x="137.68115942028987" y="68.303571428571431"/>
         </tableViewCell>
     </objects>
 </document>
