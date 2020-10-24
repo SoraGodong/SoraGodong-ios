@@ -34,7 +34,11 @@ class HomeViewController: UIViewController{
         guard let homeDetailViewController:HomeDetailViewController = segue.destination as? HomeDetailViewController else {return}
         guard let selectedIndexPath = self.tableView.indexPathForSelectedRow else {return}
         homeDetailViewController.video = videos[selectedIndexPath.row]
-        homeDetailViewController.vlogIdx = vlogs[selectedIndexPath.row].vlogIdx
+        if selectedIndexPath.row < vlogs.count{
+            homeDetailViewController.vlogIdx = vlogs[selectedIndexPath.row].vlogIdx
+        }else{
+            homeDetailViewController.vlogIdx = 1
+        }
     }
 }
 
@@ -91,6 +95,7 @@ extension HomeViewController{
                categoryMenus[i].textColor = categoryMenus[i].tag == selected.tag ? #colorLiteral(red: 0.3134731054, green: 0.6144956946, blue: 1, alpha: 1) :  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
            }
         getVlogs(categoryIdx: selected.tag)
+        //self.videos = Video.smapleVideos(category: selected.tag-1)
         tableView.reloadSections(IndexSet(0...0), with: .left)
 
        }
@@ -122,8 +127,8 @@ extension HomeViewController:UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell:HomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.cellIdentifier) as? HomeTableViewCell else {fatalError("Unable to dequeue HomeTableViewCell")} 
-        let video = videos[indexPath.row] 
+        guard let cell:HomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.cellIdentifier) as? HomeTableViewCell else {fatalError("Unable to dequeue HomeTableViewCell")}
+        let video = videos[indexPath.row]
         cell.update(video: video)
         return cell
     }
