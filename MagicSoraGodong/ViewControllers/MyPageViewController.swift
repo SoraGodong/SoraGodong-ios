@@ -23,6 +23,8 @@ class MyPageViewController: UIViewController {
         
         mypageTableView.separatorStyle = .none
         mypageTableView.tableFooterView = UIView()
+        
+        navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "soragodong"), style: .done, target: self, action: nil)
     }
 
 }
