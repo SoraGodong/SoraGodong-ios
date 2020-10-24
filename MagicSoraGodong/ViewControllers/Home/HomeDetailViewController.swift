@@ -55,16 +55,28 @@ extension HomeDetailViewController{
         cartButton.layer.shadowRadius = 6
         
         self.view.bringSubviewToFront(cartButton)
-        self.commentWrite.delegate = self
+        self.navigationController?.navigationBar.tintColor = .white
+        self.commentWrite.delegate = self 
         NotificationCenter.default.addObserver(self, selector: #selector(self.didReceiveVlog), name: DidReceiveVlogNotification, object: nil)
         
     }
     
     func videoAdd(){
-        guard let v = self.vlog else {return}
-        self.Videotitle.text = v.vlogTitle
-        self.hostName.text = v.userNickName
-        guard let videoUrl = URL(string:v.vlogUrl) else {return}
+//        guard let v = self.vlog else {return}
+//        self.Videotitle.text = v.vlogTitle
+//        self.hostName.text = v.userNickName
+//        guard let videoUrl = URL(string:v.vlogUrl) else {return}
+//        let player = AVPlayer(url: videoUrl)
+//        let playerLayer = AVPlayerLayer(player: player)
+//        playerLayer.videoGravity = .resize
+//        videoContainer.layer.addSublayer(playerLayer)
+//        playerLayer.frame = videoContainer.bounds
+//        player.play()
+        guard let v = self.video else {return}
+        self.Videotitle.text = v.title
+        self.hostName.text = v.subtitle
+        
+        guard let videoUrl = video?.url else {return}
         let player = AVPlayer(url: videoUrl)
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.videoGravity = .resize
