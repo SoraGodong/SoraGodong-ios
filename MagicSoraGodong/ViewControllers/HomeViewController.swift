@@ -15,7 +15,8 @@ class HomeViewController: UIViewController{
     
     let category = categoty.categories
     var categoryMenus:[UILabel] = []
-    var videos:[vlogItem] = []
+    var vlogs:[vlogItem] = []
+    var videos:[Video] = Video.allVideos() 
     
     //MARK: Life Cycle
     override func viewDidLoad() {
@@ -32,7 +33,8 @@ class HomeViewController: UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let homeDetailViewController:HomeDetailViewController = segue.destination as? HomeDetailViewController else {return}
         guard let selectedIndexPath = self.tableView.indexPathForSelectedRow else {return}
-        homeDetailViewController.vlogIdx = videos[selectedIndexPath.row].vlogIdx
+        homeDetailViewController.video = videos[selectedIndexPath.row]
+        homeDetailViewController.vlogIdx = vlogs[selectedIndexPath.row].vlogIdx
     }
 }
 
@@ -44,6 +46,7 @@ extension HomeViewController{
             let textfield = UITextField()
             textfield.frame = CGRect(x: 0, y: 0, width: self.view.frame.width/3, height: 50)
             textfield.placeholder = "검색어를 입력해주세요"
+            textfield.attributedPlaceholder = NSAttributedString(string: "검색어를 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor:UIColor.white])
             return textfield
         }
          
@@ -100,7 +103,7 @@ extension HomeViewController{
 extension HomeViewController{
     @objc func didReceiveVlogs(_ noti:Notification){
         guard let v:vlogKey = noti.object as? vlogKey else {return}
-        self.videos = v.Result
+        self.vlogs = v.Result
         self.tableView.reloadData()
     }
     @IBAction func searchToggle(_ sender:UIBarButtonItem){
