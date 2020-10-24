@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MQh-MJ-yh8">
-                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                        <rect key="frame" x="20" y="0.0" width="150" height="150"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="aLf-ib-0SJ"/>
@@ -46,7 +46,7 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="MQh-MJ-yh8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="B9L-iS-KNp"/>
+                    <constraint firstItem="MQh-MJ-yh8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="B9L-iS-KNp"/>
                     <constraint firstItem="MQh-MJ-yh8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="LXD-5a-7AV"/>
                     <constraint firstItem="HpO-UP-dO6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eaA-hf-fni"/>
                     <constraint firstAttribute="trailing" secondItem="HpO-UP-dO6" secondAttribute="trailing" constant="50" id="n2y-6v-1ww"/>

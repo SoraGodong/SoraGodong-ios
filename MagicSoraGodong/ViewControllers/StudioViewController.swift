@@ -157,7 +157,8 @@ extension StudioViewController {
     }
     
     func setProducts(_ index: Int) {
-        products = StudioProduct.categoryProducts[0]
+        products = StudioProduct.categoryProducts[index]
+        print(products.count)
         collectionView.reloadData()
     }
     
@@ -180,7 +181,6 @@ extension StudioViewController: UICollectionViewDataSource {
                 withReuseIdentifier: "studioCell",
                 for: indexPath) as? StudioCollectionViewCell else { return UICollectionViewCell() }
         
-
         cell.productImage.image = UIImage(
             named: self.products[indexPath.item].productImageName ?? "")
         cell.checkBoxButton.tag = indexPath.item
@@ -195,7 +195,8 @@ extension StudioViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: String(describing: StudioCollectionHeaderReusableView.self), for: indexPath)
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: String(describing: StudioCollectionHeaderReusableView.self), for: indexPath) as? StudioCollectionHeaderReusableView else { return UICollectionReusableView() }
+            header.completionHandler = setProducts(_:)
             return header
         default:
             return UICollectionReusableView()

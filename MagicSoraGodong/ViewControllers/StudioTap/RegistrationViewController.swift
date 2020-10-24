@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Photos
 
 class RegistrationViewController: UIViewController {
     
@@ -13,6 +14,7 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var numberOfProducts = 3
     private var selectedProducts = SelectedProduct.shared.products
+    let mediaPickerManager = MediaPickerManager()
     let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
@@ -26,6 +28,7 @@ class RegistrationViewController: UIViewController {
         configureTableView()
         configureNavigationBar()
         configureTapGesture()
+        mediaPickerManager.mediaPickerDelegate = self
     }
     
 }
@@ -137,18 +140,51 @@ extension RegistrationViewController {
     
 }
 
+// MARK:- Video Methods
+extension RegistrationViewController {
+    
+    func checkPermissionAndPresentImagePicker() {
+        print("영상업로드")
+        PHPhotoLibrary.checkPermission { isSuccess in
+            DispatchQueue.main.async {
+                if isSuccess {
+                    self.present(self.mediaPickerManager.imagePicker, animated: true, completion: nil)
+                }
+            }
+        }
+    }
+    
+    func imageUpload() {
+        
+    }
+}
+
+// MARK:- Media Picker Delegate
+extension RegistrationViewController: MediaPickerDelegate {
+    func didFinishPickingMedia(videoURL: URL) {
+        print("영상 선택완료")
+        let captureTime: [Double] = [12, 2, 3, 4]
+        guard let mediaCell = tableView.cellForRow(at: [0, 1]) as? ThumbnailTableViewCell else { return }
+        print(mediaCell.test)
+        // images will be created at each capture times.
+        mediaPickerManager.generateThumbnailSync(url: videoURL, startOffsets: captureTime) { images in
+            mediaCell.videoThumbnailImage.image = images.first!
+        }
+    }
+}
+
 // MARK:- Table View DataSource
 extension RegistrationViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
             return selectedProducts.count
-        case 1, 2, 3:
+        case 1, 2:
             return 1
         default:
             return 0
@@ -172,21 +208,14 @@ extension RegistrationViewController: UITableViewDataSource {
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(
-                    withIdentifier: String(describing: UploadingViedoTableViewCell.self),
-                    for: indexPath) as? UploadingViedoTableViewCell else {
-                return UITableViewCell()
-            }
-            cell.selectionStyle = .none
-            return cell
-        case 2:
-            guard let cell = tableView.dequeueReusableCell(
                     withIdentifier: String(describing: ThumbnailTableViewCell.self),
                     for: indexPath) as? ThumbnailTableViewCell else {
                 return UITableViewCell()
             }
+            cell.completionHandler = checkPermissionAndPresentImagePicker
             cell.selectionStyle = .none
             return cell
-        case 3:
+        case 2:
             guard let cell = tableView.dequeueReusableCell(
                     withIdentifier: String(describing: VideoInformationTableViewCell.self),
                     for: indexPath) as? VideoInformationTableViewCell else {
@@ -206,8 +235,6 @@ extension RegistrationViewController: UITableViewDataSource {
         case 1:
             return "브이로그 업로드"
         case 2:
-            return "브이로그 썸네일"
-        case 3:
             return "브이로그 정보"
         default:
             return ""

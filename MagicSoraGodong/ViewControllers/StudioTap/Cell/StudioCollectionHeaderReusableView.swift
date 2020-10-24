@@ -55,8 +55,8 @@ extension StudioCollectionHeaderReusableView {
 extension StudioCollectionHeaderReusableView {
     
     @objc func touchUpCategoryButton(_ sender: UIButton) {
-//        guard let completionHandler = completionHandler else { return }
-        
+        guard let completionHandler = completionHandler else { return }
+
         for index in 0 ..< categoryButtons.count {
             if sender.tag == index {
                 categoryButtons[index].setTitleColor(#colorLiteral(red: 0.5169164538, green: 0.689781487, blue: 0.9588938355, alpha: 1), for: .normal)
@@ -64,7 +64,8 @@ extension StudioCollectionHeaderReusableView {
                 categoryButtons[index].setTitleColor(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1), for: .normal)
             }
         }
-//        completionHandler(sender.tag <= 3 ? sender.tag : 0)
+        completionHandler(sender.tag <= 3 ? sender.tag : 0)
+        
     }
     
 }
