@@ -48,11 +48,12 @@ class ShoppingListViewController: UIViewController {
     
     private var totalPrice = 0
     private var cart: [Cart] = [
-        Cart(itemImageName: "table", itemTitle: "woody table", itemSellerNameLabel: "lottefurniture", itemPrice: 10000, itemAmount: 1, isCheck: true),
-        Cart(itemImageName: "chair", itemTitle: "engle chair", itemSellerNameLabel: "lottefurniture", itemPrice: 20000, itemAmount: 2, isCheck: true),
-        Cart(itemImageName: "cup", itemTitle: "white cup", itemSellerNameLabel: "lotteMart", itemPrice: 7000, itemAmount: 1, isCheck: true),
-        Cart(itemImageName: "sofa", itemTitle: "녹색 자연의 소파", itemSellerNameLabel: "lottefurniture", itemPrice: 5430000, itemAmount: 1, isCheck: true)
+        Cart(itemImageName: "beauty", itemTitle: "foundation", itemSellerNameLabel: "lotteMall", itemPrice: 80000, itemAmount: 1, isCheck: true),
+        Cart(itemImageName: "nars", itemTitle: "Glow Cushion", itemSellerNameLabel: "lotteMall", itemPrice: 60000, itemAmount: 2, isCheck: true)
     ]
+    
+    //Cart(itemImageName: "cup", itemTitle: "white cup", itemSellerNameLabel: "lotteMart", itemPrice: 7000, itemAmount: 1, isCheck: true),
+    //Cart(itemImageName: "sofa", itemTitle: "녹색 자연의 소파", itemSellerNameLabel: "lottefurniture", itemPrice: 5430000, itemAmount: 1, isCheck: true)
     
     //MARK: Life Cycles
     

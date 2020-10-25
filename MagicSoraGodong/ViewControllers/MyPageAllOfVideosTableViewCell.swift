@@ -19,10 +19,11 @@ class MyPageAllOfVideosTableViewCell: UITableViewCell {
     
     //MARK: UI
     
-    func update(video:Video){
-        self.thumbnail.loadImage(url: video.thumbURL)
-        self.videoTitle.text = video.title
-        self.videoItem.text = video.subtitle
+    func update(){
+        self.thumbnail.image = UIImage(named: "testvideo")
+        //self.thumbnail.loadImage(url: video.thumbURL)
+        self.videoTitle.text = "Bobbi Brown & Nars"
+        self.videoItem.text = "lotteWorld"
     }
 
 }
