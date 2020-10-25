@@ -91,7 +91,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="유의 사항" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Xn-wF-m5h">
-                                <rect key="frame" x="155.5" y="576.5" width="103.5" height="33.5"/>
+                                <rect key="frame" x="155.5" y="546.5" width="103.5" height="33.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -104,19 +104,19 @@
                                     <constraint firstAttribute="height" constant="200" id="efc-8H-yHM"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="훈제액이 아닌 ~  진짜 참나무로 훈연하여 깊은맛이 살아있다!  참나무 전통 훈연방식으로 만들어 고유의 은은하고 고급스러운 맛이 살아있어요~" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q0b-n0-0qC">
-                                <rect key="frame" x="87" y="396.5" width="240" height="150"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="bobbibrown foundation  따라올 수 없는 노블 글로우 New 세럼 파운데이션  파운데이션의 명가 바비 브라운만의 노하우로 개발된 5단계 트루 매치 컨설팅" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q0b-n0-0qC">
+                                <rect key="frame" x="87" y="396.5" width="240" height="130"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Rbc-Ip-grb"/>
+                                    <constraint firstAttribute="height" constant="130" id="Rbc-Ip-grb"/>
                                     <constraint firstAttribute="width" constant="240" id="hT1-3e-IgR"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="1. 세탁을 잘못하면 옷이 변형되기 쉬우니 이점을 유의해달라고 전해주세요.  2. 링클 프리 제품입니다. 이점을 강조해주세요." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dhk-vx-XrC">
-                                <rect key="frame" x="87" y="630" width="240" height="133"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="1. 자외선 차단 제품임을 활용해주세요.  2. 상처가 있는 부위에는 사용하지 말아주세요." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dhk-vx-XrC">
+                                <rect key="frame" x="87" y="610" width="240" height="133"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="133" id="aMZ-qk-XxX"/>
@@ -135,13 +135,13 @@
                             <constraint firstItem="HCh-Sx-aLG" firstAttribute="centerX" secondItem="WPX-pN-gXz" secondAttribute="centerX" id="Cb3-1k-6s2"/>
                             <constraint firstItem="q0b-n0-0qC" firstAttribute="top" secondItem="HCh-Sx-aLG" secondAttribute="bottom" constant="20" id="FxB-bk-1vt"/>
                             <constraint firstItem="HCh-Sx-aLG" firstAttribute="top" secondItem="Xew-IW-Dw8" secondAttribute="bottom" constant="20" id="Jhy-YY-Js2"/>
-                            <constraint firstItem="4Xn-wF-m5h" firstAttribute="top" secondItem="q0b-n0-0qC" secondAttribute="bottom" constant="30" id="TeE-J5-bRj"/>
+                            <constraint firstItem="4Xn-wF-m5h" firstAttribute="top" secondItem="q0b-n0-0qC" secondAttribute="bottom" constant="20" id="TeE-J5-bRj"/>
                             <constraint firstItem="Xew-IW-Dw8" firstAttribute="centerX" secondItem="WPX-pN-gXz" secondAttribute="centerX" id="Vl4-Mv-1WB"/>
                             <constraint firstItem="Hqe-2Q-Sh6" firstAttribute="top" secondItem="6LB-dP-oJf" secondAttribute="top" constant="15" id="a4E-lQ-gqX"/>
                             <constraint firstItem="Xew-IW-Dw8" firstAttribute="top" secondItem="Hqe-2Q-Sh6" secondAttribute="bottom" constant="15" id="clB-9p-eGD"/>
                             <constraint firstItem="4Xn-wF-m5h" firstAttribute="centerX" secondItem="WPX-pN-gXz" secondAttribute="centerX" id="jgS-Qa-GaY"/>
                             <constraint firstItem="Hqe-2Q-Sh6" firstAttribute="centerX" secondItem="WPX-pN-gXz" secondAttribute="centerX" id="n4X-qq-4uC"/>
-                            <constraint firstItem="dhk-vx-XrC" firstAttribute="top" secondItem="4Xn-wF-m5h" secondAttribute="bottom" constant="20" id="oCN-Oh-DFF"/>
+                            <constraint firstItem="dhk-vx-XrC" firstAttribute="top" secondItem="4Xn-wF-m5h" secondAttribute="bottom" constant="30" id="oCN-Oh-DFF"/>
                         </constraints>
                     </view>
                     <connections>

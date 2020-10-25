@@ -28,10 +28,6 @@ enum ProductCategory: Int, CaseIterable {
 // MARK:- Studio Collection's Product Model
 class StudioProduct {
     
-    struct CategoryProduct {
-        let CategoryProduct: [[Product]]
-    }
-    
     struct Product {
         let productImageName: String?
         let productTitle: String?
@@ -49,8 +45,10 @@ class StudioProduct {
     static var beautyProducts: [Product] = [
         Product(productImageName: "beauty1", productTitle: "aloe", productPrice: 13000, check: false),
         Product(productImageName: "beauty2", productTitle: "lipstick", productPrice: 8000, check: false),
+        Product(productImageName: "beauty", productTitle: "foundation", productPrice: 80000, check: false),
+        Product(productImageName: "nars", productTitle: "Glow Cushion", productPrice: 60000, check: false),
         Product(productImageName: "beauty3", productTitle: "emple", productPrice: 15000, check: false),
-        Product(productImageName: "beauty4", productTitle: "tomato", productPrice: 10000, check: false),
+        Product(productImageName: "beauty4", productTitle: "tomato", productPrice: 15000, check: false),
         Product(productImageName: "beauty5", productTitle: "pouch", productPrice: 20000, check: false),
         Product(productImageName: "beauty6", productTitle: "pink set", productPrice: 30000, check: false)
     ]
@@ -80,7 +78,7 @@ class StudioProduct {
     ]
     
     static var categoryProducts: [[Product]] = [
-        beautyProducts + digitalProducts + foodProducts + furnitureProducts,
+        foodProducts + beautyProducts + digitalProducts + furnitureProducts,
         beautyProducts,
         digitalProducts,
         foodProducts,
