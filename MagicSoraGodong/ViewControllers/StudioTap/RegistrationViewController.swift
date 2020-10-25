@@ -28,12 +28,13 @@ class RegistrationViewController: UIViewController {
         configureTableView()
         configureNavigationBar()
         configureTapGesture()
+        configureKeyboard()
         mediaPickerManager.mediaPickerDelegate = self
     }
     
 }
 
-// MARK:- Configure
+// MARK:- Configure UI
 extension RegistrationViewController {
     
     func configureTableView() {
@@ -74,6 +75,11 @@ extension RegistrationViewController {
         viewTapGestureRecognizer.addTarget(self, action: #selector(tapView))
     }
     
+    func configureKeyboard() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
 }
 
 // MARK:- Methods
@@ -97,7 +103,7 @@ extension RegistrationViewController {
             let okAction = UIAlertAction(
                 title: "확인",
                 style: .default) { (action : UIAlertAction) in
-                // 등록 완료 조건 추가하기
+                
                 self.navigationController?.popViewController(animated: true)
 //                self.present(homeViewController, animated: true, completion: nil)
             }
@@ -135,6 +141,12 @@ extension RegistrationViewController {
             return false
         }
     }
+    @objc func keyboardWillShow(_ sender: Notification) {
+        self.view.frame.origin.y = -220 // Move view 150 points upward
+    }
+    @objc func keyboardWillHide(_ sender: Notification) {
+        self.view.frame.origin.y = 0 // Move view to original position
+    }
     
 }
 
@@ -151,10 +163,7 @@ extension RegistrationViewController {
             }
         }
     }
-    
-    func imageUpload() {
-        
-    }
+
 }
 
 // MARK:- Media Picker Delegate
@@ -166,6 +175,7 @@ extension RegistrationViewController: MediaPickerDelegate {
         mediaPickerManager.generateThumbnailSync(url: videoURL, startOffsets: captureTime) { images in
             mediaCell.videoThumbnailImage.image = images.first!
             VlogData.shared.videoAseet = AVAsset(url: videoURL)
+            VlogData.shared.videoURL = videoURL
             VlogData.shared.videoImage = images.first!
         }
     }
