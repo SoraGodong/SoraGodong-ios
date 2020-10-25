@@ -105,13 +105,7 @@ extension HomeViewController{
             print("싱글톤 제목 없음")
             return
         }
-        //카테고리 전체화면으로 초기화
-        videos = Video.smapleVideos(0)
-        tableView.reloadData()
-        for i in 0..<categoryMenus.count{
-            categoryMenus[i].textColor = categoryMenus[i].tag == 1 ? #colorLiteral(red: 0.3134731054, green: 0.6144956946, blue: 1, alpha: 1) :  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-        }
-        scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+        initailCategory()
         let thumbURLPath = Bundle.main.path(forResource: "foxVillage", ofType: "png")!
         let thumbURL = URL(fileURLWithPath: thumbURLPath)
         let remoteVideo = Video(url: VideoURL, thumbURL: thumbURL, title:title, subtitle:subtitle,id:"upload")
@@ -123,6 +117,21 @@ extension HomeViewController{
         }
         videos[0] = tmp
         tableView.reloadData()
+        
+    }
+    
+    @IBAction func logo(_ sender: UIBarButtonItem){
+        initailCategory()
+    }
+    
+    func initailCategory(){
+        //카테고리 전체화면으로 초기화
+        videos = Video.smapleVideos(0)
+        tableView.reloadData()
+        for i in 0..<categoryMenus.count{
+            categoryMenus[i].textColor = categoryMenus[i].tag == 1 ? #colorLiteral(red: 0.3134731054, green: 0.6144956946, blue: 1, alpha: 1) :  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        }
+        scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
         
     }
     //카테고리 클릭했을때 처리
