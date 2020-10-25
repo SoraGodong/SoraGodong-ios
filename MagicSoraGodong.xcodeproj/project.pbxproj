@@ -48,7 +48,6 @@
 		682D36992545461000C6FE0B /* Washing Machine.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 682D36892545461000C6FE0B /* Washing Machine.mp4 */; };
 		682D369A2545461000C6FE0B /* Kitchen.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 682D368A2545461000C6FE0B /* Kitchen.mp4 */; };
 		682D369B2545461000C6FE0B /* Woman.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 682D368B2545461000C6FE0B /* Woman.mp4 */; };
-		682D369C2545461000C6FE0B /* Food.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 682D368C2545461000C6FE0B /* Food.mp4 */; };
 		682D369D2545461000C6FE0B /* China.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 682D368D2545461000C6FE0B /* China.mp4 */; };
 		682D369E2545461000C6FE0B /* Coffee Jet.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 682D368E2545461000C6FE0B /* Coffee Jet.mp4 */; };
 		682D369F2545461000C6FE0B /* Chandelier.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 682D368F2545461000C6FE0B /* Chandelier.mp4 */; };
@@ -71,6 +70,7 @@
 		683E55B6253E00F7000D79CE /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683E55B4253E00F7000D79CE /* Home.storyboard */; };
 		683E55B9253E010D000D79CE /* Studio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683E55B8253E010D000D79CE /* Studio.storyboard */; };
 		683E55BD253E011D000D79CE /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683E55BB253E011D000D79CE /* MyPage.storyboard */; };
+		6842A78A254548F20013F745 /* Food.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6842A789254548F20013F745 /* Food.mp4 */; };
 		684D07A6253EBB24006C8A3E /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684D07A5253EBB24006C8A3E /* HomeTableViewCell.swift */; };
 		685493712542D1A000C0E843 /* Vlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685493702542D1A000C0E843 /* Vlog.swift */; };
 		685DF757253F07C8007E28C2 /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685DF756253F07C8007E28C2 /* HomeDetailViewController.swift */; };
@@ -154,7 +154,6 @@
 		682D36892545461000C6FE0B /* Washing Machine.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Washing Machine.mp4"; sourceTree = "<group>"; };
 		682D368A2545461000C6FE0B /* Kitchen.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kitchen.mp4; sourceTree = "<group>"; };
 		682D368B2545461000C6FE0B /* Woman.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Woman.mp4; sourceTree = "<group>"; };
-		682D368C2545461000C6FE0B /* Food.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Food.mp4; sourceTree = "<group>"; };
 		682D368D2545461000C6FE0B /* China.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = China.mp4; sourceTree = "<group>"; };
 		682D368E2545461000C6FE0B /* Coffee Jet.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Coffee Jet.mp4"; sourceTree = "<group>"; };
 		682D368F2545461000C6FE0B /* Chandelier.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chandelier.mp4; sourceTree = "<group>"; };
@@ -177,6 +176,7 @@
 		683E55B5253E00F7000D79CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MagicSoraGodong/StoryBoards/Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		683E55B8253E010D000D79CE /* Studio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Studio.storyboard; sourceTree = "<group>"; };
 		683E55BC253E011D000D79CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MagicSoraGodong/StoryBoards/Base.lproj/MyPage.storyboard; sourceTree = "<group>"; };
+		6842A789254548F20013F745 /* Food.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Food.mp4; sourceTree = "<group>"; };
 		684D07A5253EBB24006C8A3E /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		685493702542D1A000C0E843 /* Vlog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vlog.swift; sourceTree = "<group>"; };
 		685DF756253F07C8007E28C2 /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
@@ -263,6 +263,7 @@
 		6827611A253F212C00235D84 /* TravelVids */ = {
 			isa = PBXGroup;
 			children = (
+				6842A789254548F20013F745 /* Food.mp4 */,
 				682D36822545460F00C6FE0B /* Apparel.mp4 */,
 				682D36862545460F00C6FE0B /* Armchair.mp4 */,
 				682D368F2545461000C6FE0B /* Chandelier.mp4 */,
@@ -272,7 +273,6 @@
 				682D368E2545461000C6FE0B /* Coffee Jet.mp4 */,
 				682D36902545461000C6FE0B /* Croissants.mp4 */,
 				682D36832545460F00C6FE0B /* Dog.mp4 */,
-				682D368C2545461000C6FE0B /* Food.mp4 */,
 				682D368A2545461000C6FE0B /* Kitchen.mp4 */,
 				682D36872545460F00C6FE0B /* Plants.mp4 */,
 				682D36882545460F00C6FE0B /* Puppy.mp4 */,
@@ -537,7 +537,6 @@
 			files = (
 				68276127253F212C00235D84 /* monkey-clip.mp4 in Resources */,
 				682D36922545461000C6FE0B /* Apparel.mp4 in Resources */,
-				682D369C2545461000C6FE0B /* Food.mp4 in Resources */,
 				682D36BE2545461A00C6FE0B /* Puppy.png in Resources */,
 				682D369B2545461000C6FE0B /* Woman.mp4 in Resources */,
 				8D97E620253C866000908404 /* LaunchScreen.storyboard in Resources */,
@@ -559,6 +558,7 @@
 				6827612C253F212C00235D84 /* shark.mp4 in Resources */,
 				68276125253F212C00235D84 /* newYorkFlip-clip.mp4 in Resources */,
 				8D97E61B253C866000908404 /* Main.storyboard in Resources */,
+				6842A78A254548F20013F745 /* Food.mp4 in Resources */,
 				8D5EB6D72540444800B2CDFE /* SelectedProductTableViewCell.xib in Resources */,
 				682D36912545461000C6FE0B /* Chromakey - 11305.mp4 in Resources */,
 				68276129253F212C00235D84 /* monkey.mp4 in Resources */,
