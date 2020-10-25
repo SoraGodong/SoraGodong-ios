@@ -16,7 +16,7 @@ class Video: NSObject {
     let profile:String = ""
     let videoId:String
 
-      init(url: URL, thumbURL: URL, title: String, subtitle: String,id:String) {
+    init(url: URL, thumbURL: URL, title: String, subtitle: String,id:String) {
       self.url = url
       self.thumbURL = thumbURL
       self.title = title
@@ -53,7 +53,7 @@ class Video: NSObject {
                              "Chromakey"]
     
     
-    class func smapleVideos(category:Int=0) -> [Video] {
+    class func smapleVideos(_ category:Int=0) -> [Video] {
         let vlogs = [fashion+interior+indoor+food+pet+furniture,
                      fashion,
                      interior,
@@ -62,13 +62,14 @@ class Video: NSObject {
                      pet,
                      furniture]
         let titles = vlogs[category]
+        print(titles)
         var videos: [Video] = []
         for (index, name) in titles.enumerated() {
           let urlPath = Bundle.main.path(forResource: name, ofType: "mp4")!
           let url = URL(fileURLWithPath: urlPath)
           let thumbURLPath = Bundle.main.path(forResource: name, ofType: "png")!
           let thumbURL = URL(fileURLWithPath: thumbURLPath)
-          
+
             let video = Video(url: url, thumbURL: thumbURL, title: titles[index], subtitle: titles[index],id : "\(index)")
           videos.append(video)
         }
