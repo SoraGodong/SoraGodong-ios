@@ -56,7 +56,6 @@ extension StudioViewController {
     }
     
     func configureCollectionView() {
-//        collectionViewHeader.collectionView = self.collectionView
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(
@@ -65,8 +64,9 @@ extension StudioViewController {
         
         collectionView.register(UINib(nibName: String(describing: StudioCollectionHeaderReusableView.self), bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader , withReuseIdentifier: String(describing: StudioCollectionHeaderReusableView.self))
         
-//        guard let headerCell = collectionView.cellForItem(at: [0, 0]) as? StudioCollectionHeaderReusableView else { return }
-//        headerCell.completionHandler = setProducts(_:)
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.sectionHeadersPinToVisibleBounds = true
+        }
     }
     
     func configureNavigationBar() {
