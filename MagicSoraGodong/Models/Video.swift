@@ -38,7 +38,6 @@ class Video: NSObject {
     }
     
     static var fashion = ["Apparel",
-                          "Clothing",
                           "Woman"]
     static var interior = ["China",
                            "Chandelier"]
@@ -52,6 +51,21 @@ class Video: NSObject {
                              "Armchair",
                              "Chromakey"]
     
+    static var fashionSub = ["에스쁘아",
+                          "어패럴코리아"]
+    static var interiorSub = ["다움인테리어",
+                           "로망스"]
+    static var indoorSub = ["구스토"]
+    static var foodSub =   ["파리브레드",
+                         "롯데호텔",
+                         "네이처코리아"]
+    static var petSub = ["퍼피월드",
+                      "해피모아"]
+    static var furnitureSub = [ "패브릭헤븐",
+                             "올어바웃체어",
+                             "크로마키"]
+    
+    
     
     class func smapleVideos(_ category:Int=0) -> [Video] {
         let vlogs = [fashion+interior+indoor+food+pet+furniture,
@@ -61,7 +75,15 @@ class Video: NSObject {
                      food,
                      pet,
                      furniture]
+        let subtitles = [fashionSub+interiorSub+indoorSub+foodSub+petSub+furnitureSub,
+                         fashionSub,
+                         interiorSub,
+                         indoorSub,
+                         foodSub,
+                         petSub,
+                         furnitureSub]
         let titles = vlogs[category]
+        let subtitle = subtitles[category]
         print(titles)
         var videos: [Video] = []
         for (index, name) in titles.enumerated() {
@@ -70,7 +92,7 @@ class Video: NSObject {
           let thumbURLPath = Bundle.main.path(forResource: name, ofType: "png")!
           let thumbURL = URL(fileURLWithPath: thumbURLPath)
 
-            let video = Video(url: url, thumbURL: thumbURL, title: titles[index], subtitle: titles[index],id : "\(index)")
+            let video = Video(url: url, thumbURL: thumbURL, title: titles[index], subtitle: subtitle[index],id : "\(index)")
           videos.append(video)
         }
         return videos

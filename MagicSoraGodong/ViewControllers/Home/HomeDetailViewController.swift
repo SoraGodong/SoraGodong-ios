@@ -56,7 +56,7 @@ extension HomeDetailViewController{
         
         self.view.bringSubviewToFront(cartButton)
         self.navigationController?.navigationBar.tintColor = .white
-        self.commentWrite.delegate = self 
+        self.commentWrite.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(self.didReceiveVlog), name: DidReceiveVlogNotification, object: nil)
         
     }
