@@ -85,6 +85,7 @@ extension RegistrationViewController {
     
     @objc func touchUpRegistrationButton() {
         if self.checkField() {
+//            guard let homeViewController = storyboard?.instantiateViewController(withIdentifier: String(describing:HomeViewController.self)) as? HomeViewController else { return }
             guard let videoInfoCell = tableView.cellForRow(at: [2, 0]) as? VideoInformationTableViewCell else { return }
             VlogData.shared.videoTitle = videoInfoCell.videoTitleField.text
             VlogData.shared.vidoeContent = videoInfoCell.videoInfoField.text
@@ -98,6 +99,7 @@ extension RegistrationViewController {
                 style: .default) { (action : UIAlertAction) in
                 // 등록 완료 조건 추가하기
                 self.navigationController?.popViewController(animated: true)
+//                self.present(homeViewController, animated: true, completion: nil)
             }
             alert.addAction(okAction)
             present(alert, animated: true, completion: nil)
