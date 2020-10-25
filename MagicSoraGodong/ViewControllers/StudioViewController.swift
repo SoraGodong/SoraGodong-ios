@@ -72,7 +72,7 @@ extension StudioViewController {
     func configureNavigationBar() {
         let button = UIBarButtonItem(title: "선택완료", style: .plain, target: self, action: #selector(touchUpNextButton))
         navigationItem.rightBarButtonItem = button
-        navigationItem.title = "마법의 소라고동"
+        navigationItem.title = "스튜디오"
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.5169164538, green: 0.689781487, blue: 0.9588938355, alpha: 1)
         navigationController?.navigationBar.tintColor = .white

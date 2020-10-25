@@ -71,7 +71,7 @@ class StudioProduct {
         Product(productImageName: "food6", productTitle: "stake", productPrice: 12000, check: false)
     ]
     static var furnitureProducts: [Product] = [
-        Product(productImageName: "chair1", productTitle: "simple chair", productPrice: 50000, check: false),
+        Product(productImageName: "chair", productTitle: "simple chair", productPrice: 50000, check: false),
         Product(productImageName: "chair2", productTitle: "vivid chair", productPrice: 40000, check: false),
         Product(productImageName: "cup", productTitle: "cup", productPrice: 2000, check: false),
         Product(productImageName: "furniture", productTitle: "furniture", productPrice: 2000, check: false),
