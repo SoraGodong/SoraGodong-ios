@@ -56,6 +56,7 @@
             </constraints>
             <connections>
                 <outlet property="categoryView" destination="IN5-gy-Afi" id="7Gh-1r-2YZ"/>
+                <outlet property="scrollView" destination="vwj-nA-F3M" id="bj1-KJ-QNe"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="82.366071428571431"/>
         </collectionReusableView>
