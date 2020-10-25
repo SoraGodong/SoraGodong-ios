@@ -11,12 +11,12 @@ class HomeViewController: UIViewController{
 
     // MARK:- Properties
     @IBOutlet weak var scrollView:UIScrollView!
-    @IBOutlet weak var tableView:UITableView! 
+    @IBOutlet weak var tableView:UITableView!
     
     let category = categoty.categories
     var categoryMenus:[UILabel] = []
     var vlogs:[vlogItem] = []
-    var videos:[Video] = Video.allVideos() 
+    var videos:[Video] = Video.smapleVideos(0)
     
     //MARK: Life Cycle
     override func viewDidLoad() {
@@ -25,11 +25,9 @@ class HomeViewController: UIViewController{
         configureCategoryMenu()
         configureNotificationCenter()
         getVlogs()
-//        print(Video.smapleVideos(0))
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        print("??")
         appendUploaded()
     }
     
@@ -91,7 +89,7 @@ extension HomeViewController{
     }
     
     func appendUploaded(){
-        videos = Video.allVideos() 
+       
         let uploaded = VlogData.shared
         guard let title = uploaded.videoTitle else {
             print("싱글톤 제목 없음")
@@ -107,9 +105,16 @@ extension HomeViewController{
             print("싱글톤 제목 없음")
             return
         }
+        //카테고리 전체화면으로 초기화
+        videos = Video.smapleVideos(0)
+        tableView.reloadData()
+        for i in 0..<categoryMenus.count{
+            categoryMenus[i].textColor = categoryMenus[i].tag == 1 ? #colorLiteral(red: 0.3134731054, green: 0.6144956946, blue: 1, alpha: 1) :  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        }
+        scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
         let thumbURLPath = Bundle.main.path(forResource: "foxVillage", ofType: "png")!
         let thumbURL = URL(fileURLWithPath: thumbURLPath)
-        let remoteVideo = Video(url: VideoURL, thumbURL: thumbURL, title:title, subtitle:subtitle,id:"0")
+        let remoteVideo = Video(url: VideoURL, thumbURL: thumbURL, title:title, subtitle:subtitle,id:"upload")
         videos.append(remoteVideo)
         
         guard let tmp = videos.last else {return}
@@ -129,6 +134,8 @@ extension HomeViewController{
                categoryMenus[i].textColor = categoryMenus[i].tag == selected.tag ? #colorLiteral(red: 0.3134731054, green: 0.6144956946, blue: 1, alpha: 1) :  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
            }
         getVlogs(categoryIdx: selected.tag)
+        videos = Video.smapleVideos(selected.tag-1)
+        print(videos)
         //self.videos = Video.smapleVideos(category: selected.tag-1)
         tableView.reloadSections(IndexSet(0...0), with: .left)
 
@@ -147,7 +154,7 @@ extension HomeViewController{
     }
     @IBAction func searchToggle(_ sender:UIBarButtonItem){
         guard let leftLogo = navigationItem.leftBarButtonItem else {return}
-        guard let search = navigationItem.titleView else {return} 
+        guard let search = navigationItem.titleView else {return}
         leftLogo.title = leftLogo.title=="" ? "마법의 소라고동" : ""
         search.isHidden = !search.isHidden
     }
@@ -163,7 +170,7 @@ extension HomeViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell:HomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.cellIdentifier) as? HomeTableViewCell else {fatalError("Unable to dequeue HomeTableViewCell")}
         let video = videos[indexPath.row]
-        if video.videoId == "0"{
+        if video.videoId == "upload"{
             cell.updateUpload(video: video)
         }else{
             cell.update(video: video)
