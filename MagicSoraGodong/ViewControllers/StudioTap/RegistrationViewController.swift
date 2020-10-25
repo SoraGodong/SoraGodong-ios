@@ -28,9 +28,8 @@ class RegistrationViewController: UIViewController {
         configureTableView()
         configureNavigationBar()
         configureTapGesture()
+        configureKeyboard()
         mediaPickerManager.mediaPickerDelegate = self
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
 }
@@ -74,6 +73,11 @@ extension RegistrationViewController {
         let viewTapGestureRecognizer = UITapGestureRecognizer()
         self.view.addGestureRecognizer(viewTapGestureRecognizer)
         viewTapGestureRecognizer.addTarget(self, action: #selector(tapView))
+    }
+    
+    func configureKeyboard() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
 }

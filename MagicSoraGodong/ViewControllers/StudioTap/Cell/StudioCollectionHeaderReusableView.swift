@@ -64,7 +64,7 @@ extension StudioCollectionHeaderReusableView {
                 categoryButtons[index].setTitleColor(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1), for: .normal)
             }
         }
-        completionHandler(sender.tag <= 3 ? sender.tag : 0)
+        completionHandler(sender.tag <= 4 ? sender.tag : 0)
         
     }
     
