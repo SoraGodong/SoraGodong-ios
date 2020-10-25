@@ -34,7 +34,7 @@ class HomeTableViewCell: UITableViewCell {
         self.thumbnail.image = VlogData.shared.videoImage
         //self.profile.loadImage(url: video.profile)
         self.videoTitle.text = video.title
-        self.videoItem.text = video.subtitle
+        self.videoItem.text = "lotteWorld"
     }
     static let cellIdentifier = "homeCell"
     override func awakeFromNib() {
