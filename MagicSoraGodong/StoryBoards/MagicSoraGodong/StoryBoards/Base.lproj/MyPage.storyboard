@@ -692,21 +692,21 @@
                                             <outlet property="subscriberLabel" destination="Hbx-rr-1Vf" id="XLt-zT-hL0"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyPageAllOfVideosTableViewCell" rowHeight="258" id="b6j-9X-Bx4" customClass="MyPageAllOfVideosTableViewCell" customModule="MagicSoraGodong" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="499" width="414" height="258"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyPageAllOfVideosTableViewCell" rowHeight="305" id="b6j-9X-Bx4" customClass="MyPageAllOfVideosTableViewCell" customModule="MagicSoraGodong" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="499" width="414" height="305"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b6j-9X-Bx4" id="dzD-dV-4HJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="258"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="305"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aUB-hU-bn4">
-                                                    <rect key="frame" x="15" y="15" width="384" height="150"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testvideo" translatesAutoresizingMaskIntoConstraints="NO" id="aUB-hU-bn4">
+                                                    <rect key="frame" x="0.0" y="15" width="414" height="200"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="150" id="Qw1-ns-CD7"/>
+                                                        <constraint firstAttribute="height" constant="200" id="Qw1-ns-CD7"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zqa-vJ-wvV">
-                                                    <rect key="frame" x="15" y="180" width="93.5" height="50"/>
+                                                    <rect key="frame" x="15" y="230" width="221" height="50"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qD4-MG-qpn">
                                                             <rect key="frame" x="0.0" y="0.5" width="50" height="49"/>
@@ -717,18 +717,18 @@
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZYo-0k-5F0">
-                                                            <rect key="frame" x="60" y="4.5" width="33.5" height="41"/>
+                                                            <rect key="frame" x="60" y="5.5" width="161" height="39.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMb-kT-3Zk">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="33.5" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bobbi Brown &amp; Nars" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMb-kT-3Zk">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="161" height="21.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjM-xC-8KP">
-                                                                    <rect key="frame" x="0.0" y="20.5" width="33.5" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lotteWorld" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjM-xC-8KP">
+                                                                    <rect key="frame" x="0.0" y="21.5" width="161" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -737,10 +737,10 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="aUB-hU-bn4" secondAttribute="trailing" constant="15" id="BHo-54-ADa"/>
+                                                <constraint firstAttribute="trailing" secondItem="aUB-hU-bn4" secondAttribute="trailing" id="BHo-54-ADa"/>
                                                 <constraint firstItem="Zqa-vJ-wvV" firstAttribute="leading" secondItem="dzD-dV-4HJ" secondAttribute="leading" constant="15" id="Sbn-8g-7Pl"/>
                                                 <constraint firstItem="aUB-hU-bn4" firstAttribute="top" secondItem="dzD-dV-4HJ" secondAttribute="top" constant="15" id="bkw-Tu-yKM"/>
-                                                <constraint firstItem="aUB-hU-bn4" firstAttribute="leading" secondItem="dzD-dV-4HJ" secondAttribute="leading" constant="15" id="ijC-Ec-tS8"/>
+                                                <constraint firstItem="aUB-hU-bn4" firstAttribute="leading" secondItem="dzD-dV-4HJ" secondAttribute="leading" id="ijC-Ec-tS8"/>
                                                 <constraint firstItem="Zqa-vJ-wvV" firstAttribute="top" secondItem="aUB-hU-bn4" secondAttribute="bottom" constant="15" id="vuT-Oz-5yS"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -770,7 +770,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2w-Ah-chW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2548" y="1578"/>
+            <point key="canvasLocation" x="2547.826086956522" y="1577.6785714285713"/>
         </scene>
     </scenes>
     <resources>
@@ -779,6 +779,7 @@
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="greaterthan" catalog="system" width="128" height="111"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="testvideo" width="2640" height="1478"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

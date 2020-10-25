@@ -57,7 +57,7 @@ extension MyPageViewController: UITableViewDataSource {
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingTableViewCell", for: indexPath) as? ShoppingTableViewCell else { return UITableViewCell() }
-            cell.shoppingCartLabel.text = "total 4"
+            cell.shoppingCartLabel.text = "total 2"
             cell.shoppingTotalListLabel.text = "total 3"
             cell.selectionStyle = .none
             return cell

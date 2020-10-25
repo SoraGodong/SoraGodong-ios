@@ -13,7 +13,7 @@ class MyPageShowHostViewController: UIViewController {
 
     @IBOutlet weak var showhostTableView: UITableView!
     
-    var videos: [Video] = Video.allVideos()
+    //var videos: [Video] = Video.allVideos()
     
     //MARK: Life Cycles
     
@@ -41,7 +41,7 @@ class MyPageShowHostViewController: UIViewController {
 
 extension MyPageShowHostViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return videos.count
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -57,8 +57,8 @@ extension MyPageShowHostViewController: UITableViewDataSource {
             return cell
         default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "MyPageAllOfVideosTableViewCell") as? MyPageAllOfVideosTableViewCell else { return UITableViewCell() }
-            let video = videos[indexPath.row-2]
-            cell.update(video: video)
+            //let video = videos[indexPath.row-2]
+            cell.update()
             return cell
         }
         
@@ -76,7 +76,7 @@ extension MyPageShowHostViewController: UITableViewDelegate {
         case 1:
             return 90
         default:
-            return 260
+            return 300
         }
     }
 }
