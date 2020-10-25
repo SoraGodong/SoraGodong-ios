@@ -132,6 +132,9 @@
                     <navigationItem key="navigationItem" id="VqT-7h-939">
                         <barButtonItem key="leftBarButtonItem" title="마법의 소라고동" id="k1q-W9-3lt">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="logo:" destination="qGb-1B-Ctk" id="Aua-ts-VaV"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="3hT-Yq-EgG">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
