@@ -692,11 +692,11 @@
                                             <outlet property="subscriberLabel" destination="Hbx-rr-1Vf" id="XLt-zT-hL0"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyPageAllOfVideosTableViewCell" rowHeight="258" id="b6j-9X-Bx4" customClass="MyPageAllOfVideosTableViewCell" customModule="MagicSoraGodong" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="499" width="414" height="258"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyPageAllOfVideosTableViewCell" rowHeight="305" id="b6j-9X-Bx4" customClass="MyPageAllOfVideosTableViewCell" customModule="MagicSoraGodong" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="499" width="414" height="305"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b6j-9X-Bx4" id="dzD-dV-4HJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="258"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="305"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testvideo" translatesAutoresizingMaskIntoConstraints="NO" id="aUB-hU-bn4">
@@ -770,7 +770,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2w-Ah-chW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2548" y="1578"/>
+            <point key="canvasLocation" x="2547.826086956522" y="1577.6785714285713"/>
         </scene>
     </scenes>
     <resources>

@@ -76,7 +76,7 @@ extension MyPageShowHostViewController: UITableViewDelegate {
         case 1:
             return 90
         default:
-            return 260
+            return 300
         }
     }
 }
