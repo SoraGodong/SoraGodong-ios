@@ -24,6 +24,57 @@ class Video: NSObject {
       self.videoId = id
     }
     
+    // MARK:- Home Category
+    enum HomeCategory: Int, CaseIterable {
+        
+        case total = 0
+        case fashion
+        case interior
+        case indoor
+        case food
+        case pet
+        case furniture
+        
+    }
+    
+    static var fashion = ["Apparel",
+                          "Clothing",
+                          "Woman"]
+    static var interior = ["China",
+                           "Chandelier"]
+    static var indoor = ["Coffee Jet"]
+    static var food =   ["Croissants",
+                         "Food",
+                         "Kitchen"]
+    static var pet = ["Dog",
+                      "Puppy"]
+    static var furniture = [ "Sofa",
+                             "Armchair",
+                             "Chromakey"]
+    
+    
+    class func smapleVideos(category:Int=0) -> [Video] {
+        let vlogs = [fashion+interior+indoor+food+pet+furniture,
+                     fashion,
+                     interior,
+                     indoor,
+                     food,
+                     pet,
+                     furniture]
+        let titles = vlogs[category]
+        var videos: [Video] = []
+        for (index, name) in titles.enumerated() {
+          let urlPath = Bundle.main.path(forResource: name, ofType: "mp4")!
+          let url = URL(fileURLWithPath: urlPath)
+          let thumbURLPath = Bundle.main.path(forResource: name, ofType: "png")!
+          let thumbURL = URL(fileURLWithPath: thumbURLPath)
+          
+            let video = Video(url: url, thumbURL: thumbURL, title: titles[index], subtitle: titles[index],id : "\(index)")
+          videos.append(video)
+        }
+        return videos
+    }
+    
     class func localVideos() -> [Video] {
       var videos: [Video] = []
       let names = ["newYorkFlip", "bulletTrain", "monkey", "shark"]
@@ -45,6 +96,7 @@ class Video: NSObject {
       }
       return videos
     }
+    
     
     class func allVideos() -> [Video] {
       var videos = localVideos()

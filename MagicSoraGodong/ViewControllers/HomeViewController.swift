@@ -15,7 +15,8 @@ class HomeViewController: UIViewController{
     
     let category = categoty.categories
     var categoryMenus:[UILabel] = []
-    var videos:[vlogItem] = []
+    var vlogs:[vlogItem] = []
+    var videos:[Video] = Video.allVideos() 
     
     //MARK: Life Cycle
     override func viewDidLoad() {
@@ -32,7 +33,12 @@ class HomeViewController: UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let homeDetailViewController:HomeDetailViewController = segue.destination as? HomeDetailViewController else {return}
         guard let selectedIndexPath = self.tableView.indexPathForSelectedRow else {return}
-        homeDetailViewController.vlogIdx = videos[selectedIndexPath.row].vlogIdx
+        homeDetailViewController.video = videos[selectedIndexPath.row]
+        if selectedIndexPath.row < vlogs.count{
+            homeDetailViewController.vlogIdx = vlogs[selectedIndexPath.row].vlogIdx
+        }else{
+            homeDetailViewController.vlogIdx = 1
+        }
     }
 }
 
@@ -44,6 +50,7 @@ extension HomeViewController{
             let textfield = UITextField()
             textfield.frame = CGRect(x: 0, y: 0, width: self.view.frame.width/3, height: 50)
             textfield.placeholder = "검색어를 입력해주세요"
+            textfield.attributedPlaceholder = NSAttributedString(string: "검색어를 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor:UIColor.white])
             return textfield
         }
          
@@ -88,6 +95,7 @@ extension HomeViewController{
                categoryMenus[i].textColor = categoryMenus[i].tag == selected.tag ? #colorLiteral(red: 0.3134731054, green: 0.6144956946, blue: 1, alpha: 1) :  #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
            }
         getVlogs(categoryIdx: selected.tag)
+        //self.videos = Video.smapleVideos(category: selected.tag-1)
         tableView.reloadSections(IndexSet(0...0), with: .left)
 
        }
@@ -100,7 +108,7 @@ extension HomeViewController{
 extension HomeViewController{
     @objc func didReceiveVlogs(_ noti:Notification){
         guard let v:vlogKey = noti.object as? vlogKey else {return}
-        self.videos = v.Result
+        self.vlogs = v.Result
         self.tableView.reloadData()
     }
     @IBAction func searchToggle(_ sender:UIBarButtonItem){
@@ -119,8 +127,8 @@ extension HomeViewController:UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell:HomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.cellIdentifier) as? HomeTableViewCell else {fatalError("Unable to dequeue HomeTableViewCell")} 
-        let video = videos[indexPath.row] 
+        guard let cell:HomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.cellIdentifier) as? HomeTableViewCell else {fatalError("Unable to dequeue HomeTableViewCell")}
+        let video = videos[indexPath.row]
         cell.update(video: video)
         return cell
     }

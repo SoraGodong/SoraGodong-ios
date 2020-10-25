@@ -24,7 +24,15 @@ class MyPageViewController: UIViewController {
         mypageTableView.separatorStyle = .none
         mypageTableView.tableFooterView = UIView()
         
-        navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "soragodong"), style: .done, target: self, action: nil)
+        navigationController?.navigationBar.tintColor = .white
+        self.navigationItem.title = "마이페이지"
+        navigationController?.navigationBar.topItem?.title = "마이페이지"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.title = "마이페이지"
+        navigationController?.navigationBar.topItem?.title = "마이페이지"
     }
 
 }
