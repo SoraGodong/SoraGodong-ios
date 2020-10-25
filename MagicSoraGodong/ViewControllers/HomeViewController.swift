@@ -25,9 +25,12 @@ class HomeViewController: UIViewController{
         configureCategoryMenu()
         configureNotificationCenter()
         getVlogs()
+//        print(Video.smapleVideos(0))
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        print("??")
+        appendUploaded()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -56,6 +59,7 @@ extension HomeViewController{
          
         self.navigationItem.titleView = searchKeywordField
         self.navigationItem.titleView?.isHidden = true
+        self.tableView.separatorStyle = .none
     }
     func configureNotificationCenter(){
         NotificationCenter.default.addObserver(self,
@@ -86,6 +90,36 @@ extension HomeViewController{
         }
     }
     
+    func appendUploaded(){
+        videos = Video.allVideos() 
+        let uploaded = VlogData.shared
+        guard let title = uploaded.videoTitle else {
+            print("싱글톤 제목 없음")
+            return
+            
+        }
+        guard let subtitle = uploaded.vidoeContent else {
+            print("싱글톤 아이템 없음")
+            return
+            
+        }
+        guard let VideoURL = uploaded.videoURL else {
+            print("싱글톤 제목 없음")
+            return
+        }
+        let thumbURLPath = Bundle.main.path(forResource: "foxVillage", ofType: "png")!
+        let thumbURL = URL(fileURLWithPath: thumbURLPath)
+        let remoteVideo = Video(url: VideoURL, thumbURL: thumbURL, title:title, subtitle:subtitle,id:"0")
+        videos.append(remoteVideo)
+        
+        guard let tmp = videos.last else {return}
+        for i in (0..<videos.count-1).reversed(){
+            videos[i+1] = videos[i]
+        }
+        videos[0] = tmp
+        tableView.reloadData()
+        
+    }
     //카테고리 클릭했을때 처리
        @objc func touchUpCategory(_ sender:UIGestureRecognizer){
            guard let tabGesture = sender as? UITapGestureRecognizer else {return}
@@ -129,7 +163,11 @@ extension HomeViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell:HomeTableViewCell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.cellIdentifier) as? HomeTableViewCell else {fatalError("Unable to dequeue HomeTableViewCell")}
         let video = videos[indexPath.row]
-        cell.update(video: video)
+        if video.videoId == "0"{
+            cell.updateUpload(video: video)
+        }else{
+            cell.update(video: video)
+        }
         return cell
     }
 }

@@ -29,6 +29,13 @@ class HomeTableViewCell: UITableViewCell {
         self.videoTitle.text = video.title
         self.videoItem.text = video.subtitle
     }
+    
+    func updateUpload(video:Video){
+        self.thumbnail.image = VlogData.shared.videoImage
+        //self.profile.loadImage(url: video.profile)
+        self.videoTitle.text = video.title
+        self.videoItem.text = video.subtitle
+    }
     static let cellIdentifier = "homeCell"
     override func awakeFromNib() {
         super.awakeFromNib()
