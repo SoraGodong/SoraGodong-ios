@@ -63,7 +63,7 @@ extension RegistrationViewController {
         let cancelButton = UIBarButtonItem(title: "취소", style: .plain, target: self, action: #selector(touchUpCancelButton))
         navigationItem.leftBarButtonItem = cancelButton
         navigationItem.rightBarButtonItem = registrationButton
-        navigationItem.title = "마법의 소라고동"
+        navigationItem.title = "브이로그 등록"
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.5169164538, green: 0.689781487, blue: 0.9588938355, alpha: 1)
         navigationController?.navigationBar.tintColor = .white
