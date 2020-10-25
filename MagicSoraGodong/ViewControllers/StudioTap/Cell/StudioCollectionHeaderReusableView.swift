@@ -12,6 +12,7 @@ class StudioCollectionHeaderReusableView: UICollectionViewCell {
     //UICollectionReusableView
     // MARK:- Properties
     @IBOutlet weak var categoryView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
     let categories = StudioCategoty.categories
     var categoryButtons: [UIButton] = []
     var completionHandler: ((_ index: Int) -> (Void))?
@@ -21,6 +22,7 @@ class StudioCollectionHeaderReusableView: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         configureCategory()
+        scrollView.showsHorizontalScrollIndicator = false
     }
     
 }

@@ -86,7 +86,6 @@ extension StudioViewController {
         }
         SelectedProduct.shared.products = []
         collectionView.reloadData()
-//        collectionView.reloadSections(IndexSet(0…0))
     }
     
 }
