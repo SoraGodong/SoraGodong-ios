@@ -11,8 +11,10 @@ import Photos
 class VlogData {
     static let shared = VlogData()
     
-    var videoTitle : String?
-    var vidoeContent : String?
-    var videoAseet : AVAsset?
-    var videoImage : UIImage?
+    var videoTitle: String?
+    var vidoeContent: String?
+    var videoAseet: AVAsset?
+    var videoImage: UIImage?
+    var videoURL: URL?
+//    var thumbnailURL: String?
 }

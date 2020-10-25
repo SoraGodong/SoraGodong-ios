@@ -34,7 +34,7 @@ class RegistrationViewController: UIViewController {
     
 }
 
-// MARK:- Configure
+// MARK:- Configure UI
 extension RegistrationViewController {
     
     func configureTableView() {
@@ -103,7 +103,7 @@ extension RegistrationViewController {
             let okAction = UIAlertAction(
                 title: "확인",
                 style: .default) { (action : UIAlertAction) in
-                // 등록 완료 조건 추가하기
+                
                 self.navigationController?.popViewController(animated: true)
 //                self.present(homeViewController, animated: true, completion: nil)
             }
@@ -163,10 +163,7 @@ extension RegistrationViewController {
             }
         }
     }
-    
-    func imageUpload() {
-        
-    }
+
 }
 
 // MARK:- Media Picker Delegate
@@ -178,6 +175,7 @@ extension RegistrationViewController: MediaPickerDelegate {
         mediaPickerManager.generateThumbnailSync(url: videoURL, startOffsets: captureTime) { images in
             mediaCell.videoThumbnailImage.image = images.first!
             VlogData.shared.videoAseet = AVAsset(url: videoURL)
+            VlogData.shared.videoURL = videoURL
             VlogData.shared.videoImage = images.first!
         }
     }
